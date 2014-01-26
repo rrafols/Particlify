@@ -1,0 +1,13 @@
+uniform mat4 u_MVPMatrix;
+
+attribute vec4 a_Position;
+attribute vec4 a_Color;                          
+flat varying vec4 v_Color;
+varying vec4 pos;
+
+void main()
+{
+	v_Color = a_Color;
+	gl_Position = u_MVPMatrix * a_Position;
+	pos = a_Position;
+}

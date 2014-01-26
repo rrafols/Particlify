@@ -1,0 +1,14 @@
+com.oocit.particlify.BuildConfig
+com.oocit.particlify.Particlify:
+    private static final java.lang.String TAG
+com.oocit.particlify.ParticlifyRenderer:
+    private static final java.lang.String TAG
+    private float camX
+    private float camY
+    private float camZ
+    270:276:private static final float[] crossProduct(float,float,float,float,float,float)
+    474:482:static java.util.List getAxisIds(android.view.InputDevice)
+    881:885:private void checkGLError(java.lang.String)
+com.oocit.particlify.R
+com.oocit.particlify.R$attr
+com.oocit.particlify.R$drawable

@@ -1,0 +1,6071 @@
+_____________________________________________________________________
++ Program class: com/oocit/particlify/Particlify
+  Superclass:    android/app/Activity
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.oocit.particlify.Particlify extends android.app.Activity
+
+Interfaces (count = 0):
+
+Constant Pool (count = 170):
+  + Integer [131072]
+  + Integer [16777232]
+  + String [****** Did not find API level 12 function! Joysticks NOT supported!]
+  + String [****** Found API level 12 function! Joysticks supported]
+  + String [Particlify]
+  + String [activity]
+  + String [keyCodeToString]
+  + Class [[I]
+  + Class [android/app/Activity]
+  + Class [android/app/ActivityManager]
+  + Class [android/content/pm/ConfigurationInfo]
+  + Class [android/opengl/GLSurfaceView]
+  + Class [android/os/Bundle]
+  + Class [android/util/Log]
+  + Class [android/view/InputDevice]
+  + Class [android/view/KeyEvent]
+  + Class [android/view/MotionEvent]
+  + Class [android/view/Window]
+  + Class [com/oocit/particlify/Particlify]
+  + Class [com/oocit/particlify/a]
+  + Class [java/lang/Class]
+  + Class [java/lang/Integer]
+  + Class [java/lang/NoSuchMethodException]
+  + Class [java/lang/reflect/Method]
+  + Fieldref [android/content/pm/ConfigurationInfo.reqGlEsVersion I]
+  + Fieldref [com/oocit/particlify/Particlify.a [I]
+  + Fieldref [com/oocit/particlify/Particlify.b [F]
+  + Fieldref [com/oocit/particlify/Particlify.c [F]
+  + Fieldref [com/oocit/particlify/Particlify.d Landroid/opengl/GLSurfaceView;]
+  + Fieldref [com/oocit/particlify/Particlify.e Lcom/oocit/particlify/a;]
+  + Fieldref [java/lang/Integer.TYPE Ljava/lang/Class;]
+  + Methodref [android/app/Activity.<init> ()V]
+  + Methodref [android/app/Activity.dispatchGenericMotionEvent (Landroid/view/MotionEvent;)Z]
+  + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  + Methodref [android/app/Activity.onKeyDown (ILandroid/view/KeyEvent;)Z]
+  + Methodref [android/app/Activity.onPause ()V]
+  + Methodref [android/app/Activity.onResume ()V]
+  + Methodref [android/app/ActivityManager.getDeviceConfigurationInfo ()Landroid/content/pm/ConfigurationInfo;]
+  + Methodref [android/opengl/GLSurfaceView.<init> (Landroid/content/Context;)V]
+  + Methodref [android/opengl/GLSurfaceView.onPause ()V]
+  + Methodref [android/opengl/GLSurfaceView.onResume ()V]
+  + Methodref [android/opengl/GLSurfaceView.setEGLContextClientVersion (I)V]
+  + Methodref [android/opengl/GLSurfaceView.setRenderer (Landroid/opengl/GLSurfaceView$Renderer;)V]
+  + Methodref [android/util/Log.i (Ljava/lang/String;Ljava/lang/String;)I]
+  + Methodref [android/view/InputDevice.getDevice (I)Landroid/view/InputDevice;]
+  + Methodref [android/view/InputDevice.getDeviceIds ()[I]
+  + Methodref [android/view/InputDevice.getSources ()I]
+  + Methodref [android/view/MotionEvent.getSource ()I]
+  + Methodref [android/view/Window.setFlags (II)V]
+  + Methodref [com/oocit/particlify/Particlify.a (I)Landroid/view/InputDevice;]
+  + Methodref [com/oocit/particlify/Particlify.b (I)Z]
+  + Methodref [com/oocit/particlify/Particlify.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  + Methodref [com/oocit/particlify/Particlify.getWindow ()Landroid/view/Window;]
+  + Methodref [com/oocit/particlify/Particlify.requestWindowFeature (I)Z]
+  + Methodref [com/oocit/particlify/Particlify.setContentView (Landroid/view/View;)V]
+  + Methodref [com/oocit/particlify/a.<init> (Landroid/content/Context;)V]
+  + Methodref [com/oocit/particlify/a.a (I)V]
+  + Methodref [com/oocit/particlify/a.a (Landroid/view/InputDevice;)V]
+  + Methodref [com/oocit/particlify/a.a (Landroid/view/MotionEvent;)V]
+  + Methodref [java/lang/Class.getMethod (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Landroid/content/Context;)V]
+  + NameAndType [TYPE Ljava/lang/Class;]
+  + NameAndType [a (I)Landroid/view/InputDevice;]
+  + NameAndType [a (I)V]
+  + NameAndType [a (Landroid/view/InputDevice;)V]
+  + NameAndType [a (Landroid/view/MotionEvent;)V]
+  + NameAndType [a [I]
+  + NameAndType [b (I)Z]
+  + NameAndType [b [F]
+  + NameAndType [c [F]
+  + NameAndType [d Landroid/opengl/GLSurfaceView;]
+  + NameAndType [dispatchGenericMotionEvent (Landroid/view/MotionEvent;)Z]
+  + NameAndType [e Lcom/oocit/particlify/a;]
+  + NameAndType [getDevice (I)Landroid/view/InputDevice;]
+  + NameAndType [getDeviceConfigurationInfo ()Landroid/content/pm/ConfigurationInfo;]
+  + NameAndType [getDeviceIds ()[I]
+  + NameAndType [getMethod (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
+  + NameAndType [getSource ()I]
+  + NameAndType [getSources ()I]
+  + NameAndType [getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  + NameAndType [getWindow ()Landroid/view/Window;]
+  + NameAndType [i (Ljava/lang/String;Ljava/lang/String;)I]
+  + NameAndType [onCreate (Landroid/os/Bundle;)V]
+  + NameAndType [onKeyDown (ILandroid/view/KeyEvent;)Z]
+  + NameAndType [onPause ()V]
+  + NameAndType [onResume ()V]
+  + NameAndType [reqGlEsVersion I]
+  + NameAndType [requestWindowFeature (I)Z]
+  + NameAndType [setContentView (Landroid/view/View;)V]
+  + NameAndType [setEGLContextClientVersion (I)V]
+  + NameAndType [setFlags (II)V]
+  + NameAndType [setRenderer (Landroid/opengl/GLSurfaceView$Renderer;)V]
+  + Utf8 [()I]
+  + Utf8 [()Landroid/content/pm/ConfigurationInfo;]
+  + Utf8 [()Landroid/view/Window;]
+  + Utf8 [()V]
+  + Utf8 [()[I]
+  + Utf8 [(I)Landroid/view/InputDevice;]
+  + Utf8 [(I)V]
+  + Utf8 [(I)Z]
+  + Utf8 [(II)V]
+  + Utf8 [(ILandroid/view/KeyEvent;)Z]
+  + Utf8 [(Landroid/content/Context;)V]
+  + Utf8 [(Landroid/opengl/GLSurfaceView$Renderer;)V]
+  + Utf8 [(Landroid/os/Bundle;)V]
+  + Utf8 [(Landroid/view/InputDevice;)V]
+  + Utf8 [(Landroid/view/MotionEvent;)V]
+  + Utf8 [(Landroid/view/MotionEvent;)Z]
+  + Utf8 [(Landroid/view/View;)V]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
+  + Utf8 [****** Did not find API level 12 function! Joysticks NOT supported!]
+  + Utf8 [****** Found API level 12 function! Joysticks supported]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [I]
+  + Utf8 [Landroid/opengl/GLSurfaceView;]
+  + Utf8 [Lcom/oocit/particlify/a;]
+  + Utf8 [Ljava/lang/Class;]
+  + Utf8 [Particlify]
+  + Utf8 [StackMapTable]
+  + Utf8 [TYPE]
+  + Utf8 [[F]
+  + Utf8 [[I]
+  + Utf8 [a]
+  + Utf8 [activity]
+  + Utf8 [android/app/Activity]
+  + Utf8 [android/app/ActivityManager]
+  + Utf8 [android/content/pm/ConfigurationInfo]
+  + Utf8 [android/opengl/GLSurfaceView]
+  + Utf8 [android/os/Bundle]
+  + Utf8 [android/util/Log]
+  + Utf8 [android/view/InputDevice]
+  + Utf8 [android/view/KeyEvent]
+  + Utf8 [android/view/MotionEvent]
+  + Utf8 [android/view/Window]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/oocit/particlify/Particlify]
+  + Utf8 [com/oocit/particlify/a]
+  + Utf8 [d]
+  + Utf8 [dispatchGenericMotionEvent]
+  + Utf8 [e]
+  + Utf8 [getDevice]
+  + Utf8 [getDeviceConfigurationInfo]
+  + Utf8 [getDeviceIds]
+  + Utf8 [getMethod]
+  + Utf8 [getSource]
+  + Utf8 [getSources]
+  + Utf8 [getSystemService]
+  + Utf8 [getWindow]
+  + Utf8 [i]
+  + Utf8 [java/lang/Class]
+  + Utf8 [java/lang/Integer]
+  + Utf8 [java/lang/NoSuchMethodException]
+  + Utf8 [java/lang/reflect/Method]
+  + Utf8 [keyCodeToString]
+  + Utf8 [onCreate]
+  + Utf8 [onKeyDown]
+  + Utf8 [onPause]
+  + Utf8 [onResume]
+  + Utf8 [reqGlEsVersion]
+  + Utf8 [requestWindowFeature]
+  + Utf8 [setContentView]
+  + Utf8 [setEGLContextClientVersion]
+  + Utf8 [setFlags]
+  + Utf8 [setRenderer]
+
+Fields (count = 5):
+  + Field:        d Landroid/opengl/GLSurfaceView;
+    Access flags: 0x2
+      = private android.opengl.GLSurfaceView d
+  + Field:        e Lcom/oocit/particlify/a;
+    Access flags: 0x2
+      = private com.oocit.particlify.a e
+  + Field:        a [I
+    Access flags: 0x1
+      = public int[] a
+  + Field:        b [F
+    Access flags: 0x1
+      = public float[] b
+  + Field:        c [F
+    Access flags: 0x1
+      = public float[] c
+
+Methods (count = 8):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public Particlify()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 20, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #32
+        + Methodref [android/app/Activity.<init> ()V]
+      [4] aload_0 v0
+      [5] aconst_null
+      [6] putfield #26
+        + Fieldref [com/oocit/particlify/Particlify.a [I]
+      [9] aload_0 v0
+      [10] aconst_null
+      [11] putfield #27
+        + Fieldref [com/oocit/particlify/Particlify.b [F]
+      [14] aload_0 v0
+      [15] aconst_null
+      [16] putfield #28
+        + Fieldref [com/oocit/particlify/Particlify.c [F]
+      [19] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x4
+      = protected void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 193, locals = 7, stack = 6):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #34
+        + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] iconst_1
+      [7] invokevirtual #54
+        + Methodref [com/oocit/particlify/Particlify.requestWindowFeature (I)Z]
+      [10] pop
+      [11] aload_0 v0
+      [12] invokevirtual #53
+        + Methodref [com/oocit/particlify/Particlify.getWindow ()Landroid/view/Window;]
+      [15] sipush 1024
+      [18] sipush 1024
+      [21] invokevirtual #49
+        + Methodref [android/view/Window.setFlags (II)V]
+      [24] aload_0 v0
+      [25] new #12
+        + Class [android/opengl/GLSurfaceView]
+      [28] dup
+      [29] aload_0 v0
+      [30] invokespecial #39
+        + Methodref [android/opengl/GLSurfaceView.<init> (Landroid/content/Context;)V]
+      [33] putfield #29
+        + Fieldref [com/oocit/particlify/Particlify.d Landroid/opengl/GLSurfaceView;]
+      [36] aload_0 v0
+      [37] ldc #6
+        + String [activity]
+      [39] invokevirtual #52
+        + Methodref [com/oocit/particlify/Particlify.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+      [42] checkcast #10
+        + Class [android/app/ActivityManager]
+      [45] astore_2 v2
+      [46] aload_2 v2
+      [47] invokevirtual #38
+        + Methodref [android/app/ActivityManager.getDeviceConfigurationInfo ()Landroid/content/pm/ConfigurationInfo;]
+      [50] astore_3 v3
+      [51] aload_3 v3
+      [52] getfield #25
+        + Fieldref [android/content/pm/ConfigurationInfo.reqGlEsVersion I]
+      [55] ldc #1
+        + Integer [131072]
+      [57] ificmplt +7 (target=64)
+      [60] iconst_1
+      [61] goto +4 (target=65)
+      [64] iconst_0
+      [65] istore v4
+      [67] aload_0 v0
+      [68] new #20
+        + Class [com/oocit/particlify/a]
+      [71] dup
+      [72] aload_0 v0
+      [73] invokespecial #56
+        + Methodref [com/oocit/particlify/a.<init> (Landroid/content/Context;)V]
+      [76] putfield #30
+        + Fieldref [com/oocit/particlify/Particlify.e Lcom/oocit/particlify/a;]
+      [79] iload v4
+      [81] ifeq +25 (target=106)
+      [84] aload_0 v0
+      [85] getfield #29
+        + Fieldref [com/oocit/particlify/Particlify.d Landroid/opengl/GLSurfaceView;]
+      [88] iconst_2
+      [89] invokevirtual #42
+        + Methodref [android/opengl/GLSurfaceView.setEGLContextClientVersion (I)V]
+      [92] aload_0 v0
+      [93] getfield #29
+        + Fieldref [com/oocit/particlify/Particlify.d Landroid/opengl/GLSurfaceView;]
+      [96] aload_0 v0
+      [97] getfield #30
+        + Fieldref [com/oocit/particlify/Particlify.e Lcom/oocit/particlify/a;]
+      [100] invokevirtual #43
+        + Methodref [android/opengl/GLSurfaceView.setRenderer (Landroid/opengl/GLSurfaceView$Renderer;)V]
+      [103] goto +4 (target=107)
+      [106] return
+      [107] iconst_0
+      [108] istore v5
+      [110] ldc #16
+        + Class [android/view/KeyEvent]
+      [112] ldc #7
+        + String [keyCodeToString]
+      [114] iconst_1
+      [115] anewarray #21
+        + Class [java/lang/Class]
+      [118] dup
+      [119] iconst_0
+      [120] getstatic #31
+        + Fieldref [java/lang/Integer.TYPE Ljava/lang/Class;]
+      [123] aastore
+      [124] invokevirtual #60
+        + Methodref [java/lang/Class.getMethod (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
+      [127] astore v6
+      [129] aload v6
+      [131] ifnull +7 (target=138)
+      [134] iconst_1
+      [135] goto +4 (target=139)
+      [138] iconst_0
+      [139] istore v5
+      [141] ldc #5
+        + String [Particlify]
+      [143] ldc #4
+        + String [****** Found API level 12 function! Joysticks supported]
+      [145] invokestatic #44
+        + Methodref [android/util/Log.i (Ljava/lang/String;Ljava/lang/String;)I]
+      [148] pop
+      [149] goto +13 (target=162)
+      [152] astore v6
+      [154] ldc #5
+        + String [Particlify]
+      [156] ldc #3
+        + String [****** Did not find API level 12 function! Joysticks NOT supported!]
+      [158] invokestatic #44
+        + Methodref [android/util/Log.i (Ljava/lang/String;Ljava/lang/String;)I]
+      [161] pop
+      [162] iload v5
+      [164] ifeq +20 (target=184)
+      [167] aload_0 v0
+      [168] ldc #2
+        + Integer [16777232]
+      [170] invokevirtual #50
+        + Methodref [com/oocit/particlify/Particlify.a (I)Landroid/view/InputDevice;]
+      [173] astore v6
+      [175] aload_0 v0
+      [176] getfield #30
+        + Fieldref [com/oocit/particlify/Particlify.e Lcom/oocit/particlify/a;]
+      [179] aload v6
+      [181] invokevirtual #58
+        + Methodref [com/oocit/particlify/a.a (Landroid/view/InputDevice;)V]
+      [184] aload_0 v0
+      [185] aload_0 v0
+      [186] getfield #29
+        + Fieldref [com/oocit/particlify/Particlify.d Landroid/opengl/GLSurfaceView;]
+      [189] invokevirtual #55
+        + Methodref [com/oocit/particlify/Particlify.setContentView (Landroid/view/View;)V]
+      [192] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (110 -> 149: 152):
+      + Class [java/lang/NoSuchMethodException]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 9):
+        - [64] Var: ...[a:android/app/ActivityManager][a:android/content/pm/ConfigurationInfo], Stack: (empty)
+        - [65] Var: ..., Stack: [i]
+        - [106] Var: ...[i], Stack: (empty)
+        - [107] Var: ..., Stack: (empty)
+        - [138] Var: ...[i][a:java/lang/reflect/Method], Stack: (empty)
+        - [139] Var: ..., Stack: [i]
+        - [152] Var: [a:com/oocit/particlify/Particlify][a:android/os/Bundle][a:android/app/ActivityManager][a:android/content/pm/ConfigurationInfo][i][i], Stack: [a:java/lang/NoSuchMethodException]
+        - [162] Var: ..., Stack: (empty)
+        - [184] Var: ..., Stack: (empty)
+  + Method:       a(I)Landroid/view/InputDevice;
+    Access flags: 0x1
+      = public android.view.InputDevice a(int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 51, locals = 6, stack = 2):
+      [0] invokestatic #46
+        + Methodref [android/view/InputDevice.getDeviceIds ()[I]
+      [3] astore_2 v2
+      [4] iconst_0
+      [5] istore_3 v3
+      [6] iconst_0
+      [7] istore_3 v3
+      [8] goto +35 (target=43)
+      [11] aload_2 v2
+      [12] iload_3 v3
+      [13] iaload
+      [14] invokestatic #45
+        + Methodref [android/view/InputDevice.getDevice (I)Landroid/view/InputDevice;]
+      [17] astore v4
+      [19] aload v4
+      [21] invokevirtual #47
+        + Methodref [android/view/InputDevice.getSources ()I]
+      [24] istore v5
+      [26] iload v5
+      [28] sipush -256
+      [31] iand
+      [32] iload_1 v1
+      [33] iand
+      [34] ifeq +6 (target=40)
+      [37] aload v4
+      [39] areturn
+      [40] iinc v3, 1
+      [43] iload_3 v3
+      [44] aload_2 v2
+      [45] arraylength
+      [46] ificmplt -35 (target=11)
+      [49] aconst_null
+      [50] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 3):
+        - [11] Var: ...[a:[I][i], Stack: (empty)
+        - [40] Var: ..., Stack: (empty)
+        - [43] Var: ..., Stack: (empty)
+  + Method:       b(I)Z
+    Access flags: 0xa
+      = private static boolean b(int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 11, locals = 1, stack = 2):
+      [0] iload_0 v0
+      [1] bipush 16
+      [3] iand
+      [4] ifeq +5 (target=9)
+      [7] iconst_1
+      [8] ireturn
+      [9] iconst_0
+      [10] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [9] Var: ..., Stack: (empty)
+  + Method:       dispatchGenericMotionEvent(Landroid/view/MotionEvent;)Z
+    Access flags: 0x1
+      = public boolean dispatchGenericMotionEvent(android.view.MotionEvent)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 26, locals = 2, stack = 2):
+      [0] aload_1 v1
+      [1] invokevirtual #48
+        + Methodref [android/view/MotionEvent.getSource ()I]
+      [4] invokestatic #51
+        + Methodref [com/oocit/particlify/Particlify.b (I)Z]
+      [7] ifeq +13 (target=20)
+      [10] aload_0 v0
+      [11] getfield #30
+        + Fieldref [com/oocit/particlify/Particlify.e Lcom/oocit/particlify/a;]
+      [14] aload_1 v1
+      [15] invokevirtual #59
+        + Methodref [com/oocit/particlify/a.a (Landroid/view/MotionEvent;)V]
+      [18] iconst_1
+      [19] ireturn
+      [20] aload_0 v0
+      [21] aload_1 v1
+      [22] invokespecial #33
+        + Methodref [android/app/Activity.dispatchGenericMotionEvent (Landroid/view/MotionEvent;)Z]
+      [25] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [20] Var: ..., Stack: (empty)
+  + Method:       onKeyDown(ILandroid/view/KeyEvent;)Z
+    Access flags: 0x1
+      = public boolean onKeyDown(int,android.view.KeyEvent)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 23, locals = 3, stack = 3):
+      [0] iload_1 v1
+      [1] bipush 96
+      [3] ificmpne +13 (target=16)
+      [6] aload_0 v0
+      [7] getfield #30
+        + Fieldref [com/oocit/particlify/Particlify.e Lcom/oocit/particlify/a;]
+      [10] iload_1 v1
+      [11] invokevirtual #57
+        + Methodref [com/oocit/particlify/a.a (I)V]
+      [14] iconst_1
+      [15] ireturn
+      [16] aload_0 v0
+      [17] iload_1 v1
+      [18] aload_2 v2
+      [19] invokespecial #35
+        + Methodref [android/app/Activity.onKeyDown (ILandroid/view/KeyEvent;)Z]
+      [22] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [16] Var: ..., Stack: (empty)
+  + Method:       onResume()V
+    Access flags: 0x4
+      = protected void onResume()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 12, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #37
+        + Methodref [android/app/Activity.onResume ()V]
+      [4] aload_0 v0
+      [5] getfield #29
+        + Fieldref [com/oocit/particlify/Particlify.d Landroid/opengl/GLSurfaceView;]
+      [8] invokevirtual #41
+        + Methodref [android/opengl/GLSurfaceView.onResume ()V]
+      [11] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onPause()V
+    Access flags: 0x4
+      = protected void onPause()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 12, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #36
+        + Methodref [android/app/Activity.onPause ()V]
+      [4] aload_0 v0
+      [5] getfield #29
+        + Fieldref [com/oocit/particlify/Particlify.d Landroid/opengl/GLSurfaceView;]
+      [8] invokevirtual #40
+        + Methodref [android/opengl/GLSurfaceView.onPause ()V]
+      [11] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/oocit/particlify/a
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.oocit.particlify.a extends java.lang.Object
+
+Interfaces (count = 1):
+  + Class [android/opengl/GLSurfaceView$Renderer]
+
+Constant Pool (count = 744):
+  + Integer [-16777216]
+  + Integer [0]
+  + Integer [2]
+  + Integer [3]
+  + Integer [4]
+  + Integer [12]
+  + Integer [20]
+  + Integer [28]
+  + Integer [33984]
+  + Integer [35632]
+  + Integer [35633]
+  + Integer [35713]
+  + Integer [35714]
+  + Integer [200000]
+  + Integer [16777215]
+  + Float [-512.0]
+  + Float [-62.0]
+  + Float [-60.0]
+  + Float [-55.0]
+  + Float [-5.0]
+  + Float [-1.0]
+  + Float [0.01]
+  + Float [0.03]
+  + Float [0.1]
+  + Float [0.2]
+  + Float [0.25]
+  + Float [0.3]
+  + Float [0.5]
+  + Float [0.7]
+  + Float [1.1]
+  + Float [1.5]
+  + Float [3.5]
+  + Float [4.0]
+  + Float [5.0]
+  + Float [6.0]
+  + Float [6.5]
+  + Float [7.0]
+  + Float [8.0]
+  + Float [10.0]
+  + Float [12.0]
+  + Float [20.0]
+  + Float [25.0]
+  + Float [45.0]
+  + Float [55.0]
+  + Float [60.0]
+  + Float [62.0]
+  + Float [63.0]
+  + Float [140.0]
+  + Float [180.0]
+  + Float [192.0]
+  + Float [512.0]
+  + Float [5000.0]
+  + Float [50000.0]
+  + Float [202500.0]
+  + String [ from assets]
+  + String [Error creating fragment shader.]
+  + String [Error creating program.]
+  + String [Error creating vertex shader.]
+  + String [Error loading ]
+  + String [Error loading texture.]
+  + String [Error: ]
+  + String [Particlify]
+  + String [Press [A] to Play!]
+  + String [a_Color]
+  + String [a_Position]
+  + String [a_TexCoordinate]
+  + String [bar.fs]
+  + String [bar.vs]
+  + String [obs.fs]
+  + String [obs.vs]
+  + String [particle.fs]
+  + String [particle.vs]
+  + String [track.fs]
+  + String [track.vs]
+  + String [u_MVPMatrix]
+  + String [u_Texture]
+  + Class [[B]
+  + Class [[F]
+  + Class [[I]
+  + Class [[[F]
+  + Class [android/content/Context]
+  + Class [android/content/res/AssetManager]
+  + Class [android/graphics/Bitmap]
+  + Class [android/graphics/Bitmap$Config]
+  + Class [android/graphics/Canvas]
+  + Class [android/graphics/Matrix]
+  + Class [android/graphics/Paint]
+  + Class [android/graphics/Rect]
+  + Class [android/opengl/GLES20]
+  + Class [android/opengl/GLSurfaceView$Renderer]
+  + Class [android/opengl/GLUtils]
+  + Class [android/opengl/Matrix]
+  + Class [android/util/Log]
+  + Class [android/view/MotionEvent]
+  + Class [com/oocit/particlify/a]
+  + Class [java/io/DataInputStream]
+  + Class [java/io/InputStream]
+  + Class [java/lang/Exception]
+  + Class [java/lang/Math]
+  + Class [java/lang/Object]
+  + Class [java/lang/RuntimeException]
+  + Class [java/lang/String]
+  + Class [java/lang/StringBuilder]
+  + Class [java/lang/System]
+  + Class [java/lang/Throwable]
+  + Class [java/nio/ByteBuffer]
+  + Class [java/nio/ByteOrder]
+  + Class [java/nio/FloatBuffer]
+  + Class [java/util/Random]
+  + Class [javax/microedition/khronos/opengles/GL10]
+  + Long [20]
+  + Long [1337]
+  + Double [0.3]
+  + Double [2.0]
+  + Double [8.0]
+  + Fieldref [android/graphics/Bitmap$Config.ARGB_8888 Landroid/graphics/Bitmap$Config;]
+  + Fieldref [com/oocit/particlify/a.A I]
+  + Fieldref [com/oocit/particlify/a.B I]
+  + Fieldref [com/oocit/particlify/a.C I]
+  + Fieldref [com/oocit/particlify/a.D I]
+  + Fieldref [com/oocit/particlify/a.E I]
+  + Fieldref [com/oocit/particlify/a.F I]
+  + Fieldref [com/oocit/particlify/a.G I]
+  + Fieldref [com/oocit/particlify/a.H I]
+  + Fieldref [com/oocit/particlify/a.I I]
+  + Fieldref [com/oocit/particlify/a.J I]
+  + Fieldref [com/oocit/particlify/a.K I]
+  + Fieldref [com/oocit/particlify/a.L I]
+  + Fieldref [com/oocit/particlify/a.M I]
+  + Fieldref [com/oocit/particlify/a.N I]
+  + Fieldref [com/oocit/particlify/a.O [F]
+  + Fieldref [com/oocit/particlify/a.P [F]
+  + Fieldref [com/oocit/particlify/a.Q F]
+  + Fieldref [com/oocit/particlify/a.R Landroid/view/InputDevice;]
+  + Fieldref [com/oocit/particlify/a.S J]
+  + Fieldref [com/oocit/particlify/a.T J]
+  + Fieldref [com/oocit/particlify/a.U F]
+  + Fieldref [com/oocit/particlify/a.V F]
+  + Fieldref [com/oocit/particlify/a.W F]
+  + Fieldref [com/oocit/particlify/a.X F]
+  + Fieldref [com/oocit/particlify/a.Y F]
+  + Fieldref [com/oocit/particlify/a.Z F]
+  + Fieldref [com/oocit/particlify/a.a I]
+  + Fieldref [com/oocit/particlify/a.aa F]
+  + Fieldref [com/oocit/particlify/a.ab I]
+  + Fieldref [com/oocit/particlify/a.ac I]
+  + Fieldref [com/oocit/particlify/a.ad I]
+  + Fieldref [com/oocit/particlify/a.ae I]
+  + Fieldref [com/oocit/particlify/a.af Ljava/util/Random;]
+  + Fieldref [com/oocit/particlify/a.ag Landroid/content/Context;]
+  + Fieldref [com/oocit/particlify/a.ah I]
+  + Fieldref [com/oocit/particlify/a.ai I]
+  + Fieldref [com/oocit/particlify/a.aj I]
+  + Fieldref [com/oocit/particlify/a.ak I]
+  + Fieldref [com/oocit/particlify/a.al [F]
+  + Fieldref [com/oocit/particlify/a.am [F]
+  + Fieldref [com/oocit/particlify/a.an [F]
+  + Fieldref [com/oocit/particlify/a.ao [F]
+  + Fieldref [com/oocit/particlify/a.ap I]
+  + Fieldref [com/oocit/particlify/a.aq [F]
+  + Fieldref [com/oocit/particlify/a.ar I]
+  + Fieldref [com/oocit/particlify/a.as I]
+  + Fieldref [com/oocit/particlify/a.at I]
+  + Fieldref [com/oocit/particlify/a.au I]
+  + Fieldref [com/oocit/particlify/a.av F]
+  + Fieldref [com/oocit/particlify/a.b I]
+  + Fieldref [com/oocit/particlify/a.c I]
+  + Fieldref [com/oocit/particlify/a.d I]
+  + Fieldref [com/oocit/particlify/a.e I]
+  + Fieldref [com/oocit/particlify/a.f I]
+  + Fieldref [com/oocit/particlify/a.g I]
+  + Fieldref [com/oocit/particlify/a.h Ljava/nio/FloatBuffer;]
+  + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+  + Fieldref [com/oocit/particlify/a.j Ljava/nio/FloatBuffer;]
+  + Fieldref [com/oocit/particlify/a.k [F]
+  + Fieldref [com/oocit/particlify/a.l [F]
+  + Fieldref [com/oocit/particlify/a.m [F]
+  + Fieldref [com/oocit/particlify/a.n [F]
+  + Fieldref [com/oocit/particlify/a.o I]
+  + Fieldref [com/oocit/particlify/a.p I]
+  + Fieldref [com/oocit/particlify/a.q I]
+  + Fieldref [com/oocit/particlify/a.r I]
+  + Fieldref [com/oocit/particlify/a.s I]
+  + Fieldref [com/oocit/particlify/a.t I]
+  + Fieldref [com/oocit/particlify/a.u I]
+  + Fieldref [com/oocit/particlify/a.v I]
+  + Fieldref [com/oocit/particlify/a.w I]
+  + Fieldref [com/oocit/particlify/a.x I]
+  + Fieldref [com/oocit/particlify/a.y I]
+  + Fieldref [com/oocit/particlify/a.z I]
+  + Methodref [android/content/Context.getAssets ()Landroid/content/res/AssetManager;]
+  + Methodref [android/content/res/AssetManager.open (Ljava/lang/String;)Ljava/io/InputStream;]
+  + Methodref [android/graphics/Bitmap.createBitmap (IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;]
+  + Methodref [android/graphics/Bitmap.createBitmap (Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;]
+  + Methodref [android/graphics/Bitmap.recycle ()V]
+  + Methodref [android/graphics/Bitmap.setPixels ([IIIIIII)V]
+  + Methodref [android/graphics/Canvas.<init> (Landroid/graphics/Bitmap;)V]
+  + Methodref [android/graphics/Canvas.drawText (Ljava/lang/String;FFLandroid/graphics/Paint;)V]
+  + Methodref [android/graphics/Matrix.<init> ()V]
+  + Methodref [android/graphics/Matrix.postTranslate (FF)Z]
+  + Methodref [android/graphics/Matrix.preTranslate (FF)Z]
+  + Methodref [android/graphics/Matrix.reset ()V]
+  + Methodref [android/graphics/Matrix.setRotate (FFF)V]
+  + Methodref [android/graphics/Paint.<init> (I)V]
+  + Methodref [android/graphics/Paint.getTextBounds (Ljava/lang/String;IILandroid/graphics/Rect;)V]
+  + Methodref [android/graphics/Paint.setColor (I)V]
+  + Methodref [android/graphics/Paint.setShadowLayer (FFFI)V]
+  + Methodref [android/graphics/Paint.setTextSize (F)V]
+  + Methodref [android/graphics/Rect.<init> ()V]
+  + Methodref [android/graphics/Rect.height ()I]
+  + Methodref [android/graphics/Rect.width ()I]
+  + Methodref [android/opengl/GLES20.glActiveTexture (I)V]
+  + Methodref [android/opengl/GLES20.glAttachShader (II)V]
+  + Methodref [android/opengl/GLES20.glBindAttribLocation (IILjava/lang/String;)V]
+  + Methodref [android/opengl/GLES20.glBindTexture (II)V]
+  + Methodref [android/opengl/GLES20.glBlendFunc (II)V]
+  + Methodref [android/opengl/GLES20.glClear (I)V]
+  + Methodref [android/opengl/GLES20.glClearColor (FFFF)V]
+  + Methodref [android/opengl/GLES20.glCompileShader (I)V]
+  + Methodref [android/opengl/GLES20.glCreateProgram ()I]
+  + Methodref [android/opengl/GLES20.glCreateShader (I)I]
+  + Methodref [android/opengl/GLES20.glDeleteProgram (I)V]
+  + Methodref [android/opengl/GLES20.glDeleteShader (I)V]
+  + Methodref [android/opengl/GLES20.glDisable (I)V]
+  + Methodref [android/opengl/GLES20.glDisableVertexAttribArray (I)V]
+  + Methodref [android/opengl/GLES20.glDrawArrays (III)V]
+  + Methodref [android/opengl/GLES20.glEnable (I)V]
+  + Methodref [android/opengl/GLES20.glEnableVertexAttribArray (I)V]
+  + Methodref [android/opengl/GLES20.glGenTextures (I[II)V]
+  + Methodref [android/opengl/GLES20.glGetAttribLocation (ILjava/lang/String;)I]
+  + Methodref [android/opengl/GLES20.glGetProgramiv (II[II)V]
+  + Methodref [android/opengl/GLES20.glGetShaderInfoLog (I)Ljava/lang/String;]
+  + Methodref [android/opengl/GLES20.glGetShaderiv (II[II)V]
+  + Methodref [android/opengl/GLES20.glGetUniformLocation (ILjava/lang/String;)I]
+  + Methodref [android/opengl/GLES20.glLinkProgram (I)V]
+  + Methodref [android/opengl/GLES20.glShaderSource (ILjava/lang/String;)V]
+  + Methodref [android/opengl/GLES20.glTexParameteri (III)V]
+  + Methodref [android/opengl/GLES20.glUniform1i (II)V]
+  + Methodref [android/opengl/GLES20.glUniformMatrix4fv (IIZ[FI)V]
+  + Methodref [android/opengl/GLES20.glUseProgram (I)V]
+  + Methodref [android/opengl/GLES20.glVertexAttribPointer (IIIZILjava/nio/Buffer;)V]
+  + Methodref [android/opengl/GLES20.glViewport (IIII)V]
+  + Methodref [android/opengl/GLUtils.texImage2D (IILandroid/graphics/Bitmap;I)V]
+  + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+  + Methodref [android/opengl/Matrix.perspectiveM ([FIFFFF)V]
+  + Methodref [android/opengl/Matrix.rotateM ([FIFFFF)V]
+  + Methodref [android/opengl/Matrix.scaleM ([FIFFF)V]
+  + Methodref [android/opengl/Matrix.setIdentityM ([FI)V]
+  + Methodref [android/opengl/Matrix.setLookAtM ([FIFFFFFFFFF)V]
+  + Methodref [android/opengl/Matrix.translateM ([FIFFF)V]
+  + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+  + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I]
+  + Methodref [android/view/MotionEvent.getAxisValue (I)F]
+  + Methodref [android/view/MotionEvent.getPointerCount ()I]
+  + Methodref [com/oocit/particlify/a.a ()I]
+  + Methodref [com/oocit/particlify/a.a (F)F]
+  + Methodref [com/oocit/particlify/a.a (Ljava/lang/String;)I]
+  + Methodref [com/oocit/particlify/a.a (Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I]
+  + Methodref [com/oocit/particlify/a.a ([F)V]
+  + Methodref [com/oocit/particlify/a.b ()V]
+  + Methodref [com/oocit/particlify/a.b (I)V]
+  + Methodref [com/oocit/particlify/a.b (Ljava/lang/String;)Ljava/lang/String;]
+  + Methodref [com/oocit/particlify/a.c (I)V]
+  + Methodref [com/oocit/particlify/a.d (I)F]
+  + Methodref [java/io/DataInputStream.<init> (Ljava/io/InputStream;)V]
+  + Methodref [java/io/DataInputStream.available ()I]
+  + Methodref [java/io/DataInputStream.close ()V]
+  + Methodref [java/io/DataInputStream.readFully ([B)V]
+  + Methodref [java/io/InputStream.close ()V]
+  + Methodref [java/lang/Math.pow (DD)D]
+  + Methodref [java/lang/Math.sin (D)D]
+  + Methodref [java/lang/Math.sqrt (D)D]
+  + Methodref [java/lang/Object.<init> ()V]
+  + Methodref [java/lang/RuntimeException.<init> (Ljava/lang/String;)V]
+  + Methodref [java/lang/String.<init> ([B)V]
+  + Methodref [java/lang/String.length ()I]
+  + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+  + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/System.currentTimeMillis ()J]
+  + Methodref [java/nio/ByteBuffer.allocateDirect (I)Ljava/nio/ByteBuffer;]
+  + Methodref [java/nio/ByteBuffer.asFloatBuffer ()Ljava/nio/FloatBuffer;]
+  + Methodref [java/nio/ByteBuffer.order (Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;]
+  + Methodref [java/nio/ByteOrder.nativeOrder ()Ljava/nio/ByteOrder;]
+  + Methodref [java/nio/FloatBuffer.position (I)Ljava/nio/Buffer;]
+  + Methodref [java/nio/FloatBuffer.put ([F)Ljava/nio/FloatBuffer;]
+  + Methodref [java/util/Random.<init> (J)V]
+  + Methodref [java/util/Random.nextFloat ()F]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (I)V]
+  + NameAndType [<init> (J)V]
+  + NameAndType [<init> (Landroid/graphics/Bitmap;)V]
+  + NameAndType [<init> (Ljava/io/InputStream;)V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [<init> ([B)V]
+  + NameAndType [A I]
+  + NameAndType [ARGB_8888 Landroid/graphics/Bitmap$Config;]
+  + NameAndType [B I]
+  + NameAndType [C I]
+  + NameAndType [D I]
+  + NameAndType [E I]
+  + NameAndType [F I]
+  + NameAndType [G I]
+  + NameAndType [H I]
+  + NameAndType [I I]
+  + NameAndType [J I]
+  + NameAndType [K I]
+  + NameAndType [L I]
+  + NameAndType [M I]
+  + NameAndType [N I]
+  + NameAndType [O [F]
+  + NameAndType [P [F]
+  + NameAndType [Q F]
+  + NameAndType [R Landroid/view/InputDevice;]
+  + NameAndType [S J]
+  + NameAndType [T J]
+  + NameAndType [U F]
+  + NameAndType [V F]
+  + NameAndType [W F]
+  + NameAndType [X F]
+  + NameAndType [Y F]
+  + NameAndType [Z F]
+  + NameAndType [a ()I]
+  + NameAndType [a (F)F]
+  + NameAndType [a (Ljava/lang/String;)I]
+  + NameAndType [a (Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I]
+  + NameAndType [a ([F)V]
+  + NameAndType [a I]
+  + NameAndType [aa F]
+  + NameAndType [ab I]
+  + NameAndType [ac I]
+  + NameAndType [ad I]
+  + NameAndType [ae I]
+  + NameAndType [af Ljava/util/Random;]
+  + NameAndType [ag Landroid/content/Context;]
+  + NameAndType [ah I]
+  + NameAndType [ai I]
+  + NameAndType [aj I]
+  + NameAndType [ak I]
+  + NameAndType [al [F]
+  + NameAndType [allocateDirect (I)Ljava/nio/ByteBuffer;]
+  + NameAndType [am [F]
+  + NameAndType [an [F]
+  + NameAndType [ao [F]
+  + NameAndType [ap I]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [aq [F]
+  + NameAndType [ar I]
+  + NameAndType [as I]
+  + NameAndType [asFloatBuffer ()Ljava/nio/FloatBuffer;]
+  + NameAndType [at I]
+  + NameAndType [au I]
+  + NameAndType [av F]
+  + NameAndType [available ()I]
+  + NameAndType [b ()V]
+  + NameAndType [b (I)V]
+  + NameAndType [b (Ljava/lang/String;)Ljava/lang/String;]
+  + NameAndType [b I]
+  + NameAndType [c (I)V]
+  + NameAndType [c I]
+  + NameAndType [close ()V]
+  + NameAndType [createBitmap (IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;]
+  + NameAndType [createBitmap (Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;]
+  + NameAndType [currentTimeMillis ()J]
+  + NameAndType [d (I)F]
+  + NameAndType [d I]
+  + NameAndType [drawText (Ljava/lang/String;FFLandroid/graphics/Paint;)V]
+  + NameAndType [e (Ljava/lang/String;Ljava/lang/String;)I]
+  + NameAndType [e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I]
+  + NameAndType [e I]
+  + NameAndType [f I]
+  + NameAndType [g I]
+  + NameAndType [getAssets ()Landroid/content/res/AssetManager;]
+  + NameAndType [getAxisValue (I)F]
+  + NameAndType [getPointerCount ()I]
+  + NameAndType [getTextBounds (Ljava/lang/String;IILandroid/graphics/Rect;)V]
+  + NameAndType [glActiveTexture (I)V]
+  + NameAndType [glAttachShader (II)V]
+  + NameAndType [glBindAttribLocation (IILjava/lang/String;)V]
+  + NameAndType [glBindTexture (II)V]
+  + NameAndType [glBlendFunc (II)V]
+  + NameAndType [glClear (I)V]
+  + NameAndType [glClearColor (FFFF)V]
+  + NameAndType [glCompileShader (I)V]
+  + NameAndType [glCreateProgram ()I]
+  + NameAndType [glCreateShader (I)I]
+  + NameAndType [glDeleteProgram (I)V]
+  + NameAndType [glDeleteShader (I)V]
+  + NameAndType [glDisable (I)V]
+  + NameAndType [glDisableVertexAttribArray (I)V]
+  + NameAndType [glDrawArrays (III)V]
+  + NameAndType [glEnable (I)V]
+  + NameAndType [glEnableVertexAttribArray (I)V]
+  + NameAndType [glGenTextures (I[II)V]
+  + NameAndType [glGetAttribLocation (ILjava/lang/String;)I]
+  + NameAndType [glGetProgramiv (II[II)V]
+  + NameAndType [glGetShaderInfoLog (I)Ljava/lang/String;]
+  + NameAndType [glGetShaderiv (II[II)V]
+  + NameAndType [glGetUniformLocation (ILjava/lang/String;)I]
+  + NameAndType [glLinkProgram (I)V]
+  + NameAndType [glShaderSource (ILjava/lang/String;)V]
+  + NameAndType [glTexParameteri (III)V]
+  + NameAndType [glUniform1i (II)V]
+  + NameAndType [glUniformMatrix4fv (IIZ[FI)V]
+  + NameAndType [glUseProgram (I)V]
+  + NameAndType [glVertexAttribPointer (IIIZILjava/nio/Buffer;)V]
+  + NameAndType [glViewport (IIII)V]
+  + NameAndType [h Ljava/nio/FloatBuffer;]
+  + NameAndType [height ()I]
+  + NameAndType [i Ljava/nio/FloatBuffer;]
+  + NameAndType [j Ljava/nio/FloatBuffer;]
+  + NameAndType [k [F]
+  + NameAndType [l [F]
+  + NameAndType [length ()I]
+  + NameAndType [m [F]
+  + NameAndType [multiplyMM ([FI[FI[FI)V]
+  + NameAndType [n [F]
+  + NameAndType [nativeOrder ()Ljava/nio/ByteOrder;]
+  + NameAndType [nextFloat ()F]
+  + NameAndType [o I]
+  + NameAndType [open (Ljava/lang/String;)Ljava/io/InputStream;]
+  + NameAndType [order (Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;]
+  + NameAndType [p I]
+  + NameAndType [perspectiveM ([FIFFFF)V]
+  + NameAndType [position (I)Ljava/nio/Buffer;]
+  + NameAndType [postTranslate (FF)Z]
+  + NameAndType [pow (DD)D]
+  + NameAndType [preTranslate (FF)Z]
+  + NameAndType [put ([F)Ljava/nio/FloatBuffer;]
+  + NameAndType [q I]
+  + NameAndType [r I]
+  + NameAndType [readFully ([B)V]
+  + NameAndType [recycle ()V]
+  + NameAndType [reset ()V]
+  + NameAndType [rotateM ([FIFFFF)V]
+  + NameAndType [s I]
+  + NameAndType [scaleM ([FIFFF)V]
+  + NameAndType [setColor (I)V]
+  + NameAndType [setIdentityM ([FI)V]
+  + NameAndType [setLookAtM ([FIFFFFFFFFF)V]
+  + NameAndType [setPixels ([IIIIIII)V]
+  + NameAndType [setRotate (FFF)V]
+  + NameAndType [setShadowLayer (FFFI)V]
+  + NameAndType [setTextSize (F)V]
+  + NameAndType [sin (D)D]
+  + NameAndType [sqrt (D)D]
+  + NameAndType [t I]
+  + NameAndType [texImage2D (IILandroid/graphics/Bitmap;I)V]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [translateM ([FIFFF)V]
+  + NameAndType [u I]
+  + NameAndType [v I]
+  + NameAndType [w I]
+  + NameAndType [width ()I]
+  + NameAndType [x I]
+  + NameAndType [y I]
+  + NameAndType [z I]
+  + Utf8 [ from assets]
+  + Utf8 [()F]
+  + Utf8 [()I]
+  + Utf8 [()J]
+  + Utf8 [()Landroid/content/res/AssetManager;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()Ljava/nio/ByteOrder;]
+  + Utf8 [()Ljava/nio/FloatBuffer;]
+  + Utf8 [()V]
+  + Utf8 [(D)D]
+  + Utf8 [(DD)D]
+  + Utf8 [(F)F]
+  + Utf8 [(F)V]
+  + Utf8 [(FF)Z]
+  + Utf8 [(FFF)V]
+  + Utf8 [(FFFF)V]
+  + Utf8 [(FFFI)V]
+  + Utf8 [(I)F]
+  + Utf8 [(I)I]
+  + Utf8 [(I)Ljava/lang/String;]
+  + Utf8 [(I)Ljava/nio/Buffer;]
+  + Utf8 [(I)Ljava/nio/ByteBuffer;]
+  + Utf8 [(I)V]
+  + Utf8 [(II)V]
+  + Utf8 [(III)V]
+  + Utf8 [(IIII)V]
+  + Utf8 [(IIIZILjava/nio/Buffer;)V]
+  + Utf8 [(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;]
+  + Utf8 [(IILandroid/graphics/Bitmap;I)V]
+  + Utf8 [(IILjava/lang/String;)V]
+  + Utf8 [(IIZ[FI)V]
+  + Utf8 [(II[II)V]
+  + Utf8 [(ILjava/lang/String;)I]
+  + Utf8 [(ILjava/lang/String;)V]
+  + Utf8 [(I[II)V]
+  + Utf8 [(J)V]
+  + Utf8 [(Landroid/content/Context;)V]
+  + Utf8 [(Landroid/graphics/Bitmap;)V]
+  + Utf8 [(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;]
+  + Utf8 [(Landroid/view/InputDevice;)V]
+  + Utf8 [(Landroid/view/MotionEvent;)V]
+  + Utf8 [(Ljava/io/InputStream;)V]
+  + Utf8 [(Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;)Ljava/io/InputStream;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/String;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;FFLandroid/graphics/Paint;)V]
+  + Utf8 [(Ljava/lang/String;IILandroid/graphics/Rect;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I]
+  + Utf8 [(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;]
+  + Utf8 [(Ljavax/microedition/khronos/opengles/GL10;)V]
+  + Utf8 [(Ljavax/microedition/khronos/opengles/GL10;II)V]
+  + Utf8 [(Ljavax/microedition/khronos/opengles/GL10;Ljavax/microedition/khronos/egl/EGLConfig;)V]
+  + Utf8 [([B)V]
+  + Utf8 [([F)Ljava/nio/FloatBuffer;]
+  + Utf8 [([F)V]
+  + Utf8 [([FI)V]
+  + Utf8 [([FIFFF)V]
+  + Utf8 [([FIFFFF)V]
+  + Utf8 [([FIFFFFFFFFF)V]
+  + Utf8 [([FI[FI[FI)V]
+  + Utf8 [([IIIIIII)V]
+  + Utf8 [<init>]
+  + Utf8 [A]
+  + Utf8 [ARGB_8888]
+  + Utf8 [B]
+  + Utf8 [C]
+  + Utf8 [Code]
+  + Utf8 [ConstantValue]
+  + Utf8 [D]
+  + Utf8 [E]
+  + Utf8 [Error creating fragment shader.]
+  + Utf8 [Error creating program.]
+  + Utf8 [Error creating vertex shader.]
+  + Utf8 [Error loading ]
+  + Utf8 [Error loading texture.]
+  + Utf8 [Error: ]
+  + Utf8 [F]
+  + Utf8 [G]
+  + Utf8 [H]
+  + Utf8 [I]
+  + Utf8 [J]
+  + Utf8 [K]
+  + Utf8 [L]
+  + Utf8 [Landroid/content/Context;]
+  + Utf8 [Landroid/graphics/Bitmap$Config;]
+  + Utf8 [Landroid/view/InputDevice;]
+  + Utf8 [Ljava/nio/FloatBuffer;]
+  + Utf8 [Ljava/util/Random;]
+  + Utf8 [M]
+  + Utf8 [N]
+  + Utf8 [O]
+  + Utf8 [P]
+  + Utf8 [Particlify]
+  + Utf8 [Press [A] to Play!]
+  + Utf8 [Q]
+  + Utf8 [R]
+  + Utf8 [S]
+  + Utf8 [StackMapTable]
+  + Utf8 [T]
+  + Utf8 [U]
+  + Utf8 [V]
+  + Utf8 [W]
+  + Utf8 [X]
+  + Utf8 [Y]
+  + Utf8 [Z]
+  + Utf8 [[B]
+  + Utf8 [[F]
+  + Utf8 [[I]
+  + Utf8 [[[F]
+  + Utf8 [a]
+  + Utf8 [a_Color]
+  + Utf8 [a_Position]
+  + Utf8 [a_TexCoordinate]
+  + Utf8 [aa]
+  + Utf8 [ab]
+  + Utf8 [ac]
+  + Utf8 [ad]
+  + Utf8 [ae]
+  + Utf8 [af]
+  + Utf8 [ag]
+  + Utf8 [ah]
+  + Utf8 [ai]
+  + Utf8 [aj]
+  + Utf8 [ak]
+  + Utf8 [al]
+  + Utf8 [allocateDirect]
+  + Utf8 [am]
+  + Utf8 [an]
+  + Utf8 [android/content/Context]
+  + Utf8 [android/content/res/AssetManager]
+  + Utf8 [android/graphics/Bitmap]
+  + Utf8 [android/graphics/Bitmap$Config]
+  + Utf8 [android/graphics/Canvas]
+  + Utf8 [android/graphics/Matrix]
+  + Utf8 [android/graphics/Paint]
+  + Utf8 [android/graphics/Rect]
+  + Utf8 [android/opengl/GLES20]
+  + Utf8 [android/opengl/GLSurfaceView$Renderer]
+  + Utf8 [android/opengl/GLUtils]
+  + Utf8 [android/opengl/Matrix]
+  + Utf8 [android/util/Log]
+  + Utf8 [android/view/MotionEvent]
+  + Utf8 [ao]
+  + Utf8 [ap]
+  + Utf8 [append]
+  + Utf8 [aq]
+  + Utf8 [ar]
+  + Utf8 [as]
+  + Utf8 [asFloatBuffer]
+  + Utf8 [at]
+  + Utf8 [au]
+  + Utf8 [av]
+  + Utf8 [available]
+  + Utf8 [b]
+  + Utf8 [bar.fs]
+  + Utf8 [bar.vs]
+  + Utf8 [c]
+  + Utf8 [close]
+  + Utf8 [com/oocit/particlify/a]
+  + Utf8 [createBitmap]
+  + Utf8 [currentTimeMillis]
+  + Utf8 [d]
+  + Utf8 [drawText]
+  + Utf8 [e]
+  + Utf8 [f]
+  + Utf8 [g]
+  + Utf8 [getAssets]
+  + Utf8 [getAxisValue]
+  + Utf8 [getPointerCount]
+  + Utf8 [getTextBounds]
+  + Utf8 [glActiveTexture]
+  + Utf8 [glAttachShader]
+  + Utf8 [glBindAttribLocation]
+  + Utf8 [glBindTexture]
+  + Utf8 [glBlendFunc]
+  + Utf8 [glClear]
+  + Utf8 [glClearColor]
+  + Utf8 [glCompileShader]
+  + Utf8 [glCreateProgram]
+  + Utf8 [glCreateShader]
+  + Utf8 [glDeleteProgram]
+  + Utf8 [glDeleteShader]
+  + Utf8 [glDisable]
+  + Utf8 [glDisableVertexAttribArray]
+  + Utf8 [glDrawArrays]
+  + Utf8 [glEnable]
+  + Utf8 [glEnableVertexAttribArray]
+  + Utf8 [glGenTextures]
+  + Utf8 [glGetAttribLocation]
+  + Utf8 [glGetProgramiv]
+  + Utf8 [glGetShaderInfoLog]
+  + Utf8 [glGetShaderiv]
+  + Utf8 [glGetUniformLocation]
+  + Utf8 [glLinkProgram]
+  + Utf8 [glShaderSource]
+  + Utf8 [glTexParameteri]
+  + Utf8 [glUniform1i]
+  + Utf8 [glUniformMatrix4fv]
+  + Utf8 [glUseProgram]
+  + Utf8 [glVertexAttribPointer]
+  + Utf8 [glViewport]
+  + Utf8 [h]
+  + Utf8 [height]
+  + Utf8 [i]
+  + Utf8 [j]
+  + Utf8 [java/io/DataInputStream]
+  + Utf8 [java/io/InputStream]
+  + Utf8 [java/lang/Exception]
+  + Utf8 [java/lang/Math]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/RuntimeException]
+  + Utf8 [java/lang/String]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/lang/System]
+  + Utf8 [java/lang/Throwable]
+  + Utf8 [java/nio/ByteBuffer]
+  + Utf8 [java/nio/ByteOrder]
+  + Utf8 [java/nio/FloatBuffer]
+  + Utf8 [java/util/Random]
+  + Utf8 [javax/microedition/khronos/opengles/GL10]
+  + Utf8 [k]
+  + Utf8 [l]
+  + Utf8 [length]
+  + Utf8 [m]
+  + Utf8 [multiplyMM]
+  + Utf8 [n]
+  + Utf8 [nativeOrder]
+  + Utf8 [nextFloat]
+  + Utf8 [o]
+  + Utf8 [obs.fs]
+  + Utf8 [obs.vs]
+  + Utf8 [onDrawFrame]
+  + Utf8 [onSurfaceChanged]
+  + Utf8 [onSurfaceCreated]
+  + Utf8 [open]
+  + Utf8 [order]
+  + Utf8 [p]
+  + Utf8 [particle.fs]
+  + Utf8 [particle.vs]
+  + Utf8 [perspectiveM]
+  + Utf8 [position]
+  + Utf8 [postTranslate]
+  + Utf8 [pow]
+  + Utf8 [preTranslate]
+  + Utf8 [put]
+  + Utf8 [q]
+  + Utf8 [r]
+  + Utf8 [readFully]
+  + Utf8 [recycle]
+  + Utf8 [reset]
+  + Utf8 [rotateM]
+  + Utf8 [s]
+  + Utf8 [scaleM]
+  + Utf8 [setColor]
+  + Utf8 [setIdentityM]
+  + Utf8 [setLookAtM]
+  + Utf8 [setPixels]
+  + Utf8 [setRotate]
+  + Utf8 [setShadowLayer]
+  + Utf8 [setTextSize]
+  + Utf8 [sin]
+  + Utf8 [sqrt]
+  + Utf8 [t]
+  + Utf8 [texImage2D]
+  + Utf8 [toString]
+  + Utf8 [track.fs]
+  + Utf8 [track.vs]
+  + Utf8 [translateM]
+  + Utf8 [u]
+  + Utf8 [u_MVPMatrix]
+  + Utf8 [u_Texture]
+  + Utf8 [v]
+  + Utf8 [w]
+  + Utf8 [width]
+  + Utf8 [x]
+  + Utf8 [y]
+  + Utf8 [z]
+
+Fields (count = 74):
+  + Field:        a I
+    Access flags: 0x2
+      = private int a
+  + Field:        b I
+    Access flags: 0x2
+      = private int b
+  + Field:        c I
+    Access flags: 0x2
+      = private int c
+  + Field:        d I
+    Access flags: 0x2
+      = private int d
+  + Field:        e I
+    Access flags: 0x2
+      = private int e
+  + Field:        f I
+    Access flags: 0x2
+      = private int f
+  + Field:        g I
+    Access flags: 0x2
+      = private int g
+  + Field:        h Ljava/nio/FloatBuffer;
+    Access flags: 0x12
+      = private final java.nio.FloatBuffer h
+  + Field:        i Ljava/nio/FloatBuffer;
+    Access flags: 0x12
+      = private final java.nio.FloatBuffer i
+  + Field:        j Ljava/nio/FloatBuffer;
+    Access flags: 0x12
+      = private final java.nio.FloatBuffer j
+  + Field:        k [F
+    Access flags: 0x2
+      = private float[] k
+  + Field:        l [F
+    Access flags: 0x2
+      = private float[] l
+  + Field:        m [F
+    Access flags: 0x2
+      = private float[] m
+  + Field:        n [F
+    Access flags: 0x2
+      = private float[] n
+  + Field:        o I
+    Access flags: 0x12
+      = private final int o
+    Class member attributes (count = 1):
+    + Constant value attribute:
+    + Integer [4]
+  + Field:        p I
+    Access flags: 0x12
+      = private final int p
+    Class member attributes (count = 1):
+    + Constant value attribute:
+    + Integer [28]
+  + Field:        q I
+    Access flags: 0x12
+      = private final int q
+    Class member attributes (count = 1):
+    + Constant value attribute:
+    + Integer [0]
+  + Field:        r I
+    Access flags: 0x12
+      = private final int r
+    Class member attributes (count = 1):
+    + Constant value attribute:
+    + Integer [3]
+  + Field:        s I
+    Access flags: 0x12
+      = private final int s
+    Class member attributes (count = 1):
+    + Constant value attribute:
+    + Integer [3]
+  + Field:        t I
+    Access flags: 0x12
+      = private final int t
+    Class member attributes (count = 1):
+    + Constant value attribute:
+    + Integer [4]
+  + Field:        u I
+    Access flags: 0x2
+      = private int u
+  + Field:        v I
+    Access flags: 0x2
+      = private int v
+  + Field:        w I
+    Access flags: 0x2
+      = private int w
+  + Field:        x I
+    Access flags: 0x12
+      = private final int x
+    Class member attributes (count = 1):
+    + Constant value attribute:
+    + Integer [12]
+  + Field:        y I
+    Access flags: 0x12
+      = private final int y
+    Class member attributes (count = 1):
+    + Constant value attribute:
+    + Integer [0]
+  + Field:        z I
+    Access flags: 0x12
+      = private final int z
+    Class member attributes (count = 1):
+    + Constant value attribute:
+    + Integer [3]
+  + Field:        A I
+    Access flags: 0x2
+      = private int A
+  + Field:        B I
+    Access flags: 0x2
+      = private int B
+  + Field:        C I
+    Access flags: 0x2
+      = private int C
+  + Field:        D I
+    Access flags: 0x2
+      = private int D
+  + Field:        E I
+    Access flags: 0x12
+      = private final int E
+    Class member attributes (count = 1):
+    + Constant value attribute:
+    + Integer [20]
+  + Field:        F I
+    Access flags: 0x12
+      = private final int F
+    Class member attributes (count = 1):
+    + Constant value attribute:
+    + Integer [0]
+  + Field:        G I
+    Access flags: 0x12
+      = private final int G
+    Class member attributes (count = 1):
+    + Constant value attribute:
+    + Integer [3]
+  + Field:        H I
+    Access flags: 0x12
+      = private final int H
+    Class member attributes (count = 1):
+    + Constant value attribute:
+    + Integer [3]
+  + Field:        I I
+    Access flags: 0x12
+      = private final int I
+    Class member attributes (count = 1):
+    + Constant value attribute:
+    + Integer [2]
+  + Field:        J I
+    Access flags: 0x2
+      = private int J
+  + Field:        K I
+    Access flags: 0x2
+      = private int K
+  + Field:        L I
+    Access flags: 0x2
+      = private int L
+  + Field:        M I
+    Access flags: 0x2
+      = private int M
+  + Field:        N I
+    Access flags: 0x2
+      = private int N
+  + Field:        O [F
+    Access flags: 0x2
+      = private float[] O
+  + Field:        P [F
+    Access flags: 0x2
+      = private float[] P
+  + Field:        Q F
+    Access flags: 0x2
+      = private float Q
+  + Field:        R Landroid/view/InputDevice;
+    Access flags: 0x2
+      = private android.view.InputDevice R
+  + Field:        S J
+    Access flags: 0x2
+      = private long S
+  + Field:        T J
+    Access flags: 0x2
+      = private long T
+  + Field:        U F
+    Access flags: 0x2
+      = private float U
+  + Field:        V F
+    Access flags: 0x2
+      = private float V
+  + Field:        W F
+    Access flags: 0x2
+      = private float W
+  + Field:        X F
+    Access flags: 0x2
+      = private float X
+  + Field:        Y F
+    Access flags: 0x2
+      = private float Y
+  + Field:        Z F
+    Access flags: 0x2
+      = private float Z
+  + Field:        aa F
+    Access flags: 0x2
+      = private float aa
+  + Field:        ab I
+    Access flags: 0x2
+      = private int ab
+  + Field:        ac I
+    Access flags: 0x2
+      = private int ac
+  + Field:        ad I
+    Access flags: 0x2
+      = private int ad
+  + Field:        ae I
+    Access flags: 0x2
+      = private int ae
+  + Field:        af Ljava/util/Random;
+    Access flags: 0x2
+      = private java.util.Random af
+  + Field:        ag Landroid/content/Context;
+    Access flags: 0x2
+      = private android.content.Context ag
+  + Field:        ah I
+    Access flags: 0x2
+      = private int ah
+  + Field:        ai I
+    Access flags: 0x2
+      = private int ai
+  + Field:        aj I
+    Access flags: 0x2
+      = private int aj
+  + Field:        ak I
+    Access flags: 0x2
+      = private int ak
+  + Field:        al [F
+    Access flags: 0x2
+      = private float[] al
+  + Field:        am [F
+    Access flags: 0x2
+      = private float[] am
+  + Field:        an [F
+    Access flags: 0x2
+      = private float[] an
+  + Field:        ao [F
+    Access flags: 0x2
+      = private float[] ao
+  + Field:        ap I
+    Access flags: 0x2
+      = private int ap
+  + Field:        aq [F
+    Access flags: 0x2
+      = private float[] aq
+  + Field:        ar I
+    Access flags: 0x2
+      = private int ar
+  + Field:        as I
+    Access flags: 0x2
+      = private int as
+  + Field:        at I
+    Access flags: 0x2
+      = private int at
+  + Field:        au I
+    Access flags: 0x2
+      = private int au
+  + Field:        av F
+    Access flags: 0x2
+      = private float av
+
+Methods (count = 17):
+  - Method:       <init>(Landroid/content/Context;)V
+    Access flags: 0x1
+      = public a(android.content.Context)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 1196, locals = 15, stack = 7):
+      [0] aload_0 v0
+      [1] invokespecial #278
+        + Methodref [java/lang/Object.<init> ()V]
+      [4] aload_0 v0
+      [5] sipush 3000
+      [8] putfield #148
+        + Fieldref [com/oocit/particlify/a.a I]
+      [11] aload_0 v0
+      [12] ldc #14
+        + Integer [200000]
+      [14] putfield #171
+        + Fieldref [com/oocit/particlify/a.b I]
+      [17] aload_0 v0
+      [18] bipush 60
+      [20] putfield #172
+        + Fieldref [com/oocit/particlify/a.c I]
+      [23] aload_0 v0
+      [24] bipush 12
+      [26] putfield #173
+        + Fieldref [com/oocit/particlify/a.d I]
+      [29] aload_0 v0
+      [30] sipush 150
+      [33] putfield #174
+        + Fieldref [com/oocit/particlify/a.e I]
+      [36] aload_0 v0
+      [37] iconst_0
+      [38] putfield #175
+        + Fieldref [com/oocit/particlify/a.f I]
+      [41] aload_0 v0
+      [42] iconst_1
+      [43] putfield #176
+        + Fieldref [com/oocit/particlify/a.g I]
+      [46] aload_0 v0
+      [47] bipush 16
+      [49] newarray 6
+      [51] putfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [54] aload_0 v0
+      [55] bipush 16
+      [57] newarray 6
+      [59] putfield #181
+        + Fieldref [com/oocit/particlify/a.l [F]
+      [62] aload_0 v0
+      [63] bipush 16
+      [65] newarray 6
+      [67] putfield #182
+        + Fieldref [com/oocit/particlify/a.m [F]
+      [70] aload_0 v0
+      [71] bipush 16
+      [73] newarray 6
+      [75] putfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [78] aload_0 v0
+      [79] iconst_4
+      [80] putfield #184
+        + Fieldref [com/oocit/particlify/a.o I]
+      [83] aload_0 v0
+      [84] bipush 28
+      [86] putfield #185
+        + Fieldref [com/oocit/particlify/a.p I]
+      [89] aload_0 v0
+      [90] iconst_0
+      [91] putfield #186
+        + Fieldref [com/oocit/particlify/a.q I]
+      [94] aload_0 v0
+      [95] iconst_3
+      [96] putfield #187
+        + Fieldref [com/oocit/particlify/a.r I]
+      [99] aload_0 v0
+      [100] iconst_3
+      [101] putfield #188
+        + Fieldref [com/oocit/particlify/a.s I]
+      [104] aload_0 v0
+      [105] iconst_4
+      [106] putfield #189
+        + Fieldref [com/oocit/particlify/a.t I]
+      [109] aload_0 v0
+      [110] bipush 12
+      [112] putfield #193
+        + Fieldref [com/oocit/particlify/a.x I]
+      [115] aload_0 v0
+      [116] iconst_0
+      [117] putfield #194
+        + Fieldref [com/oocit/particlify/a.y I]
+      [120] aload_0 v0
+      [121] iconst_3
+      [122] putfield #195
+        + Fieldref [com/oocit/particlify/a.z I]
+      [125] aload_0 v0
+      [126] bipush 20
+      [128] putfield #126
+        + Fieldref [com/oocit/particlify/a.E I]
+      [131] aload_0 v0
+      [132] iconst_0
+      [133] putfield #127
+        + Fieldref [com/oocit/particlify/a.F I]
+      [136] aload_0 v0
+      [137] iconst_3
+      [138] putfield #128
+        + Fieldref [com/oocit/particlify/a.G I]
+      [141] aload_0 v0
+      [142] iconst_3
+      [143] putfield #129
+        + Fieldref [com/oocit/particlify/a.H I]
+      [146] aload_0 v0
+      [147] iconst_2
+      [148] putfield #130
+        + Fieldref [com/oocit/particlify/a.I I]
+      [151] aload_0 v0
+      [152] fconst_0
+      [153] putfield #138
+        + Fieldref [com/oocit/particlify/a.Q F]
+      [156] aload_0 v0
+      [157] fconst_0
+      [158] putfield #142
+        + Fieldref [com/oocit/particlify/a.U F]
+      [161] aload_0 v0
+      [162] fconst_0
+      [163] putfield #143
+        + Fieldref [com/oocit/particlify/a.V F]
+      [166] aload_0 v0
+      [167] fconst_0
+      [168] putfield #144
+        + Fieldref [com/oocit/particlify/a.W F]
+      [171] aload_0 v0
+      [172] ldc #24
+        + Float [0.1]
+      [174] putfield #145
+        + Fieldref [com/oocit/particlify/a.X F]
+      [177] aload_0 v0
+      [178] fconst_0
+      [179] putfield #146
+        + Fieldref [com/oocit/particlify/a.Y F]
+      [182] aload_0 v0
+      [183] fconst_0
+      [184] putfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [187] aload_0 v0
+      [188] fconst_0
+      [189] putfield #149
+        + Fieldref [com/oocit/particlify/a.aa F]
+      [192] aload_0 v0
+      [193] iconst_4
+      [194] putfield #156
+        + Fieldref [com/oocit/particlify/a.ah I]
+      [197] aload_0 v0
+      [198] iconst_2
+      [199] putfield #157
+        + Fieldref [com/oocit/particlify/a.ai I]
+      [202] aload_0 v0
+      [203] bipush 20
+      [205] putfield #158
+        + Fieldref [com/oocit/particlify/a.aj I]
+      [208] aload_0 v0
+      [209] iconst_4
+      [210] putfield #159
+        + Fieldref [com/oocit/particlify/a.ak I]
+      [213] aload_0 v0
+      [214] aload_0 v0
+      [215] getfield #175
+        + Fieldref [com/oocit/particlify/a.f I]
+      [218] putfield #167
+        + Fieldref [com/oocit/particlify/a.as I]
+      [221] aload_0 v0
+      [222] fconst_0
+      [223] putfield #170
+        + Fieldref [com/oocit/particlify/a.av F]
+      [226] aload_0 v0
+      [227] aload_1 v1
+      [228] putfield #155
+        + Fieldref [com/oocit/particlify/a.ag Landroid/content/Context;]
+      [231] iconst_0
+      [232] istore_2 v2
+      [233] aload_0 v0
+      [234] aload_0 v0
+      [235] getfield #148
+        + Fieldref [com/oocit/particlify/a.a I]
+      [238] bipush 7
+      [240] imul
+      [241] iconst_2
+      [242] imul
+      [243] newarray 6
+      [245] putfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [248] aload_0 v0
+      [249] aload_0 v0
+      [250] getfield #148
+        + Fieldref [com/oocit/particlify/a.a I]
+      [253] iconst_3
+      [254] imul
+      [255] newarray 6
+      [257] putfield #137
+        + Fieldref [com/oocit/particlify/a.P [F]
+      [260] bipush 20
+      [262] newarray 6
+      [264] dup
+      [265] iconst_0
+      [266] ldc #21
+        + Float [-1.0]
+      [268] fastore
+      [269] dup
+      [270] iconst_1
+      [271] fconst_1
+      [272] fastore
+      [273] dup
+      [274] iconst_2
+      [275] fconst_0
+      [276] fastore
+      [277] dup
+      [278] iconst_3
+      [279] fconst_0
+      [280] fastore
+      [281] dup
+      [282] iconst_4
+      [283] fconst_1
+      [284] fastore
+      [285] dup
+      [286] iconst_5
+      [287] ldc #21
+        + Float [-1.0]
+      [289] fastore
+      [290] dup
+      [291] bipush 6
+      [293] ldc #21
+        + Float [-1.0]
+      [295] fastore
+      [296] dup
+      [297] bipush 7
+      [299] fconst_0
+      [300] fastore
+      [301] dup
+      [302] bipush 8
+      [304] fconst_0
+      [305] fastore
+      [306] dup
+      [307] bipush 9
+      [309] fconst_0
+      [310] fastore
+      [311] dup
+      [312] bipush 10
+      [314] fconst_1
+      [315] fastore
+      [316] dup
+      [317] bipush 11
+      [319] fconst_1
+      [320] fastore
+      [321] dup
+      [322] bipush 12
+      [324] fconst_0
+      [325] fastore
+      [326] dup
+      [327] bipush 13
+      [329] fconst_1
+      [330] fastore
+      [331] dup
+      [332] bipush 14
+      [334] fconst_1
+      [335] fastore
+      [336] dup
+      [337] bipush 15
+      [339] fconst_1
+      [340] fastore
+      [341] dup
+      [342] bipush 16
+      [344] ldc #21
+        + Float [-1.0]
+      [346] fastore
+      [347] dup
+      [348] bipush 17
+      [350] fconst_0
+      [351] fastore
+      [352] dup
+      [353] bipush 18
+      [355] fconst_1
+      [356] fastore
+      [357] dup
+      [358] bipush 19
+      [360] fconst_0
+      [361] fastore
+      [362] astore_3 v3
+      [363] aload_0 v0
+      [364] getfield #171
+        + Fieldref [com/oocit/particlify/a.b I]
+      [367] i2f
+      [368] aload_0 v0
+      [369] getfield #148
+        + Fieldref [com/oocit/particlify/a.a I]
+      [372] i2f
+      [373] fdiv
+      [374] fstore v4
+      [376] iconst_2
+      [377] anewarray #78
+        + Class [[F]
+      [380] dup
+      [381] iconst_0
+      [382] iconst_4
+      [383] newarray 6
+      [385] dup
+      [386] iconst_0
+      [387] fconst_1
+      [388] fastore
+      [389] dup
+      [390] iconst_1
+      [391] fconst_1
+      [392] fastore
+      [393] dup
+      [394] iconst_2
+      [395] fconst_1
+      [396] fastore
+      [397] dup
+      [398] iconst_3
+      [399] fconst_1
+      [400] fastore
+      [401] aastore
+      [402] dup
+      [403] iconst_1
+      [404] iconst_4
+      [405] newarray 6
+      [407] dup
+      [408] iconst_0
+      [409] fconst_0
+      [410] fastore
+      [411] dup
+      [412] iconst_1
+      [413] fconst_0
+      [414] fastore
+      [415] dup
+      [416] iconst_2
+      [417] fconst_0
+      [418] fastore
+      [419] dup
+      [420] iconst_3
+      [421] fconst_1
+      [422] fastore
+      [423] aastore
+      [424] astore v5
+      [426] aload_0 v0
+      [427] new #109
+        + Class [java/util/Random]
+      [430] dup
+      [431] ldc2_w #113
+        + Long [1337]
+      [434] invokespecial #292
+        + Methodref [java/util/Random.<init> (J)V]
+      [437] putfield #154
+        + Fieldref [com/oocit/particlify/a.af Ljava/util/Random;]
+      [440] fconst_0
+      [441] fstore v6
+      [443] iconst_0
+      [444] istore v7
+      [446] goto +307 (target=753)
+      [449] iload v7
+      [451] bipush 7
+      [453] imul
+      [454] iconst_2
+      [455] imul
+      [456] istore_2 v2
+      [457] fload v6
+      [459] aload_0 v0
+      [460] getfield #154
+        + Fieldref [com/oocit/particlify/a.af Ljava/util/Random;]
+      [463] invokevirtual #293
+        + Methodref [java/util/Random.nextFloat ()F]
+      [466] ldc #41
+        + Float [20.0]
+      [468] fmul
+      [469] fadd
+      [470] ldc #39
+        + Float [10.0]
+      [472] fsub
+      [473] fstore v8
+      [475] iload v7
+      [477] i2f
+      [478] fload v4
+      [480] fmul
+      [481] fstore v9
+      [483] fload v8
+      [485] fstore v6
+      [487] aload_0 v0
+      [488] getfield #172
+        + Fieldref [com/oocit/particlify/a.c I]
+      [491] i2f
+      [492] fstore v10
+      [494] iconst_3
+      [495] newarray 6
+      [497] dup
+      [498] iconst_0
+      [499] fconst_0
+      [500] fastore
+      [501] dup
+      [502] iconst_1
+      [503] fconst_1
+      [504] fastore
+      [505] dup
+      [506] iconst_2
+      [507] fconst_0
+      [508] fastore
+      [509] astore v11
+      [511] aload v11
+      [513] invokestatic #264
+        + Methodref [com/oocit/particlify/a.a ([F)V]
+      [516] aload v5
+      [518] iload v7
+      [520] aload v5
+      [522] arraylength
+      [523] irem
+      [524] aaload
+      [525] iconst_0
+      [526] faload
+      [527] fstore v12
+      [529] aload v5
+      [531] iload v7
+      [533] aload v5
+      [535] arraylength
+      [536] irem
+      [537] aaload
+      [538] iconst_1
+      [539] faload
+      [540] fstore v13
+      [542] aload v5
+      [544] iload v7
+      [546] aload v5
+      [548] arraylength
+      [549] irem
+      [550] aaload
+      [551] iconst_2
+      [552] faload
+      [553] fstore v14
+      [555] aload_0 v0
+      [556] getfield #137
+        + Fieldref [com/oocit/particlify/a.P [F]
+      [559] iload v7
+      [561] iconst_3
+      [562] imul
+      [563] iconst_0
+      [564] iadd
+      [565] aload v11
+      [567] iconst_0
+      [568] faload
+      [569] fastore
+      [570] aload_0 v0
+      [571] getfield #137
+        + Fieldref [com/oocit/particlify/a.P [F]
+      [574] iload v7
+      [576] iconst_3
+      [577] imul
+      [578] iconst_1
+      [579] iadd
+      [580] aload v11
+      [582] iconst_1
+      [583] faload
+      [584] fastore
+      [585] aload_0 v0
+      [586] getfield #137
+        + Fieldref [com/oocit/particlify/a.P [F]
+      [589] iload v7
+      [591] iconst_3
+      [592] imul
+      [593] iconst_2
+      [594] iadd
+      [595] aload v11
+      [597] iconst_2
+      [598] faload
+      [599] fastore
+      [600] aload_0 v0
+      [601] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [604] iload_2 v2
+      [605] iconst_0
+      [606] iadd
+      [607] aload_0 v0
+      [608] getfield #172
+        + Fieldref [com/oocit/particlify/a.c I]
+      [611] ineg
+      [612] i2f
+      [613] fastore
+      [614] aload_0 v0
+      [615] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [618] iload_2 v2
+      [619] iconst_1
+      [620] iadd
+      [621] fload v8
+      [623] fastore
+      [624] aload_0 v0
+      [625] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [628] iload_2 v2
+      [629] iconst_2
+      [630] iadd
+      [631] fload v9
+      [633] fastore
+      [634] aload_0 v0
+      [635] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [638] iload_2 v2
+      [639] iconst_3
+      [640] iadd
+      [641] fload v12
+      [643] fastore
+      [644] aload_0 v0
+      [645] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [648] iload_2 v2
+      [649] iconst_4
+      [650] iadd
+      [651] fload v13
+      [653] fastore
+      [654] aload_0 v0
+      [655] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [658] iload_2 v2
+      [659] iconst_5
+      [660] iadd
+      [661] fload v14
+      [663] fastore
+      [664] aload_0 v0
+      [665] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [668] iload_2 v2
+      [669] bipush 6
+      [671] iadd
+      [672] fconst_1
+      [673] fastore
+      [674] iinc v2, 7
+      [677] aload_0 v0
+      [678] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [681] iload_2 v2
+      [682] iconst_0
+      [683] iadd
+      [684] aload_0 v0
+      [685] getfield #172
+        + Fieldref [com/oocit/particlify/a.c I]
+      [688] i2f
+      [689] fastore
+      [690] aload_0 v0
+      [691] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [694] iload_2 v2
+      [695] iconst_1
+      [696] iadd
+      [697] fload v8
+      [699] fastore
+      [700] aload_0 v0
+      [701] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [704] iload_2 v2
+      [705] iconst_2
+      [706] iadd
+      [707] fload v9
+      [709] fastore
+      [710] aload_0 v0
+      [711] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [714] iload_2 v2
+      [715] iconst_3
+      [716] iadd
+      [717] fload v12
+      [719] fastore
+      [720] aload_0 v0
+      [721] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [724] iload_2 v2
+      [725] iconst_4
+      [726] iadd
+      [727] fload v13
+      [729] fastore
+      [730] aload_0 v0
+      [731] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [734] iload_2 v2
+      [735] iconst_5
+      [736] iadd
+      [737] fload v14
+      [739] fastore
+      [740] aload_0 v0
+      [741] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [744] iload_2 v2
+      [745] bipush 6
+      [747] iadd
+      [748] fconst_1
+      [749] fastore
+      [750] iinc v7, 1
+      [753] iload v7
+      [755] aload_0 v0
+      [756] getfield #148
+        + Fieldref [com/oocit/particlify/a.a I]
+      [759] ificmplt -310 (target=449)
+      [762] bipush 30
+      [764] newarray 6
+      [766] dup
+      [767] iconst_0
+      [768] fconst_0
+      [769] fastore
+      [770] dup
+      [771] iconst_1
+      [772] ldc #42
+        + Float [25.0]
+      [774] fastore
+      [775] dup
+      [776] iconst_2
+      [777] fconst_0
+      [778] fastore
+      [779] dup
+      [780] iconst_3
+      [781] fconst_0
+      [782] fastore
+      [783] dup
+      [784] iconst_4
+      [785] ldc #20
+        + Float [-5.0]
+      [787] fastore
+      [788] dup
+      [789] iconst_5
+      [790] fconst_0
+      [791] fastore
+      [792] dup
+      [793] bipush 6
+      [795] ldc #39
+        + Float [10.0]
+      [797] fastore
+      [798] dup
+      [799] bipush 7
+      [801] ldc #42
+        + Float [25.0]
+      [803] fastore
+      [804] dup
+      [805] bipush 8
+      [807] fconst_0
+      [808] fastore
+      [809] dup
+      [810] bipush 9
+      [812] ldc #39
+        + Float [10.0]
+      [814] fastore
+      [815] dup
+      [816] bipush 10
+      [818] ldc #20
+        + Float [-5.0]
+      [820] fastore
+      [821] dup
+      [822] bipush 11
+      [824] fconst_0
+      [825] fastore
+      [826] dup
+      [827] bipush 12
+      [829] ldc #39
+        + Float [10.0]
+      [831] fastore
+      [832] dup
+      [833] bipush 13
+      [835] ldc #42
+        + Float [25.0]
+      [837] fastore
+      [838] dup
+      [839] bipush 14
+      [841] ldc #39
+        + Float [10.0]
+      [843] fastore
+      [844] dup
+      [845] bipush 15
+      [847] ldc #39
+        + Float [10.0]
+      [849] fastore
+      [850] dup
+      [851] bipush 16
+      [853] ldc #20
+        + Float [-5.0]
+      [855] fastore
+      [856] dup
+      [857] bipush 17
+      [859] ldc #39
+        + Float [10.0]
+      [861] fastore
+      [862] dup
+      [863] bipush 18
+      [865] fconst_0
+      [866] fastore
+      [867] dup
+      [868] bipush 19
+      [870] ldc #42
+        + Float [25.0]
+      [872] fastore
+      [873] dup
+      [874] bipush 20
+      [876] ldc #39
+        + Float [10.0]
+      [878] fastore
+      [879] dup
+      [880] bipush 21
+      [882] fconst_0
+      [883] fastore
+      [884] dup
+      [885] bipush 22
+      [887] ldc #20
+        + Float [-5.0]
+      [889] fastore
+      [890] dup
+      [891] bipush 23
+      [893] ldc #39
+        + Float [10.0]
+      [895] fastore
+      [896] dup
+      [897] bipush 24
+      [899] fconst_0
+      [900] fastore
+      [901] dup
+      [902] bipush 25
+      [904] ldc #42
+        + Float [25.0]
+      [906] fastore
+      [907] dup
+      [908] bipush 26
+      [910] fconst_0
+      [911] fastore
+      [912] dup
+      [913] bipush 27
+      [915] fconst_0
+      [916] fastore
+      [917] dup
+      [918] bipush 28
+      [920] ldc #20
+        + Float [-5.0]
+      [922] fastore
+      [923] dup
+      [924] bipush 29
+      [926] fconst_0
+      [927] fastore
+      [928] astore v7
+      [930] aload_0 v0
+      [931] aload_0 v0
+      [932] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [935] arraylength
+      [936] iconst_4
+      [937] imul
+      [938] invokestatic #286
+        + Methodref [java/nio/ByteBuffer.allocateDirect (I)Ljava/nio/ByteBuffer;]
+      [941] invokestatic #289
+        + Methodref [java/nio/ByteOrder.nativeOrder ()Ljava/nio/ByteOrder;]
+      [944] invokevirtual #288
+        + Methodref [java/nio/ByteBuffer.order (Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;]
+      [947] invokevirtual #287
+        + Methodref [java/nio/ByteBuffer.asFloatBuffer ()Ljava/nio/FloatBuffer;]
+      [950] putfield #177
+        + Fieldref [com/oocit/particlify/a.h Ljava/nio/FloatBuffer;]
+      [953] aload_0 v0
+      [954] getfield #177
+        + Fieldref [com/oocit/particlify/a.h Ljava/nio/FloatBuffer;]
+      [957] aload_0 v0
+      [958] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [961] invokevirtual #291
+        + Methodref [java/nio/FloatBuffer.put ([F)Ljava/nio/FloatBuffer;]
+      [964] iconst_0
+      [965] invokevirtual #290
+        + Methodref [java/nio/FloatBuffer.position (I)Ljava/nio/Buffer;]
+      [968] pop
+      [969] aload_0 v0
+      [970] aload_3 v3
+      [971] arraylength
+      [972] iconst_4
+      [973] imul
+      [974] invokestatic #286
+        + Methodref [java/nio/ByteBuffer.allocateDirect (I)Ljava/nio/ByteBuffer;]
+      [977] invokestatic #289
+        + Methodref [java/nio/ByteOrder.nativeOrder ()Ljava/nio/ByteOrder;]
+      [980] invokevirtual #288
+        + Methodref [java/nio/ByteBuffer.order (Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;]
+      [983] invokevirtual #287
+        + Methodref [java/nio/ByteBuffer.asFloatBuffer ()Ljava/nio/FloatBuffer;]
+      [986] putfield #178
+        + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+      [989] aload_0 v0
+      [990] getfield #178
+        + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+      [993] aload_3 v3
+      [994] invokevirtual #291
+        + Methodref [java/nio/FloatBuffer.put ([F)Ljava/nio/FloatBuffer;]
+      [997] iconst_0
+      [998] invokevirtual #290
+        + Methodref [java/nio/FloatBuffer.position (I)Ljava/nio/Buffer;]
+      [1001] pop
+      [1002] aload_0 v0
+      [1003] aload_0 v0
+      [1004] getfield #174
+        + Fieldref [com/oocit/particlify/a.e I]
+      [1007] iconst_3
+      [1008] imul
+      [1009] newarray 6
+      [1011] putfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [1014] aload_0 v0
+      [1015] aload_0 v0
+      [1016] getfield #174
+        + Fieldref [com/oocit/particlify/a.e I]
+      [1019] iconst_3
+      [1020] imul
+      [1021] newarray 6
+      [1023] putfield #161
+        + Fieldref [com/oocit/particlify/a.am [F]
+      [1026] iconst_0
+      [1027] istore v8
+      [1029] goto +18 (target=1047)
+      [1032] aload_0 v0
+      [1033] iload v8
+      [1035] invokespecial #266
+        + Methodref [com/oocit/particlify/a.b (I)V]
+      [1038] aload_0 v0
+      [1039] iload v8
+      [1041] invokespecial #268
+        + Methodref [com/oocit/particlify/a.c (I)V]
+      [1044] iinc v8, 1
+      [1047] iload v8
+      [1049] aload_0 v0
+      [1050] getfield #174
+        + Fieldref [com/oocit/particlify/a.e I]
+      [1053] ificmplt -21 (target=1032)
+      [1056] aload_0 v0
+      [1057] aload v7
+      [1059] arraylength
+      [1060] iconst_4
+      [1061] imul
+      [1062] invokestatic #286
+        + Methodref [java/nio/ByteBuffer.allocateDirect (I)Ljava/nio/ByteBuffer;]
+      [1065] invokestatic #289
+        + Methodref [java/nio/ByteOrder.nativeOrder ()Ljava/nio/ByteOrder;]
+      [1068] invokevirtual #288
+        + Methodref [java/nio/ByteBuffer.order (Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;]
+      [1071] invokevirtual #287
+        + Methodref [java/nio/ByteBuffer.asFloatBuffer ()Ljava/nio/FloatBuffer;]
+      [1074] putfield #179
+        + Fieldref [com/oocit/particlify/a.j Ljava/nio/FloatBuffer;]
+      [1077] aload_0 v0
+      [1078] getfield #179
+        + Fieldref [com/oocit/particlify/a.j Ljava/nio/FloatBuffer;]
+      [1081] aload v7
+      [1083] invokevirtual #291
+        + Methodref [java/nio/FloatBuffer.put ([F)Ljava/nio/FloatBuffer;]
+      [1086] iconst_0
+      [1087] invokevirtual #290
+        + Methodref [java/nio/FloatBuffer.position (I)Ljava/nio/Buffer;]
+      [1090] pop
+      [1091] aload_0 v0
+      [1092] aload_0 v0
+      [1093] getfield #148
+        + Fieldref [com/oocit/particlify/a.a I]
+      [1096] newarray 6
+      [1098] putfield #162
+        + Fieldref [com/oocit/particlify/a.an [F]
+      [1101] aload_0 v0
+      [1102] aload_0 v0
+      [1103] getfield #148
+        + Fieldref [com/oocit/particlify/a.a I]
+      [1106] newarray 6
+      [1108] putfield #163
+        + Fieldref [com/oocit/particlify/a.ao [F]
+      [1111] iconst_0
+      [1112] istore v8
+      [1114] goto +47 (target=1161)
+      [1117] aload_0 v0
+      [1118] getfield #162
+        + Fieldref [com/oocit/particlify/a.an [F]
+      [1121] iload v8
+      [1123] aload_0 v0
+      [1124] getfield #154
+        + Fieldref [com/oocit/particlify/a.af Ljava/util/Random;]
+      [1127] invokevirtual #293
+        + Methodref [java/util/Random.nextFloat ()F]
+      [1130] ldc #40
+        + Float [12.0]
+      [1132] fmul
+      [1133] ldc #35
+        + Float [6.0]
+      [1135] fsub
+      [1136] ldc #28
+        + Float [0.5]
+      [1138] fsub
+      [1139] fastore
+      [1140] aload_0 v0
+      [1141] getfield #163
+        + Fieldref [com/oocit/particlify/a.ao [F]
+      [1144] iload v8
+      [1146] aload_0 v0
+      [1147] getfield #154
+        + Fieldref [com/oocit/particlify/a.af Ljava/util/Random;]
+      [1150] invokevirtual #293
+        + Methodref [java/util/Random.nextFloat ()F]
+      [1153] fconst_2
+      [1154] fmul
+      [1155] fconst_1
+      [1156] fadd
+      [1157] fastore
+      [1158] iinc v8, 1
+      [1161] iload v8
+      [1163] aload_0 v0
+      [1164] getfield #148
+        + Fieldref [com/oocit/particlify/a.a I]
+      [1167] ificmplt -50 (target=1117)
+      [1170] aload_0 v0
+      [1171] aload_0 v0
+      [1172] getfield #174
+        + Fieldref [com/oocit/particlify/a.e I]
+      [1175] putfield #164
+        + Fieldref [com/oocit/particlify/a.ap I]
+      [1178] aload_0 v0
+      [1179] aload_0 v0
+      [1180] getfield #174
+        + Fieldref [com/oocit/particlify/a.e I]
+      [1183] iconst_3
+      [1184] imul
+      [1185] newarray 6
+      [1187] putfield #165
+        + Fieldref [com/oocit/particlify/a.aq [F]
+      [1190] aload_0 v0
+      [1191] iconst_0
+      [1192] putfield #166
+        + Fieldref [com/oocit/particlify/a.ar I]
+      [1195] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 6):
+        - [449] Var: [a:com/oocit/particlify/a][a:android/content/Context][i][a:[F][f][a:[[F][f][i], Stack: 
+        - [753] Var: ..., Stack: (empty)
+        - [1032] Var: [a:com/oocit/particlify/a][a:android/content/Context][i][a:[F][f][a:[[F][f][a:[F][i], Stack: 
+        - [1047] Var: ..., Stack: (empty)
+        - [1117] Var: ..., Stack: (empty)
+        - [1161] Var: ..., Stack: (empty)
+  + Method:       b(I)V
+    Access flags: 0x2
+      = private void b(int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 74, locals = 2, stack = 4):
+      [0] aload_0 v0
+      [1] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [4] iload_1 v1
+      [5] iconst_3
+      [6] imul
+      [7] iconst_0
+      [8] iadd
+      [9] aload_0 v0
+      [10] getfield #154
+        + Fieldref [com/oocit/particlify/a.af Ljava/util/Random;]
+      [13] invokevirtual #293
+        + Methodref [java/util/Random.nextFloat ()F]
+      [16] ldc #33
+        + Float [4.0]
+      [18] fmul
+      [19] fconst_2
+      [20] fsub
+      [21] fastore
+      [22] aload_0 v0
+      [23] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [26] iload_1 v1
+      [27] iconst_3
+      [28] imul
+      [29] iconst_1
+      [30] iadd
+      [31] aload_0 v0
+      [32] getfield #154
+        + Fieldref [com/oocit/particlify/a.af Ljava/util/Random;]
+      [35] invokevirtual #293
+        + Methodref [java/util/Random.nextFloat ()F]
+      [38] ldc #33
+        + Float [4.0]
+      [40] fmul
+      [41] fconst_2
+      [42] fsub
+      [43] fastore
+      [44] aload_0 v0
+      [45] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [48] iload_1 v1
+      [49] iconst_3
+      [50] imul
+      [51] iconst_2
+      [52] iadd
+      [53] aload_0 v0
+      [54] getfield #154
+        + Fieldref [com/oocit/particlify/a.af Ljava/util/Random;]
+      [57] invokevirtual #293
+        + Methodref [java/util/Random.nextFloat ()F]
+      [60] aload_0 v0
+      [61] getfield #158
+        + Fieldref [com/oocit/particlify/a.aj I]
+      [64] i2f
+      [65] fmul
+      [66] aload_0 v0
+      [67] getfield #159
+        + Fieldref [com/oocit/particlify/a.ak I]
+      [70] i2f
+      [71] fsub
+      [72] fastore
+      [73] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       c(I)V
+    Access flags: 0x2
+      = private void c(int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 61, locals = 2, stack = 4):
+      [0] aload_0 v0
+      [1] getfield #161
+        + Fieldref [com/oocit/particlify/a.am [F]
+      [4] iload_1 v1
+      [5] iconst_3
+      [6] imul
+      [7] iconst_0
+      [8] iadd
+      [9] aload_0 v0
+      [10] getfield #154
+        + Fieldref [com/oocit/particlify/a.af Ljava/util/Random;]
+      [13] invokevirtual #293
+        + Methodref [java/util/Random.nextFloat ()F]
+      [16] ldc #24
+        + Float [0.1]
+      [18] fmul
+      [19] fastore
+      [20] aload_0 v0
+      [21] getfield #161
+        + Fieldref [com/oocit/particlify/a.am [F]
+      [24] iload_1 v1
+      [25] iconst_3
+      [26] imul
+      [27] iconst_1
+      [28] iadd
+      [29] aload_0 v0
+      [30] getfield #154
+        + Fieldref [com/oocit/particlify/a.af Ljava/util/Random;]
+      [33] invokevirtual #293
+        + Methodref [java/util/Random.nextFloat ()F]
+      [36] ldc #24
+        + Float [0.1]
+      [38] fmul
+      [39] fastore
+      [40] aload_0 v0
+      [41] getfield #161
+        + Fieldref [com/oocit/particlify/a.am [F]
+      [44] iload_1 v1
+      [45] iconst_3
+      [46] imul
+      [47] iconst_2
+      [48] iadd
+      [49] aload_0 v0
+      [50] getfield #154
+        + Fieldref [com/oocit/particlify/a.af Ljava/util/Random;]
+      [53] invokevirtual #293
+        + Methodref [java/util/Random.nextFloat ()F]
+      [56] ldc #24
+        + Float [0.1]
+      [58] fmul
+      [59] fastore
+      [60] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(Landroid/view/InputDevice;)V
+    Access flags: 0x1
+      = public void a(android.view.InputDevice)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 6, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #139
+        + Fieldref [com/oocit/particlify/a.R Landroid/view/InputDevice;]
+      [5] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a([F)V
+    Access flags: 0x1a
+      = private static final void a(float[])
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 61, locals = 2, stack = 4):
+      [0] aload_0 v0
+      [1] iconst_0
+      [2] faload
+      [3] aload_0 v0
+      [4] iconst_0
+      [5] faload
+      [6] fmul
+      [7] aload_0 v0
+      [8] iconst_1
+      [9] faload
+      [10] aload_0 v0
+      [11] iconst_1
+      [12] faload
+      [13] fmul
+      [14] fadd
+      [15] aload_0 v0
+      [16] iconst_2
+      [17] faload
+      [18] aload_0 v0
+      [19] iconst_2
+      [20] faload
+      [21] fmul
+      [22] fadd
+      [23] f2d
+      [24] invokestatic #277
+        + Methodref [java/lang/Math.sqrt (D)D]
+      [27] d2f
+      [28] fstore_1 v1
+      [29] fload_1 v1
+      [30] fconst_0
+      [31] fcmpl
+      [32] ifeq +28 (target=60)
+      [35] fconst_1
+      [36] fload_1 v1
+      [37] fdiv
+      [38] fstore_1 v1
+      [39] aload_0 v0
+      [40] iconst_0
+      [41] dup2
+      [42] faload
+      [43] fload_1 v1
+      [44] fmul
+      [45] fastore
+      [46] aload_0 v0
+      [47] iconst_1
+      [48] dup2
+      [49] faload
+      [50] fload_1 v1
+      [51] fmul
+      [52] fastore
+      [53] aload_0 v0
+      [54] iconst_2
+      [55] dup2
+      [56] faload
+      [57] fload_1 v1
+      [58] fmul
+      [59] fastore
+      [60] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [60] Var: ...[f], Stack: (empty)
+  + Method:       onSurfaceChanged(Ljavax/microedition/khronos/opengles/GL10;II)V
+    Access flags: 0x1
+      = public void onSurfaceChanged(javax.microedition.khronos.opengles.GL10,int,int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 31, locals = 5, stack = 6):
+      [0] iconst_0
+      [1] iconst_0
+      [2] iload_2 v2
+      [3] iload_3 v3
+      [4] invokestatic #247
+        + Methodref [android/opengl/GLES20.glViewport (IIII)V]
+      [7] iload_2 v2
+      [8] i2f
+      [9] iload_3 v3
+      [10] i2f
+      [11] fdiv
+      [12] fstore v4
+      [14] aload_0 v0
+      [15] getfield #182
+        + Fieldref [com/oocit/particlify/a.m [F]
+      [18] iconst_0
+      [19] ldc #43
+        + Float [45.0]
+      [21] fload v4
+      [23] ldc #22
+        + Float [0.01]
+      [25] ldc #53
+        + Float [50000.0]
+      [27] invokestatic #250
+        + Methodref [android/opengl/Matrix.perspectiveM ([FIFFFF)V]
+      [30] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onSurfaceCreated(Ljavax/microedition/khronos/opengles/GL10;Ljavax/microedition/khronos/egl/EGLConfig;)V
+    Access flags: 0x1
+      = public void onSurfaceCreated(javax.microedition.khronos.opengles.GL10,javax.microedition.khronos.egl.EGLConfig)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 337, locals = 11, stack = 7):
+      [0] ldc #28
+        + Float [0.5]
+      [2] ldc #28
+        + Float [0.5]
+      [4] ldc #28
+        + Float [0.5]
+      [6] ldc #28
+        + Float [0.5]
+      [8] invokestatic #223
+        + Methodref [android/opengl/GLES20.glClearColor (FFFF)V]
+      [11] aload_0 v0
+      [12] ldc #74
+        + String [track.vs]
+      [14] invokespecial #267
+        + Methodref [com/oocit/particlify/a.b (Ljava/lang/String;)Ljava/lang/String;]
+      [17] astore_3 v3
+      [18] aload_0 v0
+      [19] ldc #73
+        + String [track.fs]
+      [21] invokespecial #267
+        + Methodref [com/oocit/particlify/a.b (Ljava/lang/String;)Ljava/lang/String;]
+      [24] astore v4
+      [26] aload_0 v0
+      [27] aload_3 v3
+      [28] aload v4
+      [30] iconst_2
+      [31] anewarray #102
+        + Class [java/lang/String]
+      [34] dup
+      [35] iconst_0
+      [36] ldc #65
+        + String [a_Position]
+      [38] aastore
+      [39] dup
+      [40] iconst_1
+      [41] ldc #64
+        + String [a_Color]
+      [43] aastore
+      [44] invokestatic #263
+        + Methodref [com/oocit/particlify/a.a (Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I]
+      [47] putfield #150
+        + Fieldref [com/oocit/particlify/a.ab I]
+      [50] aload_0 v0
+      [51] aload_0 v0
+      [52] getfield #150
+        + Fieldref [com/oocit/particlify/a.ab I]
+      [55] ldc #75
+        + String [u_MVPMatrix]
+      [57] invokestatic #239
+        + Methodref [android/opengl/GLES20.glGetUniformLocation (ILjava/lang/String;)I]
+      [60] putfield #190
+        + Fieldref [com/oocit/particlify/a.u I]
+      [63] aload_0 v0
+      [64] aload_0 v0
+      [65] getfield #150
+        + Fieldref [com/oocit/particlify/a.ab I]
+      [68] ldc #65
+        + String [a_Position]
+      [70] invokestatic #235
+        + Methodref [android/opengl/GLES20.glGetAttribLocation (ILjava/lang/String;)I]
+      [73] putfield #191
+        + Fieldref [com/oocit/particlify/a.v I]
+      [76] aload_0 v0
+      [77] aload_0 v0
+      [78] getfield #150
+        + Fieldref [com/oocit/particlify/a.ab I]
+      [81] ldc #64
+        + String [a_Color]
+      [83] invokestatic #235
+        + Methodref [android/opengl/GLES20.glGetAttribLocation (ILjava/lang/String;)I]
+      [86] putfield #192
+        + Fieldref [com/oocit/particlify/a.w I]
+      [89] aload_0 v0
+      [90] ldc #72
+        + String [particle.vs]
+      [92] invokespecial #267
+        + Methodref [com/oocit/particlify/a.b (Ljava/lang/String;)Ljava/lang/String;]
+      [95] astore v5
+      [97] aload_0 v0
+      [98] ldc #71
+        + String [particle.fs]
+      [100] invokespecial #267
+        + Methodref [com/oocit/particlify/a.b (Ljava/lang/String;)Ljava/lang/String;]
+      [103] astore v6
+      [105] aload_0 v0
+      [106] aload v5
+      [108] aload v6
+      [110] iconst_2
+      [111] anewarray #102
+        + Class [java/lang/String]
+      [114] dup
+      [115] iconst_0
+      [116] ldc #65
+        + String [a_Position]
+      [118] aastore
+      [119] dup
+      [120] iconst_1
+      [121] ldc #66
+        + String [a_TexCoordinate]
+      [123] aastore
+      [124] invokestatic #263
+        + Methodref [com/oocit/particlify/a.a (Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I]
+      [127] putfield #151
+        + Fieldref [com/oocit/particlify/a.ac I]
+      [130] aload_0 v0
+      [131] aload_0 v0
+      [132] getfield #151
+        + Fieldref [com/oocit/particlify/a.ac I]
+      [135] ldc #75
+        + String [u_MVPMatrix]
+      [137] invokestatic #239
+        + Methodref [android/opengl/GLES20.glGetUniformLocation (ILjava/lang/String;)I]
+      [140] putfield #131
+        + Fieldref [com/oocit/particlify/a.J I]
+      [143] aload_0 v0
+      [144] aload_0 v0
+      [145] getfield #151
+        + Fieldref [com/oocit/particlify/a.ac I]
+      [148] ldc #65
+        + String [a_Position]
+      [150] invokestatic #235
+        + Methodref [android/opengl/GLES20.glGetAttribLocation (ILjava/lang/String;)I]
+      [153] putfield #132
+        + Fieldref [com/oocit/particlify/a.K I]
+      [156] aload_0 v0
+      [157] aload_0 v0
+      [158] getfield #151
+        + Fieldref [com/oocit/particlify/a.ac I]
+      [161] ldc #66
+        + String [a_TexCoordinate]
+      [163] invokestatic #235
+        + Methodref [android/opengl/GLES20.glGetAttribLocation (ILjava/lang/String;)I]
+      [166] putfield #133
+        + Fieldref [com/oocit/particlify/a.L I]
+      [169] aload_0 v0
+      [170] aload_0 v0
+      [171] getfield #151
+        + Fieldref [com/oocit/particlify/a.ac I]
+      [174] ldc #76
+        + String [u_Texture]
+      [176] invokestatic #239
+        + Methodref [android/opengl/GLES20.glGetUniformLocation (ILjava/lang/String;)I]
+      [179] putfield #134
+        + Fieldref [com/oocit/particlify/a.M I]
+      [182] aload_0 v0
+      [183] aload_0 v0
+      [184] invokespecial #260
+        + Methodref [com/oocit/particlify/a.a ()I]
+      [187] putfield #135
+        + Fieldref [com/oocit/particlify/a.N I]
+      [190] aload_0 v0
+      [191] ldc #70
+        + String [obs.vs]
+      [193] invokespecial #267
+        + Methodref [com/oocit/particlify/a.b (Ljava/lang/String;)Ljava/lang/String;]
+      [196] astore v7
+      [198] aload_0 v0
+      [199] ldc #69
+        + String [obs.fs]
+      [201] invokespecial #267
+        + Methodref [com/oocit/particlify/a.b (Ljava/lang/String;)Ljava/lang/String;]
+      [204] astore v8
+      [206] aload_0 v0
+      [207] aload v7
+      [209] aload v8
+      [211] iconst_1
+      [212] anewarray #102
+        + Class [java/lang/String]
+      [215] dup
+      [216] iconst_0
+      [217] ldc #65
+        + String [a_Position]
+      [219] aastore
+      [220] invokestatic #263
+        + Methodref [com/oocit/particlify/a.a (Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I]
+      [223] putfield #152
+        + Fieldref [com/oocit/particlify/a.ad I]
+      [226] aload_0 v0
+      [227] aload_0 v0
+      [228] getfield #152
+        + Fieldref [com/oocit/particlify/a.ad I]
+      [231] ldc #75
+        + String [u_MVPMatrix]
+      [233] invokestatic #239
+        + Methodref [android/opengl/GLES20.glGetUniformLocation (ILjava/lang/String;)I]
+      [236] putfield #122
+        + Fieldref [com/oocit/particlify/a.A I]
+      [239] aload_0 v0
+      [240] aload_0 v0
+      [241] getfield #152
+        + Fieldref [com/oocit/particlify/a.ad I]
+      [244] ldc #65
+        + String [a_Position]
+      [246] invokestatic #235
+        + Methodref [android/opengl/GLES20.glGetAttribLocation (ILjava/lang/String;)I]
+      [249] putfield #123
+        + Fieldref [com/oocit/particlify/a.B I]
+      [252] aload_0 v0
+      [253] ldc #68
+        + String [bar.vs]
+      [255] invokespecial #267
+        + Methodref [com/oocit/particlify/a.b (Ljava/lang/String;)Ljava/lang/String;]
+      [258] astore v9
+      [260] aload_0 v0
+      [261] ldc #67
+        + String [bar.fs]
+      [263] invokespecial #267
+        + Methodref [com/oocit/particlify/a.b (Ljava/lang/String;)Ljava/lang/String;]
+      [266] astore v10
+      [268] aload_0 v0
+      [269] aload v9
+      [271] aload v10
+      [273] iconst_1
+      [274] anewarray #102
+        + Class [java/lang/String]
+      [277] dup
+      [278] iconst_0
+      [279] ldc #65
+        + String [a_Position]
+      [281] aastore
+      [282] invokestatic #263
+        + Methodref [com/oocit/particlify/a.a (Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I]
+      [285] putfield #153
+        + Fieldref [com/oocit/particlify/a.ae I]
+      [288] aload_0 v0
+      [289] aload_0 v0
+      [290] getfield #153
+        + Fieldref [com/oocit/particlify/a.ae I]
+      [293] ldc #75
+        + String [u_MVPMatrix]
+      [295] invokestatic #239
+        + Methodref [android/opengl/GLES20.glGetUniformLocation (ILjava/lang/String;)I]
+      [298] putfield #124
+        + Fieldref [com/oocit/particlify/a.C I]
+      [301] aload_0 v0
+      [302] aload_0 v0
+      [303] getfield #153
+        + Fieldref [com/oocit/particlify/a.ae I]
+      [306] ldc #65
+        + String [a_Position]
+      [308] invokestatic #235
+        + Methodref [android/opengl/GLES20.glGetAttribLocation (ILjava/lang/String;)I]
+      [311] putfield #125
+        + Fieldref [com/oocit/particlify/a.D I]
+      [314] aload_0 v0
+      [315] aload_0 v0
+      [316] ldc #63
+        + String [Press [A] to Play!]
+      [318] invokespecial #262
+        + Methodref [com/oocit/particlify/a.a (Ljava/lang/String;)I]
+      [321] putfield #168
+        + Fieldref [com/oocit/particlify/a.at I]
+      [324] aload_0 v0
+      [325] invokestatic #285
+        + Methodref [java/lang/System.currentTimeMillis ()J]
+      [328] putfield #140
+        + Fieldref [com/oocit/particlify/a.S J]
+      [331] aload_0 v0
+      [332] lconst_0
+      [333] putfield #141
+        + Fieldref [com/oocit/particlify/a.T J]
+      [336] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    Access flags: 0xa
+      = private static int a(java.lang.String,java.lang.String,java.lang.String[])
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 282, locals = 7, stack = 4):
+      [0] ldc #11
+        + Integer [35633]
+      [2] invokestatic #226
+        + Methodref [android/opengl/GLES20.glCreateShader (I)I]
+      [5] istore_3 v3
+      [6] iload_3 v3
+      [7] ifeq +64 (target=71)
+      [10] iload_3 v3
+      [11] aload_0 v0
+      [12] invokestatic #241
+        + Methodref [android/opengl/GLES20.glShaderSource (ILjava/lang/String;)V]
+      [15] iload_3 v3
+      [16] invokestatic #224
+        + Methodref [android/opengl/GLES20.glCompileShader (I)V]
+      [19] iconst_1
+      [20] newarray 10
+      [22] astore v4
+      [24] iload_3 v3
+      [25] ldc #12
+        + Integer [35713]
+      [27] aload v4
+      [29] iconst_0
+      [30] invokestatic #238
+        + Methodref [android/opengl/GLES20.glGetShaderiv (II[II)V]
+      [33] aload v4
+      [35] iconst_0
+      [36] iaload
+      [37] ifne +34 (target=71)
+      [40] ldc #62
+        + String [Particlify]
+      [42] new #103
+        + Class [java/lang/StringBuilder]
+      [45] dup
+      [46] ldc #61
+        + String [Error: ]
+      [48] invokespecial #282
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [51] iload_3 v3
+      [52] invokestatic #237
+        + Methodref [android/opengl/GLES20.glGetShaderInfoLog (I)Ljava/lang/String;]
+      [55] invokevirtual #283
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [58] invokevirtual #284
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [61] invokestatic #256
+        + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+      [64] pop
+      [65] iload_3 v3
+      [66] invokestatic #228
+        + Methodref [android/opengl/GLES20.glDeleteShader (I)V]
+      [69] iconst_0
+      [70] istore_3 v3
+      [71] iload_3 v3
+      [72] ifne +13 (target=85)
+      [75] new #101
+        + Class [java/lang/RuntimeException]
+      [78] dup
+      [79] ldc #58
+        + String [Error creating vertex shader.]
+      [81] invokespecial #279
+        + Methodref [java/lang/RuntimeException.<init> (Ljava/lang/String;)V]
+      [84] athrow
+      [85] ldc #10
+        + Integer [35632]
+      [87] invokestatic #226
+        + Methodref [android/opengl/GLES20.glCreateShader (I)I]
+      [90] istore v4
+      [92] iload v4
+      [94] ifeq +70 (target=164)
+      [97] iload v4
+      [99] aload_1 v1
+      [100] invokestatic #241
+        + Methodref [android/opengl/GLES20.glShaderSource (ILjava/lang/String;)V]
+      [103] iload v4
+      [105] invokestatic #224
+        + Methodref [android/opengl/GLES20.glCompileShader (I)V]
+      [108] iconst_1
+      [109] newarray 10
+      [111] astore v5
+      [113] iload v4
+      [115] ldc #12
+        + Integer [35713]
+      [117] aload v5
+      [119] iconst_0
+      [120] invokestatic #238
+        + Methodref [android/opengl/GLES20.glGetShaderiv (II[II)V]
+      [123] aload v5
+      [125] iconst_0
+      [126] iaload
+      [127] ifne +37 (target=164)
+      [130] ldc #62
+        + String [Particlify]
+      [132] new #103
+        + Class [java/lang/StringBuilder]
+      [135] dup
+      [136] ldc #61
+        + String [Error: ]
+      [138] invokespecial #282
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [141] iload v4
+      [143] invokestatic #237
+        + Methodref [android/opengl/GLES20.glGetShaderInfoLog (I)Ljava/lang/String;]
+      [146] invokevirtual #283
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [149] invokevirtual #284
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [152] invokestatic #256
+        + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+      [155] pop
+      [156] iload v4
+      [158] invokestatic #228
+        + Methodref [android/opengl/GLES20.glDeleteShader (I)V]
+      [161] iconst_0
+      [162] istore v4
+      [164] iload v4
+      [166] ifne +13 (target=179)
+      [169] new #101
+        + Class [java/lang/RuntimeException]
+      [172] dup
+      [173] ldc #56
+        + String [Error creating fragment shader.]
+      [175] invokespecial #279
+        + Methodref [java/lang/RuntimeException.<init> (Ljava/lang/String;)V]
+      [178] athrow
+      [179] invokestatic #225
+        + Methodref [android/opengl/GLES20.glCreateProgram ()I]
+      [182] istore v5
+      [184] iload v5
+      [186] ifeq +51 (target=237)
+      [189] iload v5
+      [191] iload_3 v3
+      [192] invokestatic #218
+        + Methodref [android/opengl/GLES20.glAttachShader (II)V]
+      [195] iload v5
+      [197] iload v4
+      [199] invokestatic #218
+        + Methodref [android/opengl/GLES20.glAttachShader (II)V]
+      [202] iload v5
+      [204] invokestatic #240
+        + Methodref [android/opengl/GLES20.glLinkProgram (I)V]
+      [207] iconst_1
+      [208] newarray 10
+      [210] astore v6
+      [212] iload v5
+      [214] ldc #13
+        + Integer [35714]
+      [216] aload v6
+      [218] iconst_0
+      [219] invokestatic #236
+        + Methodref [android/opengl/GLES20.glGetProgramiv (II[II)V]
+      [222] aload v6
+      [224] iconst_0
+      [225] iaload
+      [226] ifne +11 (target=237)
+      [229] iload v5
+      [231] invokestatic #227
+        + Methodref [android/opengl/GLES20.glDeleteProgram (I)V]
+      [234] iconst_0
+      [235] istore v5
+      [237] iload v5
+      [239] ifne +13 (target=252)
+      [242] new #101
+        + Class [java/lang/RuntimeException]
+      [245] dup
+      [246] ldc #57
+        + String [Error creating program.]
+      [248] invokespecial #279
+        + Methodref [java/lang/RuntimeException.<init> (Ljava/lang/String;)V]
+      [251] athrow
+      [252] iconst_0
+      [253] istore v6
+      [255] goto +17 (target=272)
+      [258] iload v5
+      [260] iload v6
+      [262] aload_2 v2
+      [263] iload v6
+      [265] aaload
+      [266] invokestatic #219
+        + Methodref [android/opengl/GLES20.glBindAttribLocation (IILjava/lang/String;)V]
+      [269] iinc v6, 1
+      [272] iload v6
+      [274] aload_2 v2
+      [275] arraylength
+      [276] ificmplt -18 (target=258)
+      [279] iload v5
+      [281] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 8):
+        - [71] Var: ...[i], Stack: (empty)
+        - [85] Var: ..., Stack: (empty)
+        - [164] Var: ...[i], Stack: (empty)
+        - [179] Var: ..., Stack: (empty)
+        - [237] Var: ...[i], Stack: (empty)
+        - [252] Var: ..., Stack: (empty)
+        - [258] Var: ...[i], Stack: (empty)
+        - [272] Var: ..., Stack: (empty)
+  + Method:       a()I
+    Access flags: 0x2
+      = private int a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 330, locals = 7, stack = 8):
+      [0] iconst_1
+      [1] newarray 10
+      [3] astore_1 v1
+      [4] iconst_1
+      [5] aload_1 v1
+      [6] iconst_0
+      [7] invokestatic #234
+        + Methodref [android/opengl/GLES20.glGenTextures (I[II)V]
+      [10] aload_1 v1
+      [11] iconst_0
+      [12] iaload
+      [13] ifeq +297 (target=310)
+      [16] sipush 1024
+      [19] newarray 10
+      [21] astore_2 v2
+      [22] iconst_0
+      [23] istore_3 v3
+      [24] goto +105 (target=129)
+      [27] iconst_0
+      [28] istore v4
+      [30] goto +89 (target=119)
+      [33] iload_3 v3
+      [34] iload_3 v3
+      [35] imul
+      [36] iload v4
+      [38] iload v4
+      [40] imul
+      [41] iadd
+      [42] i2d
+      [43] ldc2_w #117
+        + Double [2.0]
+      [46] invokestatic #275
+        + Methodref [java/lang/Math.pow (DD)D]
+      [49] d2f
+      [50] ldc #54
+        + Float [202500.0]
+      [52] fdiv
+      [53] fstore v5
+      [55] fload v5
+      [57] f2d
+      [58] ldc2_w #115
+        + Double [0.3]
+      [61] dcmpl
+      [62] ifle +44 (target=106)
+      [65] fload v5
+      [67] ldc #27
+        + Float [0.3]
+      [69] fsub
+      [70] ldc #29
+        + Float [0.7]
+      [72] fdiv
+      [73] fstore v5
+      [75] fload v5
+      [77] ldc #50
+        + Float [192.0]
+      [79] fmul
+      [80] ldc #47
+        + Float [63.0]
+      [82] fadd
+      [83] f2i
+      [84] istore v6
+      [86] aload_2 v2
+      [87] iload v4
+      [89] iload_3 v3
+      [90] bipush 32
+      [92] imul
+      [93] iadd
+      [94] ldc #15
+        + Integer [16777215]
+      [96] iload v6
+      [98] bipush 24
+      [100] ishl
+      [101] ior
+      [102] iastore
+      [103] goto +13 (target=116)
+      [106] aload_2 v2
+      [107] iload v4
+      [109] iload_3 v3
+      [110] bipush 32
+      [112] imul
+      [113] iadd
+      [114] iconst_0
+      [115] iastore
+      [116] iinc v4, 1
+      [119] iload v4
+      [121] bipush 16
+      [123] ificmplt -90 (target=33)
+      [126] iinc v3, 1
+      [129] iload_3 v3
+      [130] bipush 16
+      [132] ificmplt -105 (target=27)
+      [135] iconst_0
+      [136] istore_3 v3
+      [137] goto +44 (target=181)
+      [140] bipush 16
+      [142] istore v4
+      [144] goto +27 (target=171)
+      [147] aload_2 v2
+      [148] iload v4
+      [150] iload_3 v3
+      [151] bipush 32
+      [153] imul
+      [154] iadd
+      [155] aload_2 v2
+      [156] bipush 31
+      [158] iload v4
+      [160] isub
+      [161] iload_3 v3
+      [162] bipush 32
+      [164] imul
+      [165] iadd
+      [166] iaload
+      [167] iastore
+      [168] iinc v4, 1
+      [171] iload v4
+      [173] bipush 32
+      [175] ificmplt -28 (target=147)
+      [178] iinc v3, 1
+      [181] iload_3 v3
+      [182] bipush 16
+      [184] ificmplt -44 (target=140)
+      [187] bipush 16
+      [189] istore_3 v3
+      [190] goto +43 (target=233)
+      [193] iconst_0
+      [194] istore v4
+      [196] goto +27 (target=223)
+      [199] aload_2 v2
+      [200] iload v4
+      [202] iload_3 v3
+      [203] bipush 32
+      [205] imul
+      [206] iadd
+      [207] aload_2 v2
+      [208] iload v4
+      [210] bipush 31
+      [212] iload_3 v3
+      [213] isub
+      [214] bipush 32
+      [216] imul
+      [217] iadd
+      [218] iaload
+      [219] iastore
+      [220] iinc v4, 1
+      [223] iload v4
+      [225] bipush 32
+      [227] ificmplt -28 (target=199)
+      [230] iinc v3, 1
+      [233] iload_3 v3
+      [234] bipush 32
+      [236] ificmplt -43 (target=193)
+      [239] bipush 32
+      [241] bipush 32
+      [243] getstatic #121
+        + Fieldref [android/graphics/Bitmap$Config.ARGB_8888 Landroid/graphics/Bitmap$Config;]
+      [246] invokestatic #198
+        + Methodref [android/graphics/Bitmap.createBitmap (IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;]
+      [249] astore_3 v3
+      [250] aload_3 v3
+      [251] aload_2 v2
+      [252] iconst_0
+      [253] bipush 32
+      [255] iconst_0
+      [256] iconst_0
+      [257] bipush 32
+      [259] bipush 32
+      [261] invokevirtual #201
+        + Methodref [android/graphics/Bitmap.setPixels ([IIIIIII)V]
+      [264] sipush 3553
+      [267] aload_1 v1
+      [268] iconst_0
+      [269] iaload
+      [270] invokestatic #220
+        + Methodref [android/opengl/GLES20.glBindTexture (II)V]
+      [273] sipush 3553
+      [276] sipush 10241
+      [279] sipush 9728
+      [282] invokestatic #242
+        + Methodref [android/opengl/GLES20.glTexParameteri (III)V]
+      [285] sipush 3553
+      [288] sipush 10240
+      [291] sipush 9728
+      [294] invokestatic #242
+        + Methodref [android/opengl/GLES20.glTexParameteri (III)V]
+      [297] sipush 3553
+      [300] iconst_0
+      [301] aload_3 v3
+      [302] iconst_0
+      [303] invokestatic #248
+        + Methodref [android/opengl/GLUtils.texImage2D (IILandroid/graphics/Bitmap;I)V]
+      [306] aload_3 v3
+      [307] invokevirtual #200
+        + Methodref [android/graphics/Bitmap.recycle ()V]
+      [310] aload_1 v1
+      [311] iconst_0
+      [312] iaload
+      [313] ifne +13 (target=326)
+      [316] new #101
+        + Class [java/lang/RuntimeException]
+      [319] dup
+      [320] ldc #60
+        + String [Error loading texture.]
+      [322] invokespecial #279
+        + Methodref [java/lang/RuntimeException.<init> (Ljava/lang/String;)V]
+      [325] athrow
+      [326] aload_1 v1
+      [327] iconst_0
+      [328] iaload
+      [329] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 16):
+        - [27] Var: ...[a:[I][a:[I][i], Stack: (empty)
+        - [33] Var: ...[i], Stack: (empty)
+        - [106] Var: ...[f], Stack: (empty)
+        - [116] Var: -1, Stack: (empty)
+        - [119] Var: ..., Stack: (empty)
+        - [129] Var: -1, Stack: (empty)
+        - [140] Var: ..., Stack: (empty)
+        - [147] Var: ...[i], Stack: (empty)
+        - [171] Var: ..., Stack: (empty)
+        - [181] Var: -1, Stack: (empty)
+        - [193] Var: ..., Stack: (empty)
+        - [199] Var: ...[i], Stack: (empty)
+        - [223] Var: ..., Stack: (empty)
+        - [233] Var: -1, Stack: (empty)
+        - [310] Var: -2, Stack: (empty)
+        - [326] Var: ..., Stack: (empty)
+  + Method:       a(Ljava/lang/String;)I
+    Access flags: 0x2
+      = private int a(java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 258, locals = 9, stack = 7):
+      [0] iconst_1
+      [1] newarray 10
+      [3] astore_2 v2
+      [4] iconst_1
+      [5] aload_2 v2
+      [6] iconst_0
+      [7] invokestatic #234
+        + Methodref [android/opengl/GLES20.glGenTextures (I[II)V]
+      [10] aload_2 v2
+      [11] iconst_0
+      [12] iaload
+      [13] ifeq +225 (target=238)
+      [16] new #87
+        + Class [android/graphics/Paint]
+      [19] dup
+      [20] iconst_1
+      [21] invokespecial #209
+        + Methodref [android/graphics/Paint.<init> (I)V]
+      [24] astore_3 v3
+      [25] aload_3 v3
+      [26] iconst_m1
+      [27] invokevirtual #211
+        + Methodref [android/graphics/Paint.setColor (I)V]
+      [30] aload_3 v3
+      [31] ldc #48
+        + Float [140.0]
+      [33] invokevirtual #213
+        + Methodref [android/graphics/Paint.setTextSize (F)V]
+      [36] aload_3 v3
+      [37] fconst_1
+      [38] fconst_0
+      [39] fconst_1
+      [40] ldc #1
+        + Integer [-16777216]
+      [42] invokevirtual #212
+        + Methodref [android/graphics/Paint.setShadowLayer (FFFI)V]
+      [45] new #88
+        + Class [android/graphics/Rect]
+      [48] dup
+      [49] invokespecial #214
+        + Methodref [android/graphics/Rect.<init> ()V]
+      [52] astore v4
+      [54] aload_3 v3
+      [55] aload_1 v1
+      [56] iconst_0
+      [57] aload_1 v1
+      [58] invokevirtual #281
+        + Methodref [java/lang/String.length ()I]
+      [61] aload v4
+      [63] invokevirtual #210
+        + Methodref [android/graphics/Paint.getTextBounds (Ljava/lang/String;IILandroid/graphics/Rect;)V]
+      [66] sipush 1024
+      [69] sipush 1024
+      [72] getstatic #121
+        + Fieldref [android/graphics/Bitmap$Config.ARGB_8888 Landroid/graphics/Bitmap$Config;]
+      [75] invokestatic #198
+        + Methodref [android/graphics/Bitmap.createBitmap (IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;]
+      [78] astore v5
+      [80] new #85
+        + Class [android/graphics/Canvas]
+      [83] dup
+      [84] aload v5
+      [86] invokespecial #202
+        + Methodref [android/graphics/Canvas.<init> (Landroid/graphics/Bitmap;)V]
+      [89] astore v6
+      [91] aload v6
+      [93] aload_1 v1
+      [94] sipush 1024
+      [97] aload v4
+      [99] invokevirtual #216
+        + Methodref [android/graphics/Rect.width ()I]
+      [102] isub
+      [103] iconst_2
+      [104] idiv
+      [105] i2f
+      [106] sipush 1024
+      [109] aload v4
+      [111] invokevirtual #215
+        + Methodref [android/graphics/Rect.height ()I]
+      [114] isub
+      [115] iconst_2
+      [116] idiv
+      [117] i2f
+      [118] aload_3 v3
+      [119] invokevirtual #203
+        + Methodref [android/graphics/Canvas.drawText (Ljava/lang/String;FFLandroid/graphics/Paint;)V]
+      [122] new #86
+        + Class [android/graphics/Matrix]
+      [125] dup
+      [126] invokespecial #204
+        + Methodref [android/graphics/Matrix.<init> ()V]
+      [129] astore v7
+      [131] aload v7
+      [133] invokevirtual #207
+        + Methodref [android/graphics/Matrix.reset ()V]
+      [136] aload v7
+      [138] ldc #51
+        + Float [512.0]
+      [140] ldc #51
+        + Float [512.0]
+      [142] invokevirtual #206
+        + Methodref [android/graphics/Matrix.preTranslate (FF)Z]
+      [145] pop
+      [146] aload v7
+      [148] ldc #49
+        + Float [180.0]
+      [150] ldc #51
+        + Float [512.0]
+      [152] ldc #51
+        + Float [512.0]
+      [154] invokevirtual #208
+        + Methodref [android/graphics/Matrix.setRotate (FFF)V]
+      [157] aload v7
+      [159] ldc #16
+        + Float [-512.0]
+      [161] ldc #16
+        + Float [-512.0]
+      [163] invokevirtual #205
+        + Methodref [android/graphics/Matrix.postTranslate (FF)Z]
+      [166] pop
+      [167] aload v5
+      [169] iconst_0
+      [170] iconst_0
+      [171] sipush 1024
+      [174] sipush 1024
+      [177] aload v7
+      [179] iconst_1
+      [180] invokestatic #199
+        + Methodref [android/graphics/Bitmap.createBitmap (Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;]
+      [183] astore v8
+      [185] sipush 3553
+      [188] aload_2 v2
+      [189] iconst_0
+      [190] iaload
+      [191] invokestatic #220
+        + Methodref [android/opengl/GLES20.glBindTexture (II)V]
+      [194] sipush 3553
+      [197] sipush 10241
+      [200] sipush 9728
+      [203] invokestatic #242
+        + Methodref [android/opengl/GLES20.glTexParameteri (III)V]
+      [206] sipush 3553
+      [209] sipush 10240
+      [212] sipush 9728
+      [215] invokestatic #242
+        + Methodref [android/opengl/GLES20.glTexParameteri (III)V]
+      [218] sipush 3553
+      [221] iconst_0
+      [222] aload v8
+      [224] iconst_0
+      [225] invokestatic #248
+        + Methodref [android/opengl/GLUtils.texImage2D (IILandroid/graphics/Bitmap;I)V]
+      [228] aload v5
+      [230] invokevirtual #200
+        + Methodref [android/graphics/Bitmap.recycle ()V]
+      [233] aload v8
+      [235] invokevirtual #200
+        + Methodref [android/graphics/Bitmap.recycle ()V]
+      [238] aload_2 v2
+      [239] iconst_0
+      [240] iaload
+      [241] ifne +13 (target=254)
+      [244] new #101
+        + Class [java/lang/RuntimeException]
+      [247] dup
+      [248] ldc #60
+        + String [Error loading texture.]
+      [250] invokespecial #279
+        + Methodref [java/lang/RuntimeException.<init> (Ljava/lang/String;)V]
+      [253] athrow
+      [254] aload_2 v2
+      [255] iconst_0
+      [256] iaload
+      [257] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [238] Var: ...[a:[I], Stack: (empty)
+        - [254] Var: ..., Stack: (empty)
+  + Method:       a(Landroid/view/MotionEvent;)V
+    Access flags: 0x1
+      = public void a(android.view.MotionEvent)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 41, locals = 3, stack = 4):
+      [0] iconst_0
+      [1] istore_2 v2
+      [2] goto +30 (target=32)
+      [5] aload_0 v0
+      [6] ldc #21
+        + Float [-1.0]
+      [8] aload_1 v1
+      [9] iconst_1
+      [10] invokevirtual #258
+        + Methodref [android/view/MotionEvent.getAxisValue (I)F]
+      [13] fmul
+      [14] putfield #142
+        + Fieldref [com/oocit/particlify/a.U F]
+      [17] aload_0 v0
+      [18] ldc #38
+        + Float [8.0]
+      [20] aload_1 v1
+      [21] iconst_0
+      [22] invokevirtual #258
+        + Methodref [android/view/MotionEvent.getAxisValue (I)F]
+      [25] fmul
+      [26] putfield #144
+        + Fieldref [com/oocit/particlify/a.W F]
+      [29] iinc v2, 1
+      [32] iload_2 v2
+      [33] aload_1 v1
+      [34] invokevirtual #259
+        + Methodref [android/view/MotionEvent.getPointerCount ()I]
+      [37] ificmplt -32 (target=5)
+      [40] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [5] Var: ...[i], Stack: (empty)
+        - [32] Var: ..., Stack: (empty)
+  + Method:       a(I)V
+    Access flags: 0x1
+      = public void a(int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 26, locals = 2, stack = 2):
+      [0] iload_1 v1
+      [1] bipush 96
+      [3] ificmpne +22 (target=25)
+      [6] aload_0 v0
+      [7] getfield #167
+        + Fieldref [com/oocit/particlify/a.as I]
+      [10] aload_0 v0
+      [11] getfield #175
+        + Fieldref [com/oocit/particlify/a.f I]
+      [14] ificmpne +11 (target=25)
+      [17] aload_0 v0
+      [18] aload_0 v0
+      [19] getfield #176
+        + Fieldref [com/oocit/particlify/a.g I]
+      [22] putfield #167
+        + Fieldref [com/oocit/particlify/a.as I]
+      [25] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [25] Var: ..., Stack: (empty)
+  + Method:       onDrawFrame(Ljavax/microedition/khronos/opengles/GL10;)V
+    Access flags: 0x1
+      = public void onDrawFrame(javax.microedition.khronos.opengles.GL10)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 2837, locals = 20, stack = 11):
+      [0] invokestatic #285
+        + Methodref [java/lang/System.currentTimeMillis ()J]
+      [3] lstore_2 v2
+      [4] sipush 16640
+      [7] invokestatic #222
+        + Methodref [android/opengl/GLES20.glClear (I)V]
+      [10] sipush 2929
+      [13] invokestatic #232
+        + Methodref [android/opengl/GLES20.glEnable (I)V]
+      [16] aload_0 v0
+      [17] getfield #171
+        + Fieldref [com/oocit/particlify/a.b I]
+      [20] i2f
+      [21] aload_0 v0
+      [22] getfield #148
+        + Fieldref [com/oocit/particlify/a.a I]
+      [25] i2f
+      [26] fdiv
+      [27] fstore v4
+      [29] aload_0 v0
+      [30] getfield #138
+        + Fieldref [com/oocit/particlify/a.Q F]
+      [33] fload v4
+      [35] fdiv
+      [36] f2i
+      [37] istore v5
+      [39] aload_0 v0
+      [40] aload_0 v0
+      [41] getfield #138
+        + Fieldref [com/oocit/particlify/a.Q F]
+      [44] invokespecial #261
+        + Methodref [com/oocit/particlify/a.a (F)F]
+      [47] fstore v6
+      [49] aload_0 v0
+      [50] getfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [53] fstore v7
+      [55] aload_0 v0
+      [56] getfield #173
+        + Fieldref [com/oocit/particlify/a.d I]
+      [59] i2f
+      [60] fload v6
+      [62] fadd
+      [63] fstore v8
+      [65] aload_0 v0
+      [66] getfield #138
+        + Fieldref [com/oocit/particlify/a.Q F]
+      [69] fstore v9
+      [71] aload_0 v0
+      [72] getfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [75] fstore v10
+      [77] aload_0 v0
+      [78] getfield #173
+        + Fieldref [com/oocit/particlify/a.d I]
+      [81] iconst_2
+      [82] idiv
+      [83] i2f
+      [84] fload v6
+      [86] fadd
+      [87] fstore v11
+      [89] fload v9
+      [91] fload v4
+      [93] ldc #39
+        + Float [10.0]
+      [95] fmul
+      [96] fadd
+      [97] fstore v12
+      [99] aload_0 v0
+      [100] getfield #181
+        + Fieldref [com/oocit/particlify/a.l [F]
+      [103] iconst_0
+      [104] fload v7
+      [106] fload v8
+      [108] fload v9
+      [110] fload v10
+      [112] fload v11
+      [114] fload v12
+      [116] fconst_0
+      [117] fconst_1
+      [118] fconst_0
+      [119] invokestatic #254
+        + Methodref [android/opengl/Matrix.setLookAtM ([FIFFFFFFFFF)V]
+      [122] aload_0 v0
+      [123] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [126] iconst_0
+      [127] invokestatic #253
+        + Methodref [android/opengl/Matrix.setIdentityM ([FI)V]
+      [130] aload_0 v0
+      [131] getfield #167
+        + Fieldref [com/oocit/particlify/a.as I]
+      [134] aload_0 v0
+      [135] getfield #175
+        + Fieldref [com/oocit/particlify/a.f I]
+      [138] ificmpne +687 (target=825)
+      [141] aload_0 v0
+      [142] dup
+      [143] getfield #141
+        + Fieldref [com/oocit/particlify/a.T J]
+      [146] lload_2 v2
+      [147] aload_0 v0
+      [148] getfield #140
+        + Fieldref [com/oocit/particlify/a.S J]
+      [151] lsub
+      [152] ladd
+      [153] putfield #141
+        + Fieldref [com/oocit/particlify/a.T J]
+      [156] goto +26 (target=182)
+      [159] aload_0 v0
+      [160] dup
+      [161] getfield #149
+        + Fieldref [com/oocit/particlify/a.aa F]
+      [164] ldc #23
+        + Float [0.03]
+      [166] fadd
+      [167] putfield #149
+        + Fieldref [com/oocit/particlify/a.aa F]
+      [170] aload_0 v0
+      [171] dup
+      [172] getfield #141
+        + Fieldref [com/oocit/particlify/a.T J]
+      [175] ldc2_w #111
+        + Long [20]
+      [178] lsub
+      [179] putfield #141
+        + Fieldref [com/oocit/particlify/a.T J]
+      [182] aload_0 v0
+      [183] getfield #141
+        + Fieldref [com/oocit/particlify/a.T J]
+      [186] ldc2_w #111
+        + Long [20]
+      [189] lcmp
+      [190] ifgt -31 (target=159)
+      [193] aload_0 v0
+      [194] lload_2 v2
+      [195] putfield #140
+        + Fieldref [com/oocit/particlify/a.S J]
+      [198] aload_0 v0
+      [199] getfield #181
+        + Fieldref [com/oocit/particlify/a.l [F]
+      [202] iconst_0
+      [203] ldc2_w #119
+        + Double [8.0]
+      [206] aload_0 v0
+      [207] getfield #149
+        + Fieldref [com/oocit/particlify/a.aa F]
+      [210] f2d
+      [211] invokestatic #276
+        + Methodref [java/lang/Math.sin (D)D]
+      [214] dmul
+      [215] d2f
+      [216] fconst_0
+      [217] fconst_0
+      [218] fconst_1
+      [219] invokestatic #251
+        + Methodref [android/opengl/Matrix.rotateM ([FIFFFF)V]
+      [222] aload_0 v0
+      [223] getfield #152
+        + Fieldref [com/oocit/particlify/a.ad I]
+      [226] invokestatic #245
+        + Methodref [android/opengl/GLES20.glUseProgram (I)V]
+      [229] aload_0 v0
+      [230] getfield #177
+        + Fieldref [com/oocit/particlify/a.h Ljava/nio/FloatBuffer;]
+      [233] iconst_0
+      [234] invokevirtual #290
+        + Methodref [java/nio/FloatBuffer.position (I)Ljava/nio/Buffer;]
+      [237] pop
+      [238] aload_0 v0
+      [239] getfield #123
+        + Fieldref [com/oocit/particlify/a.B I]
+      [242] iconst_3
+      [243] sipush 5126
+      [246] iconst_0
+      [247] bipush 12
+      [249] aload_0 v0
+      [250] getfield #179
+        + Fieldref [com/oocit/particlify/a.j Ljava/nio/FloatBuffer;]
+      [253] invokestatic #246
+        + Methodref [android/opengl/GLES20.glVertexAttribPointer (IIIZILjava/nio/Buffer;)V]
+      [256] aload_0 v0
+      [257] getfield #123
+        + Fieldref [com/oocit/particlify/a.B I]
+      [260] invokestatic #233
+        + Methodref [android/opengl/GLES20.glEnableVertexAttribArray (I)V]
+      [263] aload_0 v0
+      [264] getfield #162
+        + Fieldref [com/oocit/particlify/a.an [F]
+      [267] iconst_0
+      [268] faload
+      [269] ldc #39
+        + Float [10.0]
+      [271] fmul
+      [272] fstore v13
+      [274] aload_0 v0
+      [275] iconst_0
+      [276] invokespecial #269
+        + Methodref [com/oocit/particlify/a.d (I)F]
+      [279] ldc #25
+        + Float [0.2]
+      [281] fsub
+      [282] fstore v14
+      [284] aload_0 v0
+      [285] fload v14
+      [287] invokespecial #261
+        + Methodref [com/oocit/particlify/a.a (F)F]
+      [290] ldc #34
+        + Float [5.0]
+      [292] fadd
+      [293] fstore v15
+      [295] aload_0 v0
+      [296] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [299] iconst_0
+      [300] invokestatic #253
+        + Methodref [android/opengl/Matrix.setIdentityM ([FI)V]
+      [303] aload_0 v0
+      [304] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [307] iconst_0
+      [308] fload v13
+      [310] fload v15
+      [312] fload v14
+      [314] invokestatic #255
+        + Methodref [android/opengl/Matrix.translateM ([FIFFF)V]
+      [317] aload_0 v0
+      [318] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [321] iconst_0
+      [322] aload_0 v0
+      [323] getfield #163
+        + Fieldref [com/oocit/particlify/a.ao [F]
+      [326] iconst_0
+      [327] faload
+      [328] fconst_1
+      [329] fconst_1
+      [330] invokestatic #252
+        + Methodref [android/opengl/Matrix.scaleM ([FIFFF)V]
+      [333] aload_0 v0
+      [334] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [337] iconst_0
+      [338] aload_0 v0
+      [339] getfield #181
+        + Fieldref [com/oocit/particlify/a.l [F]
+      [342] iconst_0
+      [343] aload_0 v0
+      [344] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [347] iconst_0
+      [348] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [351] aload_0 v0
+      [352] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [355] iconst_0
+      [356] aload_0 v0
+      [357] getfield #182
+        + Fieldref [com/oocit/particlify/a.m [F]
+      [360] iconst_0
+      [361] aload_0 v0
+      [362] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [365] iconst_0
+      [366] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [369] aload_0 v0
+      [370] getfield #190
+        + Fieldref [com/oocit/particlify/a.u I]
+      [373] iconst_1
+      [374] iconst_0
+      [375] aload_0 v0
+      [376] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [379] iconst_0
+      [380] invokestatic #244
+        + Methodref [android/opengl/GLES20.glUniformMatrix4fv (IIZ[FI)V]
+      [383] iconst_5
+      [384] iconst_0
+      [385] bipush 10
+      [387] invokestatic #231
+        + Methodref [android/opengl/GLES20.glDrawArrays (III)V]
+      [390] aload_0 v0
+      [391] getfield #123
+        + Fieldref [com/oocit/particlify/a.B I]
+      [394] invokestatic #230
+        + Methodref [android/opengl/GLES20.glDisableVertexAttribArray (I)V]
+      [397] aload_0 v0
+      [398] getfield #181
+        + Fieldref [com/oocit/particlify/a.l [F]
+      [401] iconst_0
+      [402] ldc2_w #119
+        + Double [8.0]
+      [405] aload_0 v0
+      [406] getfield #149
+        + Fieldref [com/oocit/particlify/a.aa F]
+      [409] f2d
+      [410] invokestatic #276
+        + Methodref [java/lang/Math.sin (D)D]
+      [413] dmul
+      [414] d2f
+      [415] fneg
+      [416] fconst_0
+      [417] fconst_0
+      [418] fconst_1
+      [419] invokestatic #251
+        + Methodref [android/opengl/Matrix.rotateM ([FIFFFF)V]
+      [422] sipush 2929
+      [425] invokestatic #229
+        + Methodref [android/opengl/GLES20.glDisable (I)V]
+      [428] sipush 3042
+      [431] invokestatic #232
+        + Methodref [android/opengl/GLES20.glEnable (I)V]
+      [434] sipush 770
+      [437] sipush 772
+      [440] invokestatic #221
+        + Methodref [android/opengl/GLES20.glBlendFunc (II)V]
+      [443] aload_0 v0
+      [444] getfield #151
+        + Fieldref [com/oocit/particlify/a.ac I]
+      [447] invokestatic #245
+        + Methodref [android/opengl/GLES20.glUseProgram (I)V]
+      [450] aload_0 v0
+      [451] getfield #178
+        + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+      [454] iconst_0
+      [455] invokevirtual #290
+        + Methodref [java/nio/FloatBuffer.position (I)Ljava/nio/Buffer;]
+      [458] pop
+      [459] aload_0 v0
+      [460] getfield #132
+        + Fieldref [com/oocit/particlify/a.K I]
+      [463] iconst_3
+      [464] sipush 5126
+      [467] iconst_0
+      [468] bipush 20
+      [470] aload_0 v0
+      [471] getfield #178
+        + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+      [474] invokestatic #246
+        + Methodref [android/opengl/GLES20.glVertexAttribPointer (IIIZILjava/nio/Buffer;)V]
+      [477] aload_0 v0
+      [478] getfield #132
+        + Fieldref [com/oocit/particlify/a.K I]
+      [481] invokestatic #233
+        + Methodref [android/opengl/GLES20.glEnableVertexAttribArray (I)V]
+      [484] aload_0 v0
+      [485] getfield #178
+        + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+      [488] iconst_3
+      [489] invokevirtual #290
+        + Methodref [java/nio/FloatBuffer.position (I)Ljava/nio/Buffer;]
+      [492] pop
+      [493] aload_0 v0
+      [494] getfield #133
+        + Fieldref [com/oocit/particlify/a.L I]
+      [497] iconst_2
+      [498] sipush 5126
+      [501] iconst_0
+      [502] bipush 20
+      [504] aload_0 v0
+      [505] getfield #178
+        + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+      [508] invokestatic #246
+        + Methodref [android/opengl/GLES20.glVertexAttribPointer (IIIZILjava/nio/Buffer;)V]
+      [511] aload_0 v0
+      [512] getfield #133
+        + Fieldref [com/oocit/particlify/a.L I]
+      [515] invokestatic #233
+        + Methodref [android/opengl/GLES20.glEnableVertexAttribArray (I)V]
+      [518] ldc #9
+        + Integer [33984]
+      [520] invokestatic #217
+        + Methodref [android/opengl/GLES20.glActiveTexture (I)V]
+      [523] sipush 3553
+      [526] aload_0 v0
+      [527] getfield #168
+        + Fieldref [com/oocit/particlify/a.at I]
+      [530] invokestatic #220
+        + Methodref [android/opengl/GLES20.glBindTexture (II)V]
+      [533] aload_0 v0
+      [534] getfield #134
+        + Fieldref [com/oocit/particlify/a.M I]
+      [537] iconst_0
+      [538] invokestatic #243
+        + Methodref [android/opengl/GLES20.glUniform1i (II)V]
+      [541] aload_0 v0
+      [542] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [545] iconst_0
+      [546] invokestatic #253
+        + Methodref [android/opengl/Matrix.setIdentityM ([FI)V]
+      [549] aload_0 v0
+      [550] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [553] iconst_0
+      [554] aload_0 v0
+      [555] getfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [558] aload_0 v0
+      [559] getfield #149
+        + Fieldref [com/oocit/particlify/a.aa F]
+      [562] f2d
+      [563] invokestatic #276
+        + Methodref [java/lang/Math.sin (D)D]
+      [566] ldc2_w #119
+        + Double [8.0]
+      [569] ddiv
+      [570] d2f
+      [571] fadd
+      [572] fload v6
+      [574] aload_0 v0
+      [575] getfield #173
+        + Fieldref [com/oocit/particlify/a.d I]
+      [578] i2f
+      [579] fadd
+      [580] ldc #25
+        + Float [0.2]
+      [582] fsub
+      [583] fload v9
+      [585] fload v4
+      [587] ldc #41
+        + Float [20.0]
+      [589] fdiv
+      [590] fadd
+      [591] invokestatic #255
+        + Methodref [android/opengl/Matrix.translateM ([FIFFF)V]
+      [594] aload_0 v0
+      [595] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [598] iconst_0
+      [599] aload_0 v0
+      [600] getfield #181
+        + Fieldref [com/oocit/particlify/a.l [F]
+      [603] iconst_0
+      [604] aload_0 v0
+      [605] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [608] iconst_0
+      [609] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [612] aload_0 v0
+      [613] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [616] iconst_0
+      [617] aload_0 v0
+      [618] getfield #182
+        + Fieldref [com/oocit/particlify/a.m [F]
+      [621] iconst_0
+      [622] aload_0 v0
+      [623] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [626] iconst_0
+      [627] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [630] aload_0 v0
+      [631] getfield #131
+        + Fieldref [com/oocit/particlify/a.J I]
+      [634] iconst_1
+      [635] iconst_0
+      [636] aload_0 v0
+      [637] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [640] iconst_0
+      [641] invokestatic #244
+        + Methodref [android/opengl/GLES20.glUniformMatrix4fv (IIZ[FI)V]
+      [644] iconst_5
+      [645] iconst_0
+      [646] iconst_4
+      [647] invokestatic #231
+        + Methodref [android/opengl/GLES20.glDrawArrays (III)V]
+      [650] sipush 3553
+      [653] aload_0 v0
+      [654] getfield #135
+        + Fieldref [com/oocit/particlify/a.N I]
+      [657] invokestatic #220
+        + Methodref [android/opengl/GLES20.glBindTexture (II)V]
+      [660] iconst_0
+      [661] istore v16
+      [663] goto +126 (target=789)
+      [666] aload_0 v0
+      [667] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [670] iconst_0
+      [671] invokestatic #253
+        + Methodref [android/opengl/Matrix.setIdentityM ([FI)V]
+      [674] aload_0 v0
+      [675] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [678] iconst_0
+      [679] aload_0 v0
+      [680] getfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [683] ldc #36
+        + Float [6.5]
+      [685] fadd
+      [686] aload_0 v0
+      [687] getfield #154
+        + Fieldref [com/oocit/particlify/a.af Ljava/util/Random;]
+      [690] invokevirtual #293
+        + Methodref [java/util/Random.nextFloat ()F]
+      [693] ldc #31
+        + Float [1.5]
+      [695] fmul
+      [696] fadd
+      [697] fload v6
+      [699] aload_0 v0
+      [700] getfield #173
+        + Fieldref [com/oocit/particlify/a.d I]
+      [703] i2f
+      [704] fadd
+      [705] ldc #28
+        + Float [0.5]
+      [707] fsub
+      [708] aload_0 v0
+      [709] getfield #154
+        + Fieldref [com/oocit/particlify/a.af Ljava/util/Random;]
+      [712] invokevirtual #293
+        + Methodref [java/util/Random.nextFloat ()F]
+      [715] ldc #31
+        + Float [1.5]
+      [717] fmul
+      [718] fadd
+      [719] fload v9
+      [721] fload v4
+      [723] ldc #33
+        + Float [4.0]
+      [725] fdiv
+      [726] fadd
+      [727] invokestatic #255
+        + Methodref [android/opengl/Matrix.translateM ([FIFFF)V]
+      [730] aload_0 v0
+      [731] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [734] iconst_0
+      [735] aload_0 v0
+      [736] getfield #181
+        + Fieldref [com/oocit/particlify/a.l [F]
+      [739] iconst_0
+      [740] aload_0 v0
+      [741] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [744] iconst_0
+      [745] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [748] aload_0 v0
+      [749] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [752] iconst_0
+      [753] aload_0 v0
+      [754] getfield #182
+        + Fieldref [com/oocit/particlify/a.m [F]
+      [757] iconst_0
+      [758] aload_0 v0
+      [759] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [762] iconst_0
+      [763] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [766] aload_0 v0
+      [767] getfield #131
+        + Fieldref [com/oocit/particlify/a.J I]
+      [770] iconst_1
+      [771] iconst_0
+      [772] aload_0 v0
+      [773] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [776] iconst_0
+      [777] invokestatic #244
+        + Methodref [android/opengl/GLES20.glUniformMatrix4fv (IIZ[FI)V]
+      [780] iconst_5
+      [781] iconst_0
+      [782] iconst_4
+      [783] invokestatic #231
+        + Methodref [android/opengl/GLES20.glDrawArrays (III)V]
+      [786] iinc v16, 1
+      [789] iload v16
+      [791] bipush 10
+      [793] ificmplt -127 (target=666)
+      [796] aload_0 v0
+      [797] getfield #132
+        + Fieldref [com/oocit/particlify/a.K I]
+      [800] invokestatic #230
+        + Methodref [android/opengl/GLES20.glDisableVertexAttribArray (I)V]
+      [803] aload_0 v0
+      [804] getfield #133
+        + Fieldref [com/oocit/particlify/a.L I]
+      [807] invokestatic #230
+        + Methodref [android/opengl/GLES20.glDisableVertexAttribArray (I)V]
+      [810] sipush 2929
+      [813] invokestatic #232
+        + Methodref [android/opengl/GLES20.glEnable (I)V]
+      [816] sipush 3042
+      [819] invokestatic #229
+        + Methodref [android/opengl/GLES20.glDisable (I)V]
+      [822] goto +2014 (target=2836)
+      [825] aload_0 v0
+      [826] getfield #181
+        + Fieldref [com/oocit/particlify/a.l [F]
+      [829] iconst_0
+      [830] aload_0 v0
+      [831] getfield #149
+        + Fieldref [com/oocit/particlify/a.aa F]
+      [834] fconst_0
+      [835] fconst_0
+      [836] fconst_1
+      [837] invokestatic #251
+        + Methodref [android/opengl/Matrix.rotateM ([FIFFFF)V]
+      [840] aload_0 v0
+      [841] dup
+      [842] getfield #141
+        + Fieldref [com/oocit/particlify/a.T J]
+      [845] lload_2 v2
+      [846] aload_0 v0
+      [847] getfield #140
+        + Fieldref [com/oocit/particlify/a.S J]
+      [850] lsub
+      [851] ladd
+      [852] putfield #141
+        + Fieldref [com/oocit/particlify/a.T J]
+      [855] aload_0 v0
+      [856] getfield #142
+        + Fieldref [com/oocit/particlify/a.U F]
+      [859] fstore v13
+      [861] goto +607 (target=1468)
+      [864] aload_0 v0
+      [865] dup
+      [866] getfield #146
+        + Fieldref [com/oocit/particlify/a.Y F]
+      [869] fload v13
+      [871] aload_0 v0
+      [872] getfield #145
+        + Fieldref [com/oocit/particlify/a.X F]
+      [875] aload_0 v0
+      [876] getfield #146
+        + Fieldref [com/oocit/particlify/a.Y F]
+      [879] fmul
+      [880] fsub
+      [881] fadd
+      [882] putfield #146
+        + Fieldref [com/oocit/particlify/a.Y F]
+      [885] aload_0 v0
+      [886] getfield #146
+        + Fieldref [com/oocit/particlify/a.Y F]
+      [889] fconst_0
+      [890] fcmpg
+      [891] ifge +8 (target=899)
+      [894] aload_0 v0
+      [895] fconst_0
+      [896] putfield #146
+        + Fieldref [com/oocit/particlify/a.Y F]
+      [899] aload_0 v0
+      [900] dup
+      [901] getfield #138
+        + Fieldref [com/oocit/particlify/a.Q F]
+      [904] aload_0 v0
+      [905] getfield #146
+        + Fieldref [com/oocit/particlify/a.Y F]
+      [908] fadd
+      [909] putfield #138
+        + Fieldref [com/oocit/particlify/a.Q F]
+      [912] aload_0 v0
+      [913] dup
+      [914] getfield #149
+        + Fieldref [com/oocit/particlify/a.aa F]
+      [917] aload_0 v0
+      [918] getfield #144
+        + Fieldref [com/oocit/particlify/a.W F]
+      [921] aload_0 v0
+      [922] getfield #149
+        + Fieldref [com/oocit/particlify/a.aa F]
+      [925] fsub
+      [926] ldc #39
+        + Float [10.0]
+      [928] fdiv
+      [929] fadd
+      [930] putfield #149
+        + Fieldref [com/oocit/particlify/a.aa F]
+      [933] aload_0 v0
+      [934] dup
+      [935] getfield #143
+        + Fieldref [com/oocit/particlify/a.V F]
+      [938] aload_0 v0
+      [939] getfield #144
+        + Fieldref [com/oocit/particlify/a.W F]
+      [942] ldc #33
+        + Float [4.0]
+      [944] fdiv
+      [945] fsub
+      [946] putfield #143
+        + Fieldref [com/oocit/particlify/a.V F]
+      [949] aload_0 v0
+      [950] getfield #143
+        + Fieldref [com/oocit/particlify/a.V F]
+      [953] ldc #46
+        + Float [62.0]
+      [955] fcmpl
+      [956] ifle +9 (target=965)
+      [959] aload_0 v0
+      [960] ldc #46
+        + Float [62.0]
+      [962] putfield #143
+        + Fieldref [com/oocit/particlify/a.V F]
+      [965] aload_0 v0
+      [966] getfield #143
+        + Fieldref [com/oocit/particlify/a.V F]
+      [969] ldc #17
+        + Float [-62.0]
+      [971] fcmpg
+      [972] ifge +9 (target=981)
+      [975] aload_0 v0
+      [976] ldc #17
+        + Float [-62.0]
+      [978] putfield #143
+        + Fieldref [com/oocit/particlify/a.V F]
+      [981] aload_0 v0
+      [982] dup
+      [983] getfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [986] aload_0 v0
+      [987] getfield #143
+        + Fieldref [com/oocit/particlify/a.V F]
+      [990] aload_0 v0
+      [991] getfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [994] fsub
+      [995] ldc #33
+        + Float [4.0]
+      [997] fdiv
+      [998] fadd
+      [999] putfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [1002] aload_0 v0
+      [1003] getfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [1006] ldc #18
+        + Float [-60.0]
+      [1008] fcmpg
+      [1009] ifge +25 (target=1034)
+      [1012] aload_0 v0
+      [1013] dup
+      [1014] getfield #166
+        + Fieldref [com/oocit/particlify/a.ar I]
+      [1017] iconst_5
+      [1018] iadd
+      [1019] putfield #166
+        + Fieldref [com/oocit/particlify/a.ar I]
+      [1022] aload_0 v0
+      [1023] ldc #19
+        + Float [-55.0]
+      [1025] putfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [1028] aload_0 v0
+      [1029] ldc #19
+        + Float [-55.0]
+      [1031] putfield #143
+        + Fieldref [com/oocit/particlify/a.V F]
+      [1034] aload_0 v0
+      [1035] getfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [1038] ldc #45
+        + Float [60.0]
+      [1040] fcmpl
+      [1041] ifle +25 (target=1066)
+      [1044] aload_0 v0
+      [1045] dup
+      [1046] getfield #166
+        + Fieldref [com/oocit/particlify/a.ar I]
+      [1049] iconst_5
+      [1050] iadd
+      [1051] putfield #166
+        + Fieldref [com/oocit/particlify/a.ar I]
+      [1054] aload_0 v0
+      [1055] ldc #44
+        + Float [55.0]
+      [1057] putfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [1060] aload_0 v0
+      [1061] ldc #44
+        + Float [55.0]
+      [1063] putfield #143
+        + Fieldref [com/oocit/particlify/a.V F]
+      [1066] iconst_0
+      [1067] istore v14
+      [1069] goto +224 (target=1293)
+      [1072] aload_0 v0
+      [1073] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [1076] iload v14
+      [1078] iconst_3
+      [1079] imul
+      [1080] iconst_0
+      [1081] iadd
+      [1082] dup2
+      [1083] faload
+      [1084] aload_0 v0
+      [1085] getfield #161
+        + Fieldref [com/oocit/particlify/a.am [F]
+      [1088] iload v14
+      [1090] iconst_3
+      [1091] imul
+      [1092] iconst_0
+      [1093] iadd
+      [1094] faload
+      [1095] fadd
+      [1096] fastore
+      [1097] aload_0 v0
+      [1098] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [1101] iload v14
+      [1103] iconst_3
+      [1104] imul
+      [1105] iconst_1
+      [1106] iadd
+      [1107] dup2
+      [1108] faload
+      [1109] aload_0 v0
+      [1110] getfield #161
+        + Fieldref [com/oocit/particlify/a.am [F]
+      [1113] iload v14
+      [1115] iconst_3
+      [1116] imul
+      [1117] iconst_1
+      [1118] iadd
+      [1119] faload
+      [1120] fadd
+      [1121] fastore
+      [1122] aload_0 v0
+      [1123] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [1126] iload v14
+      [1128] iconst_3
+      [1129] imul
+      [1130] iconst_2
+      [1131] iadd
+      [1132] dup2
+      [1133] faload
+      [1134] aload_0 v0
+      [1135] getfield #161
+        + Fieldref [com/oocit/particlify/a.am [F]
+      [1138] iload v14
+      [1140] iconst_3
+      [1141] imul
+      [1142] iconst_2
+      [1143] iadd
+      [1144] faload
+      [1145] fadd
+      [1146] fastore
+      [1147] aload_0 v0
+      [1148] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [1151] iload v14
+      [1153] iconst_3
+      [1154] imul
+      [1155] iconst_0
+      [1156] iadd
+      [1157] faload
+      [1158] aload_0 v0
+      [1159] getfield #156
+        + Fieldref [com/oocit/particlify/a.ah I]
+      [1162] iconst_2
+      [1163] idiv
+      [1164] i2f
+      [1165] fcmpl
+      [1166] ifgt +112 (target=1278)
+      [1169] aload_0 v0
+      [1170] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [1173] iload v14
+      [1175] iconst_3
+      [1176] imul
+      [1177] iconst_0
+      [1178] iadd
+      [1179] faload
+      [1180] aload_0 v0
+      [1181] getfield #156
+        + Fieldref [com/oocit/particlify/a.ah I]
+      [1184] ineg
+      [1185] iconst_2
+      [1186] idiv
+      [1187] i2f
+      [1188] fcmpg
+      [1189] iflt +89 (target=1278)
+      [1192] aload_0 v0
+      [1193] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [1196] iload v14
+      [1198] iconst_3
+      [1199] imul
+      [1200] iconst_1
+      [1201] iadd
+      [1202] faload
+      [1203] aload_0 v0
+      [1204] getfield #157
+        + Fieldref [com/oocit/particlify/a.ai I]
+      [1207] iconst_2
+      [1208] idiv
+      [1209] i2f
+      [1210] fcmpl
+      [1211] ifgt +67 (target=1278)
+      [1214] aload_0 v0
+      [1215] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [1218] iload v14
+      [1220] iconst_3
+      [1221] imul
+      [1222] iconst_1
+      [1223] iadd
+      [1224] faload
+      [1225] aload_0 v0
+      [1226] getfield #157
+        + Fieldref [com/oocit/particlify/a.ai I]
+      [1229] ineg
+      [1230] iconst_2
+      [1231] idiv
+      [1232] i2f
+      [1233] fcmpg
+      [1234] iflt +44 (target=1278)
+      [1237] aload_0 v0
+      [1238] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [1241] iload v14
+      [1243] iconst_3
+      [1244] imul
+      [1245] iconst_2
+      [1246] iadd
+      [1247] faload
+      [1248] aload_0 v0
+      [1249] getfield #158
+        + Fieldref [com/oocit/particlify/a.aj I]
+      [1252] i2f
+      [1253] fcmpl
+      [1254] ifgt +24 (target=1278)
+      [1257] aload_0 v0
+      [1258] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [1261] iload v14
+      [1263] iconst_3
+      [1264] imul
+      [1265] iconst_2
+      [1266] iadd
+      [1267] faload
+      [1268] aload_0 v0
+      [1269] getfield #159
+        + Fieldref [com/oocit/particlify/a.ak I]
+      [1272] ineg
+      [1273] i2f
+      [1274] fcmpg
+      [1275] ifge +15 (target=1290)
+      [1278] aload_0 v0
+      [1279] iload v14
+      [1281] invokespecial #266
+        + Methodref [com/oocit/particlify/a.b (I)V]
+      [1284] aload_0 v0
+      [1285] iload v14
+      [1287] invokespecial #268
+        + Methodref [com/oocit/particlify/a.c (I)V]
+      [1290] iinc v14, 1
+      [1293] iload v14
+      [1295] aload_0 v0
+      [1296] getfield #164
+        + Fieldref [com/oocit/particlify/a.ap I]
+      [1299] ificmplt -227 (target=1072)
+      [1302] aload_0 v0
+      [1303] getfield #138
+        + Fieldref [com/oocit/particlify/a.Q F]
+      [1306] fload v4
+      [1308] ldc #30
+        + Float [1.1]
+      [1310] fdiv
+      [1311] fadd
+      [1312] ldc #40
+        + Float [12.0]
+      [1314] fsub
+      [1315] fstore v14
+      [1317] fload v14
+      [1319] fload v4
+      [1321] fdiv
+      [1322] f2i
+      [1323] istore v15
+      [1325] fload v14
+      [1327] iload v15
+      [1329] i2f
+      [1330] fload v4
+      [1332] fmul
+      [1333] fsub
+      [1334] fstore v16
+      [1336] aload_0 v0
+      [1337] getfield #162
+        + Fieldref [com/oocit/particlify/a.an [F]
+      [1340] iload v15
+      [1342] faload
+      [1343] ldc #39
+        + Float [10.0]
+      [1345] fmul
+      [1346] fstore v17
+      [1348] fload v17
+      [1350] ldc #39
+        + Float [10.0]
+      [1352] aload_0 v0
+      [1353] getfield #163
+        + Fieldref [com/oocit/particlify/a.ao [F]
+      [1356] iload v15
+      [1358] faload
+      [1359] fmul
+      [1360] fadd
+      [1361] fstore v18
+      [1363] iload v15
+      [1365] ifle +35 (target=1400)
+      [1368] aload_0 v0
+      [1369] getfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [1372] fload v17
+      [1374] fcmpl
+      [1375] iflt +25 (target=1400)
+      [1378] aload_0 v0
+      [1379] getfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [1382] fload v18
+      [1384] fcmpg
+      [1385] ifgt +15 (target=1400)
+      [1388] fload v16
+      [1390] ldc #43
+        + Float [45.0]
+      [1392] fcmpg
+      [1393] ifge +7 (target=1400)
+      [1396] iconst_1
+      [1397] goto +4 (target=1401)
+      [1400] iconst_0
+      [1401] istore v19
+      [1403] iload v19
+      [1405] ifeq +13 (target=1418)
+      [1408] aload_0 v0
+      [1409] dup
+      [1410] getfield #166
+        + Fieldref [com/oocit/particlify/a.ar I]
+      [1413] iconst_2
+      [1414] iadd
+      [1415] putfield #166
+        + Fieldref [com/oocit/particlify/a.ar I]
+      [1418] aload_0 v0
+      [1419] getfield #169
+        + Fieldref [com/oocit/particlify/a.au I]
+      [1422] bipush 20
+      [1424] ificmpne +21 (target=1445)
+      [1427] aload_0 v0
+      [1428] dup
+      [1429] getfield #166
+        + Fieldref [com/oocit/particlify/a.ar I]
+      [1432] iconst_1
+      [1433] iadd
+      [1434] putfield #166
+        + Fieldref [com/oocit/particlify/a.ar I]
+      [1437] aload_0 v0
+      [1438] iconst_0
+      [1439] putfield #169
+        + Fieldref [com/oocit/particlify/a.au I]
+      [1442] goto +13 (target=1455)
+      [1445] aload_0 v0
+      [1446] dup
+      [1447] getfield #169
+        + Fieldref [com/oocit/particlify/a.au I]
+      [1450] iconst_1
+      [1451] iadd
+      [1452] putfield #169
+        + Fieldref [com/oocit/particlify/a.au I]
+      [1455] aload_0 v0
+      [1456] dup
+      [1457] getfield #141
+        + Fieldref [com/oocit/particlify/a.T J]
+      [1460] l2f
+      [1461] ldc #41
+        + Float [20.0]
+      [1463] fsub
+      [1464] f2l
+      [1465] putfield #141
+        + Fieldref [com/oocit/particlify/a.T J]
+      [1468] aload_0 v0
+      [1469] getfield #141
+        + Fieldref [com/oocit/particlify/a.T J]
+      [1472] ldc2_w #111
+        + Long [20]
+      [1475] lcmp
+      [1476] ifgt -612 (target=864)
+      [1479] aload_0 v0
+      [1480] lload_2 v2
+      [1481] putfield #140
+        + Fieldref [com/oocit/particlify/a.S J]
+      [1484] aload_0 v0
+      [1485] getfield #150
+        + Fieldref [com/oocit/particlify/a.ab I]
+      [1488] invokestatic #245
+        + Methodref [android/opengl/GLES20.glUseProgram (I)V]
+      [1491] aload_0 v0
+      [1492] getfield #177
+        + Fieldref [com/oocit/particlify/a.h Ljava/nio/FloatBuffer;]
+      [1495] iconst_0
+      [1496] invokevirtual #290
+        + Methodref [java/nio/FloatBuffer.position (I)Ljava/nio/Buffer;]
+      [1499] pop
+      [1500] aload_0 v0
+      [1501] getfield #191
+        + Fieldref [com/oocit/particlify/a.v I]
+      [1504] iconst_3
+      [1505] sipush 5126
+      [1508] iconst_0
+      [1509] bipush 28
+      [1511] aload_0 v0
+      [1512] getfield #177
+        + Fieldref [com/oocit/particlify/a.h Ljava/nio/FloatBuffer;]
+      [1515] invokestatic #246
+        + Methodref [android/opengl/GLES20.glVertexAttribPointer (IIIZILjava/nio/Buffer;)V]
+      [1518] aload_0 v0
+      [1519] getfield #191
+        + Fieldref [com/oocit/particlify/a.v I]
+      [1522] invokestatic #233
+        + Methodref [android/opengl/GLES20.glEnableVertexAttribArray (I)V]
+      [1525] aload_0 v0
+      [1526] getfield #177
+        + Fieldref [com/oocit/particlify/a.h Ljava/nio/FloatBuffer;]
+      [1529] iconst_3
+      [1530] invokevirtual #290
+        + Methodref [java/nio/FloatBuffer.position (I)Ljava/nio/Buffer;]
+      [1533] pop
+      [1534] aload_0 v0
+      [1535] getfield #192
+        + Fieldref [com/oocit/particlify/a.w I]
+      [1538] iconst_4
+      [1539] sipush 5126
+      [1542] iconst_0
+      [1543] bipush 28
+      [1545] aload_0 v0
+      [1546] getfield #177
+        + Fieldref [com/oocit/particlify/a.h Ljava/nio/FloatBuffer;]
+      [1549] invokestatic #246
+        + Methodref [android/opengl/GLES20.glVertexAttribPointer (IIIZILjava/nio/Buffer;)V]
+      [1552] aload_0 v0
+      [1553] getfield #192
+        + Fieldref [com/oocit/particlify/a.w I]
+      [1556] invokestatic #233
+        + Methodref [android/opengl/GLES20.glEnableVertexAttribArray (I)V]
+      [1559] aload_0 v0
+      [1560] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [1563] iconst_0
+      [1564] aload_0 v0
+      [1565] getfield #181
+        + Fieldref [com/oocit/particlify/a.l [F]
+      [1568] iconst_0
+      [1569] aload_0 v0
+      [1570] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [1573] iconst_0
+      [1574] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [1577] aload_0 v0
+      [1578] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [1581] iconst_0
+      [1582] aload_0 v0
+      [1583] getfield #182
+        + Fieldref [com/oocit/particlify/a.m [F]
+      [1586] iconst_0
+      [1587] aload_0 v0
+      [1588] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [1591] iconst_0
+      [1592] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [1595] aload_0 v0
+      [1596] getfield #190
+        + Fieldref [com/oocit/particlify/a.u I]
+      [1599] iconst_1
+      [1600] iconst_0
+      [1601] aload_0 v0
+      [1602] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [1605] iconst_0
+      [1606] invokestatic #244
+        + Methodref [android/opengl/GLES20.glUniformMatrix4fv (IIZ[FI)V]
+      [1609] iconst_5
+      [1610] iconst_0
+      [1611] aload_0 v0
+      [1612] getfield #148
+        + Fieldref [com/oocit/particlify/a.a I]
+      [1615] iconst_2
+      [1616] imul
+      [1617] invokestatic #231
+        + Methodref [android/opengl/GLES20.glDrawArrays (III)V]
+      [1620] aload_0 v0
+      [1621] getfield #191
+        + Fieldref [com/oocit/particlify/a.v I]
+      [1624] invokestatic #230
+        + Methodref [android/opengl/GLES20.glDisableVertexAttribArray (I)V]
+      [1627] aload_0 v0
+      [1628] getfield #192
+        + Fieldref [com/oocit/particlify/a.w I]
+      [1631] invokestatic #230
+        + Methodref [android/opengl/GLES20.glDisableVertexAttribArray (I)V]
+      [1634] aload_0 v0
+      [1635] getfield #152
+        + Fieldref [com/oocit/particlify/a.ad I]
+      [1638] invokestatic #245
+        + Methodref [android/opengl/GLES20.glUseProgram (I)V]
+      [1641] aload_0 v0
+      [1642] getfield #177
+        + Fieldref [com/oocit/particlify/a.h Ljava/nio/FloatBuffer;]
+      [1645] iconst_0
+      [1646] invokevirtual #290
+        + Methodref [java/nio/FloatBuffer.position (I)Ljava/nio/Buffer;]
+      [1649] pop
+      [1650] aload_0 v0
+      [1651] getfield #123
+        + Fieldref [com/oocit/particlify/a.B I]
+      [1654] iconst_3
+      [1655] sipush 5126
+      [1658] iconst_0
+      [1659] bipush 12
+      [1661] aload_0 v0
+      [1662] getfield #179
+        + Fieldref [com/oocit/particlify/a.j Ljava/nio/FloatBuffer;]
+      [1665] invokestatic #246
+        + Methodref [android/opengl/GLES20.glVertexAttribPointer (IIIZILjava/nio/Buffer;)V]
+      [1668] aload_0 v0
+      [1669] getfield #123
+        + Fieldref [com/oocit/particlify/a.B I]
+      [1672] invokestatic #233
+        + Methodref [android/opengl/GLES20.glEnableVertexAttribArray (I)V]
+      [1675] iload v5
+      [1677] bipush 20
+      [1679] iadd
+      [1680] iconst_1
+      [1681] isub
+      [1682] istore v14
+      [1684] goto +141 (target=1825)
+      [1687] iload v14
+      [1689] ifne +6 (target=1695)
+      [1692] goto +140 (target=1832)
+      [1695] aload_0 v0
+      [1696] getfield #162
+        + Fieldref [com/oocit/particlify/a.an [F]
+      [1699] iload v14
+      [1701] faload
+      [1702] ldc #39
+        + Float [10.0]
+      [1704] fmul
+      [1705] fstore v15
+      [1707] aload_0 v0
+      [1708] iload v14
+      [1710] invokespecial #269
+        + Methodref [com/oocit/particlify/a.d (I)F]
+      [1713] fstore v16
+      [1715] aload_0 v0
+      [1716] fload v16
+      [1718] invokespecial #261
+        + Methodref [com/oocit/particlify/a.a (F)F]
+      [1721] ldc #34
+        + Float [5.0]
+      [1723] fadd
+      [1724] fstore v17
+      [1726] aload_0 v0
+      [1727] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [1730] iconst_0
+      [1731] invokestatic #253
+        + Methodref [android/opengl/Matrix.setIdentityM ([FI)V]
+      [1734] aload_0 v0
+      [1735] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [1738] iconst_0
+      [1739] fload v15
+      [1741] fload v17
+      [1743] fload v16
+      [1745] invokestatic #255
+        + Methodref [android/opengl/Matrix.translateM ([FIFFF)V]
+      [1748] aload_0 v0
+      [1749] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [1752] iconst_0
+      [1753] aload_0 v0
+      [1754] getfield #163
+        + Fieldref [com/oocit/particlify/a.ao [F]
+      [1757] iload v14
+      [1759] faload
+      [1760] fconst_1
+      [1761] fconst_1
+      [1762] invokestatic #252
+        + Methodref [android/opengl/Matrix.scaleM ([FIFFF)V]
+      [1765] aload_0 v0
+      [1766] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [1769] iconst_0
+      [1770] aload_0 v0
+      [1771] getfield #181
+        + Fieldref [com/oocit/particlify/a.l [F]
+      [1774] iconst_0
+      [1775] aload_0 v0
+      [1776] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [1779] iconst_0
+      [1780] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [1783] aload_0 v0
+      [1784] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [1787] iconst_0
+      [1788] aload_0 v0
+      [1789] getfield #182
+        + Fieldref [com/oocit/particlify/a.m [F]
+      [1792] iconst_0
+      [1793] aload_0 v0
+      [1794] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [1797] iconst_0
+      [1798] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [1801] aload_0 v0
+      [1802] getfield #190
+        + Fieldref [com/oocit/particlify/a.u I]
+      [1805] iconst_1
+      [1806] iconst_0
+      [1807] aload_0 v0
+      [1808] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [1811] iconst_0
+      [1812] invokestatic #244
+        + Methodref [android/opengl/GLES20.glUniformMatrix4fv (IIZ[FI)V]
+      [1815] iconst_5
+      [1816] iconst_0
+      [1817] bipush 10
+      [1819] invokestatic #231
+        + Methodref [android/opengl/GLES20.glDrawArrays (III)V]
+      [1822] iinc v14, -1
+      [1825] iload v14
+      [1827] iload v5
+      [1829] ificmpge -142 (target=1687)
+      [1832] aload_0 v0
+      [1833] getfield #123
+        + Fieldref [com/oocit/particlify/a.B I]
+      [1836] invokestatic #230
+        + Methodref [android/opengl/GLES20.glDisableVertexAttribArray (I)V]
+      [1839] sipush 2929
+      [1842] invokestatic #229
+        + Methodref [android/opengl/GLES20.glDisable (I)V]
+      [1845] sipush 3042
+      [1848] invokestatic #232
+        + Methodref [android/opengl/GLES20.glEnable (I)V]
+      [1851] sipush 770
+      [1854] sipush 772
+      [1857] invokestatic #221
+        + Methodref [android/opengl/GLES20.glBlendFunc (II)V]
+      [1860] aload_0 v0
+      [1861] getfield #151
+        + Fieldref [com/oocit/particlify/a.ac I]
+      [1864] invokestatic #245
+        + Methodref [android/opengl/GLES20.glUseProgram (I)V]
+      [1867] aload_0 v0
+      [1868] getfield #178
+        + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+      [1871] iconst_0
+      [1872] invokevirtual #290
+        + Methodref [java/nio/FloatBuffer.position (I)Ljava/nio/Buffer;]
+      [1875] pop
+      [1876] aload_0 v0
+      [1877] getfield #132
+        + Fieldref [com/oocit/particlify/a.K I]
+      [1880] iconst_3
+      [1881] sipush 5126
+      [1884] iconst_0
+      [1885] bipush 20
+      [1887] aload_0 v0
+      [1888] getfield #178
+        + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+      [1891] invokestatic #246
+        + Methodref [android/opengl/GLES20.glVertexAttribPointer (IIIZILjava/nio/Buffer;)V]
+      [1894] aload_0 v0
+      [1895] getfield #132
+        + Fieldref [com/oocit/particlify/a.K I]
+      [1898] invokestatic #233
+        + Methodref [android/opengl/GLES20.glEnableVertexAttribArray (I)V]
+      [1901] aload_0 v0
+      [1902] getfield #178
+        + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+      [1905] iconst_3
+      [1906] invokevirtual #290
+        + Methodref [java/nio/FloatBuffer.position (I)Ljava/nio/Buffer;]
+      [1909] pop
+      [1910] aload_0 v0
+      [1911] getfield #133
+        + Fieldref [com/oocit/particlify/a.L I]
+      [1914] iconst_2
+      [1915] sipush 5126
+      [1918] iconst_0
+      [1919] bipush 20
+      [1921] aload_0 v0
+      [1922] getfield #178
+        + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+      [1925] invokestatic #246
+        + Methodref [android/opengl/GLES20.glVertexAttribPointer (IIIZILjava/nio/Buffer;)V]
+      [1928] aload_0 v0
+      [1929] getfield #133
+        + Fieldref [com/oocit/particlify/a.L I]
+      [1932] invokestatic #233
+        + Methodref [android/opengl/GLES20.glEnableVertexAttribArray (I)V]
+      [1935] ldc #9
+        + Integer [33984]
+      [1937] invokestatic #217
+        + Methodref [android/opengl/GLES20.glActiveTexture (I)V]
+      [1940] sipush 3553
+      [1943] aload_0 v0
+      [1944] getfield #135
+        + Fieldref [com/oocit/particlify/a.N I]
+      [1947] invokestatic #220
+        + Methodref [android/opengl/GLES20.glBindTexture (II)V]
+      [1950] aload_0 v0
+      [1951] getfield #134
+        + Fieldref [com/oocit/particlify/a.M I]
+      [1954] iconst_0
+      [1955] invokestatic #243
+        + Methodref [android/opengl/GLES20.glUniform1i (II)V]
+      [1958] iconst_0
+      [1959] istore v14
+      [1961] goto +108 (target=2069)
+      [1964] aload_0 v0
+      [1965] dup
+      [1966] getfield #164
+        + Fieldref [com/oocit/particlify/a.ap I]
+      [1969] iconst_1
+      [1970] isub
+      [1971] putfield #164
+        + Fieldref [com/oocit/particlify/a.ap I]
+      [1974] aload_0 v0
+      [1975] getfield #165
+        + Fieldref [com/oocit/particlify/a.aq [F]
+      [1978] aload_0 v0
+      [1979] getfield #164
+        + Fieldref [com/oocit/particlify/a.ap I]
+      [1982] iconst_3
+      [1983] imul
+      [1984] iconst_0
+      [1985] iadd
+      [1986] aload_0 v0
+      [1987] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [1990] iload v14
+      [1992] iconst_3
+      [1993] imul
+      [1994] iconst_0
+      [1995] iadd
+      [1996] faload
+      [1997] aload_0 v0
+      [1998] getfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [2001] fadd
+      [2002] fastore
+      [2003] aload_0 v0
+      [2004] getfield #165
+        + Fieldref [com/oocit/particlify/a.aq [F]
+      [2007] aload_0 v0
+      [2008] getfield #164
+        + Fieldref [com/oocit/particlify/a.ap I]
+      [2011] iconst_3
+      [2012] imul
+      [2013] iconst_2
+      [2014] iadd
+      [2015] fload v9
+      [2017] fload v4
+      [2019] ldc #31
+        + Float [1.5]
+      [2021] fdiv
+      [2022] fadd
+      [2023] aload_0 v0
+      [2024] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [2027] iload v14
+      [2029] iconst_3
+      [2030] imul
+      [2031] iconst_2
+      [2032] iadd
+      [2033] faload
+      [2034] fadd
+      [2035] fastore
+      [2036] aload_0 v0
+      [2037] getfield #165
+        + Fieldref [com/oocit/particlify/a.aq [F]
+      [2040] aload_0 v0
+      [2041] getfield #164
+        + Fieldref [com/oocit/particlify/a.ap I]
+      [2044] iconst_3
+      [2045] imul
+      [2046] iconst_1
+      [2047] iadd
+      [2048] aload_0 v0
+      [2049] aload_0 v0
+      [2050] getfield #165
+        + Fieldref [com/oocit/particlify/a.aq [F]
+      [2053] aload_0 v0
+      [2054] getfield #164
+        + Fieldref [com/oocit/particlify/a.ap I]
+      [2057] iconst_3
+      [2058] imul
+      [2059] iconst_2
+      [2060] iadd
+      [2061] faload
+      [2062] invokespecial #261
+        + Methodref [com/oocit/particlify/a.a (F)F]
+      [2065] fastore
+      [2066] iinc v14, 1
+      [2069] aload_0 v0
+      [2070] getfield #164
+        + Fieldref [com/oocit/particlify/a.ap I]
+      [2073] ifle +12 (target=2085)
+      [2076] iload v14
+      [2078] aload_0 v0
+      [2079] getfield #166
+        + Fieldref [com/oocit/particlify/a.ar I]
+      [2082] ificmplt -118 (target=1964)
+      [2085] aload_0 v0
+      [2086] iconst_0
+      [2087] putfield #166
+        + Fieldref [com/oocit/particlify/a.ar I]
+      [2090] iconst_0
+      [2091] istore v14
+      [2093] goto +130 (target=2223)
+      [2096] aload_0 v0
+      [2097] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [2100] iconst_0
+      [2101] invokestatic #253
+        + Methodref [android/opengl/Matrix.setIdentityM ([FI)V]
+      [2104] aload_0 v0
+      [2105] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [2108] iconst_0
+      [2109] aload_0 v0
+      [2110] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [2113] iload v14
+      [2115] iconst_3
+      [2116] imul
+      [2117] iconst_0
+      [2118] iadd
+      [2119] faload
+      [2120] aload_0 v0
+      [2121] getfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [2124] fadd
+      [2125] fload v6
+      [2127] fconst_2
+      [2128] fadd
+      [2129] aload_0 v0
+      [2130] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [2133] iload v14
+      [2135] iconst_3
+      [2136] imul
+      [2137] iconst_1
+      [2138] iadd
+      [2139] faload
+      [2140] fadd
+      [2141] fload v9
+      [2143] fload v4
+      [2145] ldc #30
+        + Float [1.1]
+      [2147] fdiv
+      [2148] fadd
+      [2149] aload_0 v0
+      [2150] getfield #160
+        + Fieldref [com/oocit/particlify/a.al [F]
+      [2153] iload v14
+      [2155] iconst_3
+      [2156] imul
+      [2157] iconst_2
+      [2158] iadd
+      [2159] faload
+      [2160] fadd
+      [2161] invokestatic #255
+        + Methodref [android/opengl/Matrix.translateM ([FIFFF)V]
+      [2164] aload_0 v0
+      [2165] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [2168] iconst_0
+      [2169] aload_0 v0
+      [2170] getfield #181
+        + Fieldref [com/oocit/particlify/a.l [F]
+      [2173] iconst_0
+      [2174] aload_0 v0
+      [2175] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [2178] iconst_0
+      [2179] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [2182] aload_0 v0
+      [2183] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [2186] iconst_0
+      [2187] aload_0 v0
+      [2188] getfield #182
+        + Fieldref [com/oocit/particlify/a.m [F]
+      [2191] iconst_0
+      [2192] aload_0 v0
+      [2193] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [2196] iconst_0
+      [2197] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [2200] aload_0 v0
+      [2201] getfield #131
+        + Fieldref [com/oocit/particlify/a.J I]
+      [2204] iconst_1
+      [2205] iconst_0
+      [2206] aload_0 v0
+      [2207] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [2210] iconst_0
+      [2211] invokestatic #244
+        + Methodref [android/opengl/GLES20.glUniformMatrix4fv (IIZ[FI)V]
+      [2214] iconst_5
+      [2215] iconst_0
+      [2216] iconst_4
+      [2217] invokestatic #231
+        + Methodref [android/opengl/GLES20.glDrawArrays (III)V]
+      [2220] iinc v14, 1
+      [2223] iload v14
+      [2225] aload_0 v0
+      [2226] getfield #164
+        + Fieldref [com/oocit/particlify/a.ap I]
+      [2229] ificmplt -133 (target=2096)
+      [2232] aload_0 v0
+      [2233] getfield #164
+        + Fieldref [com/oocit/particlify/a.ap I]
+      [2236] istore v14
+      [2238] goto +111 (target=2349)
+      [2241] aload_0 v0
+      [2242] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [2245] iconst_0
+      [2246] invokestatic #253
+        + Methodref [android/opengl/Matrix.setIdentityM ([FI)V]
+      [2249] aload_0 v0
+      [2250] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [2253] iconst_0
+      [2254] aload_0 v0
+      [2255] getfield #165
+        + Fieldref [com/oocit/particlify/a.aq [F]
+      [2258] iload v14
+      [2260] iconst_3
+      [2261] imul
+      [2262] iconst_0
+      [2263] iadd
+      [2264] faload
+      [2265] aload_0 v0
+      [2266] getfield #165
+        + Fieldref [com/oocit/particlify/a.aq [F]
+      [2269] iload v14
+      [2271] iconst_3
+      [2272] imul
+      [2273] iconst_1
+      [2274] iadd
+      [2275] faload
+      [2276] aload_0 v0
+      [2277] getfield #165
+        + Fieldref [com/oocit/particlify/a.aq [F]
+      [2280] iload v14
+      [2282] iconst_3
+      [2283] imul
+      [2284] iconst_2
+      [2285] iadd
+      [2286] faload
+      [2287] invokestatic #255
+        + Methodref [android/opengl/Matrix.translateM ([FIFFF)V]
+      [2290] aload_0 v0
+      [2291] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [2294] iconst_0
+      [2295] aload_0 v0
+      [2296] getfield #181
+        + Fieldref [com/oocit/particlify/a.l [F]
+      [2299] iconst_0
+      [2300] aload_0 v0
+      [2301] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [2304] iconst_0
+      [2305] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [2308] aload_0 v0
+      [2309] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [2312] iconst_0
+      [2313] aload_0 v0
+      [2314] getfield #182
+        + Fieldref [com/oocit/particlify/a.m [F]
+      [2317] iconst_0
+      [2318] aload_0 v0
+      [2319] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [2322] iconst_0
+      [2323] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [2326] aload_0 v0
+      [2327] getfield #131
+        + Fieldref [com/oocit/particlify/a.J I]
+      [2330] iconst_1
+      [2331] iconst_0
+      [2332] aload_0 v0
+      [2333] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [2336] iconst_0
+      [2337] invokestatic #244
+        + Methodref [android/opengl/GLES20.glUniformMatrix4fv (IIZ[FI)V]
+      [2340] iconst_5
+      [2341] iconst_0
+      [2342] iconst_4
+      [2343] invokestatic #231
+        + Methodref [android/opengl/GLES20.glDrawArrays (III)V]
+      [2346] iinc v14, 1
+      [2349] iload v14
+      [2351] aload_0 v0
+      [2352] getfield #174
+        + Fieldref [com/oocit/particlify/a.e I]
+      [2355] ificmplt -114 (target=2241)
+      [2358] aload_0 v0
+      [2359] getfield #132
+        + Fieldref [com/oocit/particlify/a.K I]
+      [2362] invokestatic #230
+        + Methodref [android/opengl/GLES20.glDisableVertexAttribArray (I)V]
+      [2365] aload_0 v0
+      [2366] getfield #133
+        + Fieldref [com/oocit/particlify/a.L I]
+      [2369] invokestatic #230
+        + Methodref [android/opengl/GLES20.glDisableVertexAttribArray (I)V]
+      [2372] sipush 3042
+      [2375] invokestatic #229
+        + Methodref [android/opengl/GLES20.glDisable (I)V]
+      [2378] aload_0 v0
+      [2379] getfield #153
+        + Fieldref [com/oocit/particlify/a.ae I]
+      [2382] invokestatic #245
+        + Methodref [android/opengl/GLES20.glUseProgram (I)V]
+      [2385] aload_0 v0
+      [2386] getfield #178
+        + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+      [2389] iconst_0
+      [2390] invokevirtual #290
+        + Methodref [java/nio/FloatBuffer.position (I)Ljava/nio/Buffer;]
+      [2393] pop
+      [2394] aload_0 v0
+      [2395] getfield #132
+        + Fieldref [com/oocit/particlify/a.K I]
+      [2398] iconst_3
+      [2399] sipush 5126
+      [2402] iconst_0
+      [2403] bipush 20
+      [2405] aload_0 v0
+      [2406] getfield #178
+        + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+      [2409] invokestatic #246
+        + Methodref [android/opengl/GLES20.glVertexAttribPointer (IIIZILjava/nio/Buffer;)V]
+      [2412] aload_0 v0
+      [2413] getfield #132
+        + Fieldref [com/oocit/particlify/a.K I]
+      [2416] invokestatic #233
+        + Methodref [android/opengl/GLES20.glEnableVertexAttribArray (I)V]
+      [2419] aload_0 v0
+      [2420] getfield #181
+        + Fieldref [com/oocit/particlify/a.l [F]
+      [2423] iconst_0
+      [2424] fconst_0
+      [2425] fconst_0
+      [2426] fconst_0
+      [2427] fconst_0
+      [2428] fconst_0
+      [2429] ldc #39
+        + Float [10.0]
+      [2431] fconst_0
+      [2432] fconst_1
+      [2433] fconst_0
+      [2434] invokestatic #254
+        + Methodref [android/opengl/Matrix.setLookAtM ([FIFFFFFFFFF)V]
+      [2437] aload_0 v0
+      [2438] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [2441] iconst_0
+      [2442] invokestatic #253
+        + Methodref [android/opengl/Matrix.setIdentityM ([FI)V]
+      [2445] aload_0 v0
+      [2446] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [2449] iconst_0
+      [2450] ldc #37
+        + Float [7.0]
+      [2452] ldc #32
+        + Float [3.5]
+      [2454] ldc #39
+        + Float [10.0]
+      [2456] invokestatic #255
+        + Methodref [android/opengl/Matrix.translateM ([FIFFF)V]
+      [2459] aload_0 v0
+      [2460] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [2463] iconst_0
+      [2464] aload_0 v0
+      [2465] getfield #138
+        + Fieldref [com/oocit/particlify/a.Q F]
+      [2468] fneg
+      [2469] ldc #52
+        + Float [5000.0]
+      [2471] fdiv
+      [2472] ldc #26
+        + Float [0.25]
+      [2474] fconst_1
+      [2475] invokestatic #252
+        + Methodref [android/opengl/Matrix.scaleM ([FIFFF)V]
+      [2478] aload_0 v0
+      [2479] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [2482] iconst_0
+      [2483] fconst_1
+      [2484] fconst_0
+      [2485] fconst_0
+      [2486] invokestatic #255
+        + Methodref [android/opengl/Matrix.translateM ([FIFFF)V]
+      [2489] aload_0 v0
+      [2490] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [2493] iconst_0
+      [2494] aload_0 v0
+      [2495] getfield #181
+        + Fieldref [com/oocit/particlify/a.l [F]
+      [2498] iconst_0
+      [2499] aload_0 v0
+      [2500] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [2503] iconst_0
+      [2504] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [2507] aload_0 v0
+      [2508] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [2511] iconst_0
+      [2512] aload_0 v0
+      [2513] getfield #182
+        + Fieldref [com/oocit/particlify/a.m [F]
+      [2516] iconst_0
+      [2517] aload_0 v0
+      [2518] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [2521] iconst_0
+      [2522] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [2525] aload_0 v0
+      [2526] getfield #131
+        + Fieldref [com/oocit/particlify/a.J I]
+      [2529] iconst_1
+      [2530] iconst_0
+      [2531] aload_0 v0
+      [2532] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [2535] iconst_0
+      [2536] invokestatic #244
+        + Methodref [android/opengl/GLES20.glUniformMatrix4fv (IIZ[FI)V]
+      [2539] iconst_5
+      [2540] iconst_0
+      [2541] iconst_4
+      [2542] invokestatic #231
+        + Methodref [android/opengl/GLES20.glDrawArrays (III)V]
+      [2545] aload_0 v0
+      [2546] getfield #132
+        + Fieldref [com/oocit/particlify/a.K I]
+      [2549] invokestatic #230
+        + Methodref [android/opengl/GLES20.glDisableVertexAttribArray (I)V]
+      [2552] sipush 2929
+      [2555] invokestatic #229
+        + Methodref [android/opengl/GLES20.glDisable (I)V]
+      [2558] sipush 3042
+      [2561] invokestatic #232
+        + Methodref [android/opengl/GLES20.glEnable (I)V]
+      [2564] sipush 770
+      [2567] sipush 772
+      [2570] invokestatic #221
+        + Methodref [android/opengl/GLES20.glBlendFunc (II)V]
+      [2573] aload_0 v0
+      [2574] getfield #151
+        + Fieldref [com/oocit/particlify/a.ac I]
+      [2577] invokestatic #245
+        + Methodref [android/opengl/GLES20.glUseProgram (I)V]
+      [2580] aload_0 v0
+      [2581] getfield #178
+        + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+      [2584] iconst_0
+      [2585] invokevirtual #290
+        + Methodref [java/nio/FloatBuffer.position (I)Ljava/nio/Buffer;]
+      [2588] pop
+      [2589] aload_0 v0
+      [2590] getfield #132
+        + Fieldref [com/oocit/particlify/a.K I]
+      [2593] iconst_3
+      [2594] sipush 5126
+      [2597] iconst_0
+      [2598] bipush 20
+      [2600] aload_0 v0
+      [2601] getfield #178
+        + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+      [2604] invokestatic #246
+        + Methodref [android/opengl/GLES20.glVertexAttribPointer (IIIZILjava/nio/Buffer;)V]
+      [2607] aload_0 v0
+      [2608] getfield #132
+        + Fieldref [com/oocit/particlify/a.K I]
+      [2611] invokestatic #233
+        + Methodref [android/opengl/GLES20.glEnableVertexAttribArray (I)V]
+      [2614] aload_0 v0
+      [2615] getfield #178
+        + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+      [2618] iconst_3
+      [2619] invokevirtual #290
+        + Methodref [java/nio/FloatBuffer.position (I)Ljava/nio/Buffer;]
+      [2622] pop
+      [2623] aload_0 v0
+      [2624] getfield #133
+        + Fieldref [com/oocit/particlify/a.L I]
+      [2627] iconst_2
+      [2628] sipush 5126
+      [2631] iconst_0
+      [2632] bipush 20
+      [2634] aload_0 v0
+      [2635] getfield #178
+        + Fieldref [com/oocit/particlify/a.i Ljava/nio/FloatBuffer;]
+      [2638] invokestatic #246
+        + Methodref [android/opengl/GLES20.glVertexAttribPointer (IIIZILjava/nio/Buffer;)V]
+      [2641] aload_0 v0
+      [2642] getfield #133
+        + Fieldref [com/oocit/particlify/a.L I]
+      [2645] invokestatic #233
+        + Methodref [android/opengl/GLES20.glEnableVertexAttribArray (I)V]
+      [2648] ldc #9
+        + Integer [33984]
+      [2650] invokestatic #217
+        + Methodref [android/opengl/GLES20.glActiveTexture (I)V]
+      [2653] sipush 3553
+      [2656] aload_0 v0
+      [2657] getfield #135
+        + Fieldref [com/oocit/particlify/a.N I]
+      [2660] invokestatic #220
+        + Methodref [android/opengl/GLES20.glBindTexture (II)V]
+      [2663] aload_0 v0
+      [2664] getfield #134
+        + Fieldref [com/oocit/particlify/a.M I]
+      [2667] iconst_0
+      [2668] invokestatic #243
+        + Methodref [android/opengl/GLES20.glUniform1i (II)V]
+      [2671] aload_0 v0
+      [2672] getfield #181
+        + Fieldref [com/oocit/particlify/a.l [F]
+      [2675] iconst_0
+      [2676] fconst_0
+      [2677] fconst_0
+      [2678] fconst_0
+      [2679] fconst_0
+      [2680] fconst_0
+      [2681] ldc #39
+        + Float [10.0]
+      [2683] fconst_0
+      [2684] fconst_1
+      [2685] fconst_0
+      [2686] invokestatic #254
+        + Methodref [android/opengl/Matrix.setLookAtM ([FIFFFFFFFFF)V]
+      [2689] aload_0 v0
+      [2690] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [2693] iconst_0
+      [2694] invokestatic #253
+        + Methodref [android/opengl/Matrix.setIdentityM ([FI)V]
+      [2697] aload_0 v0
+      [2698] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [2701] iconst_0
+      [2702] ldc #37
+        + Float [7.0]
+      [2704] aload_0 v0
+      [2705] getfield #170
+        + Fieldref [com/oocit/particlify/a.av F]
+      [2708] ldc #52
+        + Float [5000.0]
+      [2710] fdiv
+      [2711] fconst_2
+      [2712] fmul
+      [2713] fsub
+      [2714] ldc #32
+        + Float [3.5]
+      [2716] ldc #39
+        + Float [10.0]
+      [2718] invokestatic #255
+        + Methodref [android/opengl/Matrix.translateM ([FIFFF)V]
+      [2721] aload_0 v0
+      [2722] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [2725] iconst_0
+      [2726] aload_0 v0
+      [2727] getfield #181
+        + Fieldref [com/oocit/particlify/a.l [F]
+      [2730] iconst_0
+      [2731] aload_0 v0
+      [2732] getfield #180
+        + Fieldref [com/oocit/particlify/a.k [F]
+      [2735] iconst_0
+      [2736] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [2739] aload_0 v0
+      [2740] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [2743] iconst_0
+      [2744] aload_0 v0
+      [2745] getfield #182
+        + Fieldref [com/oocit/particlify/a.m [F]
+      [2748] iconst_0
+      [2749] aload_0 v0
+      [2750] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [2753] iconst_0
+      [2754] invokestatic #249
+        + Methodref [android/opengl/Matrix.multiplyMM ([FI[FI[FI)V]
+      [2757] aload_0 v0
+      [2758] getfield #131
+        + Fieldref [com/oocit/particlify/a.J I]
+      [2761] iconst_1
+      [2762] iconst_0
+      [2763] aload_0 v0
+      [2764] getfield #183
+        + Fieldref [com/oocit/particlify/a.n [F]
+      [2767] iconst_0
+      [2768] invokestatic #244
+        + Methodref [android/opengl/GLES20.glUniformMatrix4fv (IIZ[FI)V]
+      [2771] iconst_5
+      [2772] iconst_0
+      [2773] iconst_4
+      [2774] invokestatic #231
+        + Methodref [android/opengl/GLES20.glDrawArrays (III)V]
+      [2777] aload_0 v0
+      [2778] getfield #132
+        + Fieldref [com/oocit/particlify/a.K I]
+      [2781] invokestatic #230
+        + Methodref [android/opengl/GLES20.glDisableVertexAttribArray (I)V]
+      [2784] aload_0 v0
+      [2785] getfield #133
+        + Fieldref [com/oocit/particlify/a.L I]
+      [2788] invokestatic #230
+        + Methodref [android/opengl/GLES20.glDisableVertexAttribArray (I)V]
+      [2791] sipush 3042
+      [2794] invokestatic #229
+        + Methodref [android/opengl/GLES20.glDisable (I)V]
+      [2797] aload_0 v0
+      [2798] getfield #138
+        + Fieldref [com/oocit/particlify/a.Q F]
+      [2801] aload_0 v0
+      [2802] getfield #170
+        + Fieldref [com/oocit/particlify/a.av F]
+      [2805] fcmpl
+      [2806] ifle +11 (target=2817)
+      [2809] aload_0 v0
+      [2810] aload_0 v0
+      [2811] getfield #138
+        + Fieldref [com/oocit/particlify/a.Q F]
+      [2814] putfield #170
+        + Fieldref [com/oocit/particlify/a.av F]
+      [2817] aload_0 v0
+      [2818] getfield #164
+        + Fieldref [com/oocit/particlify/a.ap I]
+      [2821] ifgt +15 (target=2836)
+      [2824] aload_0 v0
+      [2825] invokespecial #265
+        + Methodref [com/oocit/particlify/a.b ()V]
+      [2828] aload_0 v0
+      [2829] aload_0 v0
+      [2830] getfield #175
+        + Fieldref [com/oocit/particlify/a.f I]
+      [2833] putfield #167
+        + Fieldref [com/oocit/particlify/a.as I]
+      [2836] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 34):
+        - [159] Var: [a:com/oocit/particlify/a][a:javax/microedition/khronos/opengles/GL10][l][f][i][f][f][f][f][f][f][f], Stack: 
+        - [182] Var: ..., Stack: (empty)
+        - [666] Var: [a:com/oocit/particlify/a][a:javax/microedition/khronos/opengles/GL10][l][f][i][f][f][f][f][f][f][f][f][f][f][i], Stack: 
+        - [789] Var: ..., Stack: (empty)
+        - [825] Var: [a:com/oocit/particlify/a][a:javax/microedition/khronos/opengles/GL10][l][f][i][f][f][f][f][f][f][f], Stack: 
+        - [864] Var: ...[f], Stack: (empty)
+        - [899] Var: ..., Stack: (empty)
+        - [965] Var: ..., Stack: (empty)
+        - [981] Var: ..., Stack: (empty)
+        - [1034] Var: ..., Stack: (empty)
+        - [1066] Var: ..., Stack: (empty)
+        - [1072] Var: ...[i], Stack: (empty)
+        - [1278] Var: ..., Stack: (empty)
+        - [1290] Var: ..., Stack: (empty)
+        - [1293] Var: ..., Stack: (empty)
+        - [1400] Var: [a:com/oocit/particlify/a][a:javax/microedition/khronos/opengles/GL10][l][f][i][f][f][f][f][f][f][f][f][f][i][f][f][f], Stack: 
+        - [1401] Var: ..., Stack: [i]
+        - [1418] Var: ...[i], Stack: (empty)
+        - [1445] Var: ..., Stack: (empty)
+        - [1455] Var: ..., Stack: (empty)
+        - [1468] Var: [a:com/oocit/particlify/a][a:javax/microedition/khronos/opengles/GL10][l][f][i][f][f][f][f][f][f][f][f], Stack: 
+        - [1687] Var: ...[i], Stack: (empty)
+        - [1695] Var: ..., Stack: (empty)
+        - [1825] Var: ..., Stack: (empty)
+        - [1832] Var: -1, Stack: (empty)
+        - [1964] Var: ...[i], Stack: (empty)
+        - [2069] Var: ..., Stack: (empty)
+        - [2085] Var: -1, Stack: (empty)
+        - [2096] Var: ...[i], Stack: (empty)
+        - [2223] Var: ..., Stack: (empty)
+        - [2241] Var: ..., Stack: (empty)
+        - [2349] Var: ..., Stack: (empty)
+        - [2817] Var: -1, Stack: (empty)
+        - [2836] Var: -1, Stack: (empty)
+  + Method:       b()V
+    Access flags: 0x2
+      = private void b()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 51, locals = 1, stack = 3):
+      [0] aload_0 v0
+      [1] aload_0 v0
+      [2] getfield #174
+        + Fieldref [com/oocit/particlify/a.e I]
+      [5] putfield #164
+        + Fieldref [com/oocit/particlify/a.ap I]
+      [8] aload_0 v0
+      [9] fconst_0
+      [10] putfield #138
+        + Fieldref [com/oocit/particlify/a.Q F]
+      [13] aload_0 v0
+      [14] fconst_0
+      [15] putfield #147
+        + Fieldref [com/oocit/particlify/a.Z F]
+      [18] aload_0 v0
+      [19] fconst_0
+      [20] putfield #143
+        + Fieldref [com/oocit/particlify/a.V F]
+      [23] aload_0 v0
+      [24] fconst_0
+      [25] putfield #144
+        + Fieldref [com/oocit/particlify/a.W F]
+      [28] aload_0 v0
+      [29] fconst_0
+      [30] putfield #146
+        + Fieldref [com/oocit/particlify/a.Y F]
+      [33] aload_0 v0
+      [34] lconst_0
+      [35] putfield #141
+        + Fieldref [com/oocit/particlify/a.T J]
+      [38] aload_0 v0
+      [39] fconst_0
+      [40] putfield #142
+        + Fieldref [com/oocit/particlify/a.U F]
+      [43] aload_0 v0
+      [44] invokestatic #285
+        + Methodref [java/lang/System.currentTimeMillis ()J]
+      [47] putfield #140
+        + Fieldref [com/oocit/particlify/a.S J]
+      [50] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       d(I)F
+    Access flags: 0x2
+      = private float d(int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 14, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [4] iload_1 v1
+      [5] bipush 7
+      [7] imul
+      [8] iconst_2
+      [9] imul
+      [10] iconst_2
+      [11] iadd
+      [12] faload
+      [13] freturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(F)F
+    Access flags: 0x2
+      = private float a(float)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 77, locals = 8, stack = 3):
+      [0] aload_0 v0
+      [1] getfield #171
+        + Fieldref [com/oocit/particlify/a.b I]
+      [4] i2f
+      [5] aload_0 v0
+      [6] getfield #148
+        + Fieldref [com/oocit/particlify/a.a I]
+      [9] i2f
+      [10] fdiv
+      [11] fstore_2 v2
+      [12] fload_1 v1
+      [13] fload_2 v2
+      [14] fdiv
+      [15] f2i
+      [16] istore_3 v3
+      [17] iload_3 v3
+      [18] iconst_1
+      [19] iadd
+      [20] istore v4
+      [22] aload_0 v0
+      [23] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [26] iload_3 v3
+      [27] bipush 7
+      [29] imul
+      [30] iconst_2
+      [31] imul
+      [32] iconst_1
+      [33] iadd
+      [34] faload
+      [35] fstore v5
+      [37] aload_0 v0
+      [38] getfield #136
+        + Fieldref [com/oocit/particlify/a.O [F]
+      [41] iload v4
+      [43] bipush 7
+      [45] imul
+      [46] iconst_2
+      [47] imul
+      [48] iconst_1
+      [49] iadd
+      [50] faload
+      [51] fstore v6
+      [53] fload_1 v1
+      [54] iload_3 v3
+      [55] i2f
+      [56] fload_2 v2
+      [57] fmul
+      [58] fsub
+      [59] fload_2 v2
+      [60] fdiv
+      [61] fstore v7
+      [63] fload v5
+      [65] fconst_1
+      [66] fload v7
+      [68] fsub
+      [69] fmul
+      [70] fload v6
+      [72] fload v7
+      [74] fmul
+      [75] fadd
+      [76] freturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       b(Ljava/lang/String;)Ljava/lang/String;
+    Access flags: 0x2
+      = private java.lang.String b(java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 152, locals = 9, stack = 4):
+      [0] aconst_null
+      [1] astore_2 v2
+      [2] aconst_null
+      [3] astore_3 v3
+      [4] aload_0 v0
+      [5] getfield #155
+        + Fieldref [com/oocit/particlify/a.ag Landroid/content/Context;]
+      [8] invokevirtual #196
+        + Methodref [android/content/Context.getAssets ()Landroid/content/res/AssetManager;]
+      [11] aload_1 v1
+      [12] invokevirtual #197
+        + Methodref [android/content/res/AssetManager.open (Ljava/lang/String;)Ljava/io/InputStream;]
+      [15] astore_2 v2
+      [16] new #96
+        + Class [java/io/DataInputStream]
+      [19] dup
+      [20] aload_2 v2
+      [21] invokespecial #270
+        + Methodref [java/io/DataInputStream.<init> (Ljava/io/InputStream;)V]
+      [24] astore_3 v3
+      [25] aload_3 v3
+      [26] invokevirtual #271
+        + Methodref [java/io/DataInputStream.available ()I]
+      [29] istore v4
+      [31] iload v4
+      [33] newarray 8
+      [35] astore v5
+      [37] aload_3 v3
+      [38] aload v5
+      [40] invokevirtual #273
+        + Methodref [java/io/DataInputStream.readFully ([B)V]
+      [43] new #102
+        + Class [java/lang/String]
+      [46] dup
+      [47] aload v5
+      [49] invokespecial #280
+        + Methodref [java/lang/String.<init> ([B)V]
+      [52] astore v7
+      [54] aload_3 v3
+      [55] invokevirtual #272
+        + Methodref [java/io/DataInputStream.close ()V]
+      [58] goto +5 (target=63)
+      [61] astore v8
+      [63] aload_2 v2
+      [64] invokevirtual #274
+        + Methodref [java/io/InputStream.close ()V]
+      [67] goto +5 (target=72)
+      [70] astore v8
+      [72] aload v7
+      [74] areturn
+      [75] astore v4
+      [77] ldc #62
+        + String [Particlify]
+      [79] new #103
+        + Class [java/lang/StringBuilder]
+      [82] dup
+      [83] ldc #59
+        + String [Error loading ]
+      [85] invokespecial #282
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [88] aload_1 v1
+      [89] invokevirtual #283
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [92] ldc #55
+        + String [ from assets]
+      [94] invokevirtual #283
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [97] invokevirtual #284
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [100] aload v4
+      [102] invokestatic #257
+        + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I]
+      [105] pop
+      [106] aload_3 v3
+      [107] invokevirtual #272
+        + Methodref [java/io/DataInputStream.close ()V]
+      [110] goto +5 (target=115)
+      [113] astore v8
+      [115] aload_2 v2
+      [116] invokevirtual #274
+        + Methodref [java/io/InputStream.close ()V]
+      [119] goto +31 (target=150)
+      [122] astore v8
+      [124] goto +26 (target=150)
+      [127] astore v6
+      [129] aload_3 v3
+      [130] invokevirtual #272
+        + Methodref [java/io/DataInputStream.close ()V]
+      [133] goto +5 (target=138)
+      [136] astore v8
+      [138] aload_2 v2
+      [139] invokevirtual #274
+        + Methodref [java/io/InputStream.close ()V]
+      [142] goto +5 (target=147)
+      [145] astore v8
+      [147] aload v6
+      [149] athrow
+      [150] aconst_null
+      [151] areturn
+      Code attribute exceptions (count = 9):
+      - ExceptionInfo (54 -> 58: 61):
+      + Class [java/lang/Exception]
+      - ExceptionInfo (63 -> 67: 70):
+      + Class [java/lang/Exception]
+      - ExceptionInfo (4 -> 54: 75):
+      + Class [java/lang/Exception]
+      - ExceptionInfo (106 -> 110: 113):
+      + Class [java/lang/Exception]
+      - ExceptionInfo (115 -> 119: 122):
+      + Class [java/lang/Exception]
+      - ExceptionInfo (4 -> 54: 127):
+      - ExceptionInfo (75 -> 106: 127):
+      - ExceptionInfo (129 -> 133: 136):
+      + Class [java/lang/Exception]
+      - ExceptionInfo (138 -> 142: 145):
+      + Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 15):
+        - [61] Var: [a:com/oocit/particlify/a][a:java/lang/String][a:java/io/InputStream][a:java/io/DataInputStream][i][a:[B][T][a:java/lang/String], Stack: [a:java/lang/Exception]
+        - [63] Var: ..., Stack: (empty)
+        - [70] Var: ..., Stack: [a:java/lang/Exception]
+        - [72] Var: ..., Stack: (empty)
+        - [75] Var: [a:com/oocit/particlify/a][a:java/lang/String][a:java/io/InputStream][a:java/io/DataInputStream], Stack: [a:java/lang/Exception]
+        - [113] Var: ..., Stack: [a:java/lang/Exception]
+        - [115] Var: ..., Stack: (empty)
+        - [122] Var: ..., Stack: [a:java/lang/Exception]
+        - [124] Var: ..., Stack: (empty)
+        - [127] Var: ..., Stack: [a:java/lang/Throwable]
+        - [136] Var: [a:com/oocit/particlify/a][a:java/lang/String][a:java/io/InputStream][a:java/io/DataInputStream][T][T][a:java/lang/Throwable], Stack: [a:java/lang/Exception]
+        - [138] Var: ..., Stack: (empty)
+        - [145] Var: ..., Stack: [a:java/lang/Exception]
+        - [147] Var: ..., Stack: (empty)
+        - [150] Var: [a:com/oocit/particlify/a][a:java/lang/String][a:java/io/InputStream][a:java/io/DataInputStream], Stack: 
+
+Class file attributes (count = 0):
+
