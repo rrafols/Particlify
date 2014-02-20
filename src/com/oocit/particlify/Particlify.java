@@ -43,6 +43,7 @@ public class Particlify extends Activity {
 	    renderer = new ParticlifyRenderer(this);
 	    if (supportsEs2) {
 	        mGLSurfaceView.setEGLContextClientVersion(2);
+//	        mGLSurfaceView.setEGLConfigChooser(new MultisampleConfigChooser());
 	        mGLSurfaceView.setRenderer(renderer);
 	    } else {
 	        return;

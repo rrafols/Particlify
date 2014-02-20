@@ -35,9 +35,9 @@ public class ParticlifyRenderer implements GLSurfaceView.Renderer {
 
 	private static final String TAG = "Particlify";
 	private int TRACK_SECTIONS = 3000;
-	private int TRACK_LENGTH = 200000; //150000
-	private int TRACK_WIDTH = 60;
-	private int DEFAULT_CAMERA_HEIGHT = 12;
+	private int TRACK_LENGTH = 300000; //150000
+	private int TRACK_WIDTH = 140;
+	private int DEFAULT_CAMERA_HEIGHT = 22;
 	private int NPARTICLES = 150;	//3000;
 	private	int GAME_MENUS = 0;
 	private	int GAME_PLAYING = 1;
@@ -120,7 +120,7 @@ public class ParticlifyRenderer implements GLSurfaceView.Renderer {
 	private int aliveParticles;
 	private float[] killedParticlePos;
 	private int particlesToKill;
-	private int gameState = GAME_MENUS;
+	private int gameState = GAME_PLAYING;
 	private int playTexture;
 	private int times;
 	private float maxDistance = 0;
@@ -154,17 +154,25 @@ public class ParticlifyRenderer implements GLSurfaceView.Renderer {
         };
         
         rnd = new Random(1337l);
-        float lastY = 0;
         
         for(int i = 0; i < TRACK_SECTIONS; i++) {
         	pos = i * (3 + 4) * 2;
         	
-//        	float y0 = lastY + rnd.nextFloat() * 10.f - 5.f;
-        	float y0 = lastY + rnd.nextFloat() * 20.f - 10.f;
-        	float z0 = ((float) i) * sectionLength;
-        	lastY = y0;
-        	
         	float w = TRACK_WIDTH;
+        	float R = DEFAULT_CAMERA_HEIGHT * 2;
+        	float k = ((float) i) * 0.1f;
+        	
+        	float[] rv = new float[] {(float) (R * Math.cos(k)), (float) (R * Math.sin(k))};
+        	float[] tv = new float[] {-rv[1], rv[0]};
+        	unitVector2(tv);
+        	
+        	float x0 = (float) (rv[0] + tv[0] * w);
+        	float y0 = (float) (rv[1] + tv[1] * w);
+        	
+        	float x1 = (float) (rv[0] - tv[0] * w);
+        	float y1 = (float) (rv[1] - tv[1] * w);
+        	
+        	float z0 = ((float) i) * sectionLength;
         	
         	float[] cross = new float[] {0.f, 1, 0};
         	unitVector(cross);
@@ -177,7 +185,7 @@ public class ParticlifyRenderer implements GLSurfaceView.Renderer {
         	trackSectorNormals[i * 3 + 1] = cross[1];
         	trackSectorNormals[i * 3 + 2] = cross[2];
         	
-        	trackVerticesData[pos + 0] = -TRACK_WIDTH;
+        	trackVerticesData[pos + 0] = x0;
         	trackVerticesData[pos + 1] = y0;
         	trackVerticesData[pos + 2] = z0;
         	
@@ -188,8 +196,8 @@ public class ParticlifyRenderer implements GLSurfaceView.Renderer {
         	
         	pos += 3 + 4;
         	
-        	trackVerticesData[pos + 0] = TRACK_WIDTH;
-        	trackVerticesData[pos + 1] = y0;
+        	trackVerticesData[pos + 0] = x1;
+        	trackVerticesData[pos + 1] = y1;
         	trackVerticesData[pos + 2] = z0;
         	
         	trackVerticesData[pos + 3] = r;
@@ -266,6 +274,15 @@ public class ParticlifyRenderer implements GLSurfaceView.Renderer {
 		}
 	}
 	
+	private static final void unitVector2(float[] v) {
+		float m = (float) Math.sqrt(v[0] * v[0] + v[1] * v[1]);
+		if(m != 0) {
+			m = 1.f / m;
+			v[0] *= m;
+			v[1] *= m;
+		}
+	}
+	
 	private static final float[] crossProduct(float x0, float y0, float z0, float x1, float y1, float z1) {
 		float[] out = new float[3];
 		
@@ -281,7 +298,8 @@ public class ParticlifyRenderer implements GLSurfaceView.Renderer {
         GLES20.glViewport(0, 0, width, height);
         
         final float ratio = (float) width / height;
-        Matrix.perspectiveM(mProjectionMatrix, 0, 45.f, ratio, 0.01f, 50000.f);
+//        Matrix.perspectiveM(mProjectionMatrix, 0, 45.f, ratio, 1.f, 5000000.f);
+        Matrix.perspectiveM(mProjectionMatrix, 0, 10.f, ratio, 1.f, 50000.f);
 	}
 
 	@Override
@@ -484,7 +502,7 @@ public class ParticlifyRenderer implements GLSurfaceView.Renderer {
 	
 	public void processJoystickEvent(MotionEvent ev) {
 		for (int p = 0; p < ev.getPointerCount(); p++) {
-			animAccel = -1.f * ev.getAxisValue(MotionEvent.AXIS_Y);
+			animAccel = -4.f * ev.getAxisValue(MotionEvent.AXIS_Y);
 			angleX = 8.f * ev.getAxisValue(MotionEvent.AXIS_X);
 		}
 	}
@@ -509,102 +527,101 @@ public class ParticlifyRenderer implements GLSurfaceView.Renderer {
 		int currentTrackSector = (int) (trackPosition / sectionLength);
 		float height = getTrackHeight(trackPosition);
 		
-        float x = _xpos;
-        float y = DEFAULT_CAMERA_HEIGHT + height;
+        float x = 0;	//_xpos;
+        float y = 0;	//DEFAULT_CAMERA_HEIGHT + height;
         float z = trackPosition;
         
-        float tx = _xpos;
-        float ty = DEFAULT_CAMERA_HEIGHT / 2 + height;
+        float tx = 0;	//_xpos;
+        float ty = 0;	//DEFAULT_CAMERA_HEIGHT / 2 + height;
         float tz = z + sectionLength * 10;
         
         Matrix.setLookAtM(mViewMatrix, 0, x, y, z, tx, ty, tz, 0, 1, 0);
         
         
         Matrix.setIdentityM(mModelMatrix, 0);
-		if(gameState == GAME_MENUS) {
-			accTime += currentTime - lastFrameTime;
-			
-			while(accTime > 20) {
-				_anglex += 0.03f;
-				accTime -= 20;
-			}
-			lastFrameTime = currentTime;
-			
-			Matrix.rotateM(mViewMatrix, 0, (float) (8.f * Math.sin(_anglex)), 0, 0, 1);
-			GLES20.glUseProgram(obsProgramHandle);
-			trackBuffer.position(obsPositionOffset);
-		    GLES20.glVertexAttribPointer(obsPositionHandle, obsPositionDataSize, GLES20.GL_FLOAT, false, obsStrideBytes, obsBuffer);        
-		    GLES20.glEnableVertexAttribArray(obsPositionHandle);
-		    
-	    	float xo = sectionObsX[0] * 10.f;
-	    	float zo = getSectionObstaclePos(0) - 0.2f;
-	    	float yo = getTrackHeight(zo) + 5;
-	    	
-		    Matrix.setIdentityM(mModelMatrix, 0);
-		    Matrix.translateM(mModelMatrix, 0, xo, yo, zo);
-		    Matrix.scaleM(mModelMatrix, 0, sectionObsW[0], 1.f, 1.f);
-		    
-		    Matrix.multiplyMM(mMVPMatrix, 0, mViewMatrix,       0, mModelMatrix, 0);
-		    Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mMVPMatrix,   0);
-		
-		    GLES20.glUniformMatrix4fv(trackMVPMatrixHandle, 1, false, mMVPMatrix, 0);
-		    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 10);
-		    
-		    GLES20.glDisableVertexAttribArray(obsPositionHandle);
-		    
-		    
-		    
-		    
-		    Matrix.rotateM(mViewMatrix, 0, -(float) (8.f * Math.sin(_anglex)), 0, 0, 1);
-		    
-		    GLES20.glDisable(GLES20.GL_DEPTH_TEST);
-		    GLES20.glEnable(GLES20.GL_BLEND);
-		    GLES20.glBlendFunc(GLES20.GL_SRC_ALPHA, GLES20.GL_DST_ALPHA);
-		    
-		    GLES20.glUseProgram(particleProgramHandle);
-		    particleBuffer.position(particlePositionOffset);
-		    GLES20.glVertexAttribPointer(particlePositionHandle, particlePositionDataSize, GLES20.GL_FLOAT, false, particleStrideBytes, particleBuffer);
-		    GLES20.glEnableVertexAttribArray(particlePositionHandle);
-		    
-		    particleBuffer.position(particleTextureOffset);
-		    GLES20.glVertexAttribPointer(particleTextureHandle, particleTextureDataSize, GLES20.GL_FLOAT, false, particleStrideBytes, particleBuffer);
-		    GLES20.glEnableVertexAttribArray(particleTextureHandle);
-		    
-		    GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
-	        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, playTexture);
+//		if(gameState == GAME_MENUS) {
+//			accTime += currentTime - lastFrameTime;
+//			
+//			while(accTime > 20) {
+//				_anglex += 0.03f;
+//				accTime -= 20;
+//			}
+//			lastFrameTime = currentTime;
+//			
+//			Matrix.rotateM(mViewMatrix, 0, targetX, 0, 0, 1);
+//			GLES20.glUseProgram(obsProgramHandle);
+//			trackBuffer.position(obsPositionOffset);
+//		    GLES20.glVertexAttribPointer(obsPositionHandle, obsPositionDataSize, GLES20.GL_FLOAT, false, obsStrideBytes, obsBuffer);        
+//		    GLES20.glEnableVertexAttribArray(obsPositionHandle);
+//		    
+//	    	float xo = sectionObsX[0] * 10.f;
+//	    	float zo = getSectionObstaclePos(0) - 0.2f;
+//	    	float yo = getTrackHeight(zo) + 5;
+//	    	
+//		    Matrix.setIdentityM(mModelMatrix, 0);
+//		    Matrix.translateM(mModelMatrix, 0, xo, yo, zo);
+//		    Matrix.scaleM(mModelMatrix, 0, sectionObsW[0], 1.f, 1.f);
+//		    
+//		    Matrix.multiplyMM(mMVPMatrix, 0, mViewMatrix,       0, mModelMatrix, 0);
+//		    Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mMVPMatrix,   0);
+//		
+//		    GLES20.glUniformMatrix4fv(trackMVPMatrixHandle, 1, false, mMVPMatrix, 0);
+//		    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 10);
+//		    
+//		    GLES20.glDisableVertexAttribArray(obsPositionHandle);
+//		    
+//		    
+//		    
+//		    Matrix.rotateM(mViewMatrix, 0, targetX, 0, 0, 1);
+//		    
+//		    GLES20.glDisable(GLES20.GL_DEPTH_TEST);
+//		    GLES20.glEnable(GLES20.GL_BLEND);
+//		    GLES20.glBlendFunc(GLES20.GL_SRC_ALPHA, GLES20.GL_DST_ALPHA);
+//		    
+//		    GLES20.glUseProgram(particleProgramHandle);
+//		    particleBuffer.position(particlePositionOffset);
+//		    GLES20.glVertexAttribPointer(particlePositionHandle, particlePositionDataSize, GLES20.GL_FLOAT, false, particleStrideBytes, particleBuffer);
+//		    GLES20.glEnableVertexAttribArray(particlePositionHandle);
+//		    
+//		    particleBuffer.position(particleTextureOffset);
+//		    GLES20.glVertexAttribPointer(particleTextureHandle, particleTextureDataSize, GLES20.GL_FLOAT, false, particleStrideBytes, particleBuffer);
+//		    GLES20.glEnableVertexAttribArray(particleTextureHandle);
+//		    
+//		    GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
+//	        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, playTexture);
+////	        
+//	        GLES20.glUniform1i(particleTextureUniformHandle, 0);
 //	        
-	        GLES20.glUniform1i(particleTextureUniformHandle, 0);
-	        
-	        Matrix.setIdentityM(mModelMatrix, 0);
-	        Matrix.translateM(mModelMatrix, 0, _xpos + (float) (Math.sin(_anglex) / 8.f), height + DEFAULT_CAMERA_HEIGHT - 0.20f, z + sectionLength/20.f);
-		    
-		    Matrix.multiplyMM(mMVPMatrix, 0, mViewMatrix,       0, mModelMatrix, 0);
-		    Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mMVPMatrix, 0);
-		    
-		    GLES20.glUniformMatrix4fv(particleMVPMatrixHandle, 1, false, mMVPMatrix, 0);
-		    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
-		    
-		    GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, particleTextureId);
-		    
-		    for(int i = 0; i < 10; i++) {
-		    	Matrix.setIdentityM(mModelMatrix, 0);
-		    
-		        Matrix.translateM(mModelMatrix, 0, _xpos + 6.5f + rnd.nextFloat() * 1.5f, height + DEFAULT_CAMERA_HEIGHT - 0.50f + rnd.nextFloat() * 1.5f, z + sectionLength/4.f);
-			    
-			    Matrix.multiplyMM(mMVPMatrix, 0, mViewMatrix,       0, mModelMatrix, 0);
-			    Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mMVPMatrix, 0);
-			    
-			    GLES20.glUniformMatrix4fv(particleMVPMatrixHandle, 1, false, mMVPMatrix, 0);
-			    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
-		    }
-		    
-		    GLES20.glDisableVertexAttribArray(particlePositionHandle);
-		    GLES20.glDisableVertexAttribArray(particleTextureHandle);
-	        
-	        GLES20.glEnable(GLES20.GL_DEPTH_TEST);
-	        GLES20.glDisable(GLES20.GL_BLEND);
-		} else {
-			Matrix.rotateM(mViewMatrix, 0, _anglex, 0, 0, 1);
+//	        Matrix.setIdentityM(mModelMatrix, 0);
+//	        Matrix.translateM(mModelMatrix, 0, _xpos + (float) (Math.sin(_anglex) / 8.f), height + DEFAULT_CAMERA_HEIGHT - 0.20f, z + sectionLength/20.f);
+//		    
+//		    Matrix.multiplyMM(mMVPMatrix, 0, mViewMatrix,       0, mModelMatrix, 0);
+//		    Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mMVPMatrix, 0);
+//		    
+//		    GLES20.glUniformMatrix4fv(particleMVPMatrixHandle, 1, false, mMVPMatrix, 0);
+//		    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
+//		    
+//		    GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, particleTextureId);
+//		    
+//		    for(int i = 0; i < 10; i++) {
+//		    	Matrix.setIdentityM(mModelMatrix, 0);
+//		    
+//		        Matrix.translateM(mModelMatrix, 0, _xpos + 6.5f + rnd.nextFloat() * 1.5f, height + DEFAULT_CAMERA_HEIGHT - 0.50f + rnd.nextFloat() * 1.5f, z + sectionLength/4.f);
+//			    
+//			    Matrix.multiplyMM(mMVPMatrix, 0, mViewMatrix,       0, mModelMatrix, 0);
+//			    Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mMVPMatrix, 0);
+//			    
+//			    GLES20.glUniformMatrix4fv(particleMVPMatrixHandle, 1, false, mMVPMatrix, 0);
+//			    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
+//		    }
+//		    
+//		    GLES20.glDisableVertexAttribArray(particlePositionHandle);
+//		    GLES20.glDisableVertexAttribArray(particleTextureHandle);
+//	        
+//	        GLES20.glEnable(GLES20.GL_DEPTH_TEST);
+//	        GLES20.glDisable(GLES20.GL_BLEND);
+//		} else {
+			Matrix.rotateM(mViewMatrix, 0, targetX, 0, 0, 1);
 			
 			accTime += currentTime - lastFrameTime;
 			
@@ -615,30 +632,30 @@ public class ParticlifyRenderer implements GLSurfaceView.Renderer {
 				if(_speed < 0) _speed = 0;
 			    trackPosition += _speed;
 			    
-			    _anglex += (angleX - _anglex) / 10.f;
-			    targetX -= angleX / 4.f;
-			    if(targetX >  60 + 2) targetX = 60 + 2;
-			    if(targetX < -60 - 2) targetX = -60 - 2;
+//			    _anglex += (angleX - _anglex) / 4.f;
+			    targetX += angleX;
+//			    if(targetX >  60 + 2) targetX = 60 + 2;
+//			    if(targetX < -60 - 2) targetX = -60 - 2;
 			    		
-			    _xpos += (targetX - _xpos) / 4.f;
+//			    _xpos += (targetX - _xpos) / 4.f;
 			    
-			    if(_xpos < -60) { particlesToKill += 5; _xpos = -55; targetX = -55;}
-			    if(_xpos >  60) { particlesToKill += 5; _xpos =  55; targetX =  55; }
-			    
-			    
-			    for(int i = 0; i < aliveParticles; i++) {
-			    	pPos[i * 3 + 0] += pVel[i * 3 + 0];
-			    	pPos[i * 3 + 1] += pVel[i * 3 + 1];
-			    	pPos[i * 3 + 2] += pVel[i * 3 + 2];
-			    	
-			    	if (	pPos[i * 3 + 0] > P_WIDTH/2   || pPos[i * 3 + 0] < -P_WIDTH/2 ||
-			    			pPos[i * 3 + 1] > P_HEIGHT/2  || pPos[i * 3 + 1] < -P_HEIGHT/2 ||
-			    			pPos[i * 3 + 2] > P_MAX_DEPTH || pPos[i * 3 + 2] < -P_MIN_DEPTH) {
-			    		
-			    		resetParticlePos(i);
-			    		resetParticleVel(i);
-			    	}
-			    }
+//			    if(_xpos < -60) { particlesToKill += 5; _xpos = -55; targetX = -55;}
+//			    if(_xpos >  60) { particlesToKill += 5; _xpos =  55; targetX =  55; }
+//			    
+//			    
+//			    for(int i = 0; i < aliveParticles; i++) {
+//			    	pPos[i * 3 + 0] += pVel[i * 3 + 0];
+//			    	pPos[i * 3 + 1] += pVel[i * 3 + 1];
+//			    	pPos[i * 3 + 2] += pVel[i * 3 + 2];
+//			    	
+//			    	if (	pPos[i * 3 + 0] > P_WIDTH/2   || pPos[i * 3 + 0] < -P_WIDTH/2 ||
+//			    			pPos[i * 3 + 1] > P_HEIGHT/2  || pPos[i * 3 + 1] < -P_HEIGHT/2 ||
+//			    			pPos[i * 3 + 2] > P_MAX_DEPTH || pPos[i * 3 + 2] < -P_MIN_DEPTH) {
+//			    		
+//			    		resetParticlePos(i);
+//			    		resetParticleVel(i);
+//			    	}
+//			    }
 			    
 			    float particleTrackPos = trackPosition + sectionLength/1.1f - 12.f;
 				int collisionSector = (int) (particleTrackPos / sectionLength);
@@ -682,149 +699,149 @@ public class ParticlifyRenderer implements GLSurfaceView.Renderer {
 		    GLES20.glDisableVertexAttribArray(trackColorHandle);
 		    
 		    
-		    // obstacles
-		    GLES20.glUseProgram(obsProgramHandle);
-			trackBuffer.position(obsPositionOffset);
-		    GLES20.glVertexAttribPointer(obsPositionHandle, obsPositionDataSize, GLES20.GL_FLOAT, false, obsStrideBytes, obsBuffer);        
-		    GLES20.glEnableVertexAttribArray(obsPositionHandle);
-		    
-		    for(int i = currentTrackSector + 20 - 1; i >= currentTrackSector ; i--) {
-		    	if(i == 0) break;
-		    	float xo = sectionObsX[i] * 10.f;
-		    	float zo = getSectionObstaclePos(i);
-		    	float yo = getTrackHeight(zo) + 5;
-		    	
-			    Matrix.setIdentityM(mModelMatrix, 0);
-			    Matrix.translateM(mModelMatrix, 0, xo, yo, zo);
-			    Matrix.scaleM(mModelMatrix, 0, sectionObsW[i], 1.f, 1.f);
-			    
-			    Matrix.multiplyMM(mMVPMatrix, 0, mViewMatrix,       0, mModelMatrix, 0);
-			    Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mMVPMatrix,   0);
-			
-			    GLES20.glUniformMatrix4fv(trackMVPMatrixHandle, 1, false, mMVPMatrix, 0);
-			    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 10);
-		    }
-		    
-		    GLES20.glDisableVertexAttribArray(obsPositionHandle);
-		    
-		    
-		    // particles
-		    GLES20.glDisable(GLES20.GL_DEPTH_TEST);
-		    
-		    GLES20.glEnable(GLES20.GL_BLEND);
-		    GLES20.glBlendFunc(GLES20.GL_SRC_ALPHA, GLES20.GL_DST_ALPHA);
-		    
-		    GLES20.glUseProgram(particleProgramHandle);
-		    particleBuffer.position(particlePositionOffset);
-		    GLES20.glVertexAttribPointer(particlePositionHandle, particlePositionDataSize, GLES20.GL_FLOAT, false, particleStrideBytes, particleBuffer);
-		    GLES20.glEnableVertexAttribArray(particlePositionHandle);
-		    
-		    particleBuffer.position(particleTextureOffset);
-		    GLES20.glVertexAttribPointer(particleTextureHandle, particleTextureDataSize, GLES20.GL_FLOAT, false, particleStrideBytes, particleBuffer);
-		    GLES20.glEnableVertexAttribArray(particleTextureHandle);
-		    
-		    GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
-	        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, particleTextureId);
-	        GLES20.glUniform1i(particleTextureUniformHandle, 0);
+//		    // obstacles
+//		    GLES20.glUseProgram(obsProgramHandle);
+//			trackBuffer.position(obsPositionOffset);
+//		    GLES20.glVertexAttribPointer(obsPositionHandle, obsPositionDataSize, GLES20.GL_FLOAT, false, obsStrideBytes, obsBuffer);        
+//		    GLES20.glEnableVertexAttribArray(obsPositionHandle);
+//		    
+//		    for(int i = currentTrackSector + 20 - 1; i >= currentTrackSector ; i--) {
+//		    	if(i == 0) break;
+//		    	float xo = sectionObsX[i] * 10.f;
+//		    	float zo = getSectionObstaclePos(i);
+//		    	float yo = getTrackHeight(zo) + 5;
+//		    	
+//			    Matrix.setIdentityM(mModelMatrix, 0);
+//			    Matrix.translateM(mModelMatrix, 0, xo, yo, zo);
+//			    Matrix.scaleM(mModelMatrix, 0, sectionObsW[i], 1.f, 1.f);
+//			    
+//			    Matrix.multiplyMM(mMVPMatrix, 0, mViewMatrix,       0, mModelMatrix, 0);
+//			    Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mMVPMatrix,   0);
+//			
+//			    GLES20.glUniformMatrix4fv(trackMVPMatrixHandle, 1, false, mMVPMatrix, 0);
+//			    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 10);
+//		    }
+//		    
+//		    GLES20.glDisableVertexAttribArray(obsPositionHandle);
+//		    
+//		    
+//		    // particles
+//		    GLES20.glDisable(GLES20.GL_DEPTH_TEST);
+//		    
+//		    GLES20.glEnable(GLES20.GL_BLEND);
+//		    GLES20.glBlendFunc(GLES20.GL_SRC_ALPHA, GLES20.GL_DST_ALPHA);
+//		    
+//		    GLES20.glUseProgram(particleProgramHandle);
+//		    particleBuffer.position(particlePositionOffset);
+//		    GLES20.glVertexAttribPointer(particlePositionHandle, particlePositionDataSize, GLES20.GL_FLOAT, false, particleStrideBytes, particleBuffer);
+//		    GLES20.glEnableVertexAttribArray(particlePositionHandle);
+//		    
+//		    particleBuffer.position(particleTextureOffset);
+//		    GLES20.glVertexAttribPointer(particleTextureHandle, particleTextureDataSize, GLES20.GL_FLOAT, false, particleStrideBytes, particleBuffer);
+//		    GLES20.glEnableVertexAttribArray(particleTextureHandle);
+//		    
+//		    GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
+//	        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, particleTextureId);
+//	        GLES20.glUniform1i(particleTextureUniformHandle, 0);
 	        
-	        for(int i = 0; aliveParticles > 0 && i < particlesToKill; i++) {
-	        	aliveParticles--;
-	        	
-	        	killedParticlePos[aliveParticles * 3 + 0] = pPos[i * 3 + 0] + _xpos;
-	        	killedParticlePos[aliveParticles * 3 + 2] = z + sectionLength/1.5f + pPos[i * 3 + 2];
-	        	killedParticlePos[aliveParticles * 3 + 1] = getTrackHeight(killedParticlePos[aliveParticles * 3 + 2]);
-		    }
-		    particlesToKill = 0;
+//	        for(int i = 0; aliveParticles > 0 && i < particlesToKill; i++) {
+//	        	aliveParticles--;
+//	        	
+//	        	killedParticlePos[aliveParticles * 3 + 0] = pPos[i * 3 + 0] + _xpos;
+//	        	killedParticlePos[aliveParticles * 3 + 2] = z + sectionLength/1.5f + pPos[i * 3 + 2];
+//	        	killedParticlePos[aliveParticles * 3 + 1] = getTrackHeight(killedParticlePos[aliveParticles * 3 + 2]);
+//		    }
+//		    particlesToKill = 0;
+//		    
+//		    for(int i = 0; i < aliveParticles; i++) {
+//		    	Matrix.setIdentityM(mModelMatrix, 0);
+//			    Matrix.translateM(mModelMatrix, 0, pPos[i * 3 + 0] + _xpos, height + 2 + pPos[i * 3 + 1], z + sectionLength/1.1f + pPos[i * 3 + 2]);
+//			    
+//			    Matrix.multiplyMM(mMVPMatrix, 0, mViewMatrix,       0, mModelMatrix, 0);
+//			    Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mMVPMatrix, 0);
+//			    
+//			    GLES20.glUniformMatrix4fv(particleMVPMatrixHandle, 1, false, mMVPMatrix, 0);
+//			    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
+//		    }
+//		    
+//		    
+//		    for(int i = aliveParticles; i < NPARTICLES; i++) {
+//		    	Matrix.setIdentityM(mModelMatrix, 0);
+//			    Matrix.translateM(mModelMatrix, 0, killedParticlePos[i * 3 + 0], killedParticlePos[i * 3 + 1], killedParticlePos[i * 3 + 2]);
+//			    
+//			    Matrix.multiplyMM(mMVPMatrix, 0, mViewMatrix,       0, mModelMatrix, 0);
+//			    Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mMVPMatrix, 0);
+//			    
+//			    GLES20.glUniformMatrix4fv(particleMVPMatrixHandle, 1, false, mMVPMatrix, 0);
+//			    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
+//		    }
+//		    
+//		    
+//		    GLES20.glDisableVertexAttribArray(particlePositionHandle);
+//		    GLES20.glDisableVertexAttribArray(particleTextureHandle);
+//		    GLES20.glDisable(GLES20.GL_BLEND);
+//		    
+//		    
+//		    GLES20.glUseProgram(barProgramHandle);
+//		    particleBuffer.position(particlePositionOffset);
+//		    GLES20.glVertexAttribPointer(particlePositionHandle, particlePositionDataSize, GLES20.GL_FLOAT, false, particleStrideBytes, particleBuffer);
+//		    GLES20.glEnableVertexAttribArray(particlePositionHandle);
+//		    
+//		    Matrix.setLookAtM(mViewMatrix, 0, 0, 0, 0, 0, 0, 10, 0, 1, 0);
+//		    Matrix.setIdentityM(mModelMatrix, 0);
+//		    Matrix.translateM(mModelMatrix, 0, 7, 3.5f, 10);
+//		    Matrix.scaleM(mModelMatrix, 0, -trackPosition / 5000.f, 0.25f, 1);
+//		    Matrix.translateM(mModelMatrix, 0, 1, 0, 0);
+//		    
+//		    Matrix.multiplyMM(mMVPMatrix, 0, mViewMatrix,       0, mModelMatrix, 0);
+//		    Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mMVPMatrix, 0);
+//		    
+//		    GLES20.glUniformMatrix4fv(particleMVPMatrixHandle, 1, false, mMVPMatrix, 0);
+//		    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
+//		    
+//		    GLES20.glDisableVertexAttribArray(particlePositionHandle);
 		    
-		    for(int i = 0; i < aliveParticles; i++) {
-		    	Matrix.setIdentityM(mModelMatrix, 0);
-			    Matrix.translateM(mModelMatrix, 0, pPos[i * 3 + 0] + _xpos, height + 2 + pPos[i * 3 + 1], z + sectionLength/1.1f + pPos[i * 3 + 2]);
-			    
-			    Matrix.multiplyMM(mMVPMatrix, 0, mViewMatrix,       0, mModelMatrix, 0);
-			    Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mMVPMatrix, 0);
-			    
-			    GLES20.glUniformMatrix4fv(particleMVPMatrixHandle, 1, false, mMVPMatrix, 0);
-			    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
-		    }
 		    
 		    
-		    for(int i = aliveParticles; i < NPARTICLES; i++) {
-		    	Matrix.setIdentityM(mModelMatrix, 0);
-			    Matrix.translateM(mModelMatrix, 0, killedParticlePos[i * 3 + 0], killedParticlePos[i * 3 + 1], killedParticlePos[i * 3 + 2]);
-			    
-			    Matrix.multiplyMM(mMVPMatrix, 0, mViewMatrix,       0, mModelMatrix, 0);
-			    Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mMVPMatrix, 0);
-			    
-			    GLES20.glUniformMatrix4fv(particleMVPMatrixHandle, 1, false, mMVPMatrix, 0);
-			    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
-		    }
-		    
-		    
-		    GLES20.glDisableVertexAttribArray(particlePositionHandle);
-		    GLES20.glDisableVertexAttribArray(particleTextureHandle);
-		    GLES20.glDisable(GLES20.GL_BLEND);
-		    
-		    
-		    GLES20.glUseProgram(barProgramHandle);
-		    particleBuffer.position(particlePositionOffset);
-		    GLES20.glVertexAttribPointer(particlePositionHandle, particlePositionDataSize, GLES20.GL_FLOAT, false, particleStrideBytes, particleBuffer);
-		    GLES20.glEnableVertexAttribArray(particlePositionHandle);
-		    
-		    Matrix.setLookAtM(mViewMatrix, 0, 0, 0, 0, 0, 0, 10, 0, 1, 0);
-		    Matrix.setIdentityM(mModelMatrix, 0);
-		    Matrix.translateM(mModelMatrix, 0, 7, 3.5f, 10);
-		    Matrix.scaleM(mModelMatrix, 0, -trackPosition / 5000.f, 0.25f, 1);
-		    Matrix.translateM(mModelMatrix, 0, 1, 0, 0);
-		    
-		    Matrix.multiplyMM(mMVPMatrix, 0, mViewMatrix,       0, mModelMatrix, 0);
-		    Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mMVPMatrix, 0);
-		    
-		    GLES20.glUniformMatrix4fv(particleMVPMatrixHandle, 1, false, mMVPMatrix, 0);
-		    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
-		    
-		    GLES20.glDisableVertexAttribArray(particlePositionHandle);
-		    
-		    
-		    
-		    //max distance
-		    GLES20.glDisable(GLES20.GL_DEPTH_TEST);
-		    
-		    GLES20.glEnable(GLES20.GL_BLEND);
-		    GLES20.glBlendFunc(GLES20.GL_SRC_ALPHA, GLES20.GL_DST_ALPHA);
-		    
-		    GLES20.glUseProgram(particleProgramHandle);
-		    particleBuffer.position(particlePositionOffset);
-		    GLES20.glVertexAttribPointer(particlePositionHandle, particlePositionDataSize, GLES20.GL_FLOAT, false, particleStrideBytes, particleBuffer);
-		    GLES20.glEnableVertexAttribArray(particlePositionHandle);
-		    
-		    particleBuffer.position(particleTextureOffset);
-		    GLES20.glVertexAttribPointer(particleTextureHandle, particleTextureDataSize, GLES20.GL_FLOAT, false, particleStrideBytes, particleBuffer);
-		    GLES20.glEnableVertexAttribArray(particleTextureHandle);
-		    
-		    GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
-	        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, particleTextureId);
-	        GLES20.glUniform1i(particleTextureUniformHandle, 0);
-		    
-	        Matrix.setLookAtM(mViewMatrix, 0, 0, 0, 0, 0, 0, 10, 0, 1, 0);
-		    Matrix.setIdentityM(mModelMatrix, 0);
-		    Matrix.translateM(mModelMatrix, 0, 7 - (maxDistance / 5000.f) * 2, 3.5f, 10);
-		    
-		    Matrix.multiplyMM(mMVPMatrix, 0, mViewMatrix,       0, mModelMatrix, 0);
-		    Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mMVPMatrix, 0);
-		    
-		    GLES20.glUniformMatrix4fv(particleMVPMatrixHandle, 1, false, mMVPMatrix, 0);
-		    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
-		    
-		    GLES20.glDisableVertexAttribArray(particlePositionHandle);
-		    GLES20.glDisableVertexAttribArray(particleTextureHandle);
-		    GLES20.glDisable(GLES20.GL_BLEND);
+//		    //max distance
+//		    GLES20.glDisable(GLES20.GL_DEPTH_TEST);
+//		    
+//		    GLES20.glEnable(GLES20.GL_BLEND);
+//		    GLES20.glBlendFunc(GLES20.GL_SRC_ALPHA, GLES20.GL_DST_ALPHA);
+//		    
+//		    GLES20.glUseProgram(particleProgramHandle);
+//		    particleBuffer.position(particlePositionOffset);
+//		    GLES20.glVertexAttribPointer(particlePositionHandle, particlePositionDataSize, GLES20.GL_FLOAT, false, particleStrideBytes, particleBuffer);
+//		    GLES20.glEnableVertexAttribArray(particlePositionHandle);
+//		    
+//		    particleBuffer.position(particleTextureOffset);
+//		    GLES20.glVertexAttribPointer(particleTextureHandle, particleTextureDataSize, GLES20.GL_FLOAT, false, particleStrideBytes, particleBuffer);
+//		    GLES20.glEnableVertexAttribArray(particleTextureHandle);
+//		    
+//		    GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
+//	        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, particleTextureId);
+//	        GLES20.glUniform1i(particleTextureUniformHandle, 0);
+//		    
+//	        Matrix.setLookAtM(mViewMatrix, 0, 0, 0, 0, 0, 0, 10, 0, 1, 0);
+//		    Matrix.setIdentityM(mModelMatrix, 0);
+//		    Matrix.translateM(mModelMatrix, 0, 7 - (maxDistance / 5000.f) * 2, 3.5f, 10);
+//		    
+//		    Matrix.multiplyMM(mMVPMatrix, 0, mViewMatrix,       0, mModelMatrix, 0);
+//		    Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mMVPMatrix, 0);
+//		    
+//		    GLES20.glUniformMatrix4fv(particleMVPMatrixHandle, 1, false, mMVPMatrix, 0);
+//		    GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
+//		    
+//		    GLES20.glDisableVertexAttribArray(particlePositionHandle);
+//		    GLES20.glDisableVertexAttribArray(particleTextureHandle);
+//		    GLES20.glDisable(GLES20.GL_BLEND);
 		    if(trackPosition > maxDistance) maxDistance = trackPosition;
 		    
 		    if(aliveParticles <= 0) {		    	
 		    	restartGame();
 		    	gameState = GAME_MENUS;
 		    }
-		}
+//		}
     }
 	
 	private void restartGame() {
@@ -840,7 +857,7 @@ public class ParticlifyRenderer implements GLSurfaceView.Renderer {
 	}
 	
 	private float getSectionObstaclePos(int currentTrackSector) {
-		return trackVerticesData[currentTrackSector * 7  * 2 + 2];
+		return trackVerticesData[currentTrackSector * 7  * 2];
 	}
 	
 	private float getTrackHeight(float trackPosition) {
